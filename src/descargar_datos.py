@@ -12,6 +12,7 @@ import json
 import os
 import sys
 import time
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
@@ -23,9 +24,12 @@ else:
     from config import ANIOS, DATOS_CRUDOS, DATOS_PROCESADOS, URL_RECORRIDOS
 
 AGENTE = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-# Plazo total por archivo: una hora. Se comprueba al recibir cada bloque y cada espera de lectura tiene 120 s de
-# límite, así que una descarga atascada se corta como mucho unos 120 s después de cumplida la hora.
+# Plazo total por archivo: una hora, contada desde antes de pedir el archivo. Se comprueba cada vez que llega un
+# bloque (64 KB). Además, la conexión se corta si pasan 30 s sin poder conectarse o 120 s seguidos sin recibir
+# ningún dato. Así, una descarga detenida se corta en 120 s; una que sigue avanzando, aunque sea muy despacio, se
+# corta al llegar el primer bloque después de cumplida la hora.
 PLAZO_TOTAL_S = 3600
+BLOQUE = 64 * 1024
 
 
 def ruta_zip(anio):
@@ -45,22 +49,28 @@ def bajar(anio, conocidas):
     if destino.exists() and conocidas.get(destino.name) == huella(destino):
         return f"{anio}: ya estaba y su huella coincide con el manifiesto"
     url = URL_RECORRIDOS.format(anio=anio)
-    temporal = destino.with_suffix(f".zip.{os.getpid()}.parcial")  # único por ejecución
+    # Proceso + marca aleatoria: único aunque el sistema reutilice el número de proceso.
+    temporal = destino.with_suffix(f".zip.{os.getpid()}-{uuid.uuid4().hex[:12]}.parcial")
+    inicio = time.monotonic()
+    creado = False  # solo se borra el temporal si lo creó esta llamada
     try:
-        with requests.get(url, headers={"User-Agent": AGENTE}, stream=True, timeout=(30, 120)) as r:
-            r.raise_for_status()
-            esperado = int(r.headers.get("Content-Length", 0))
-            inicio = time.monotonic()
-            with open(temporal, "wb") as f:
-                for bloque in r.iter_content(chunk_size=1 << 20):
+        with open(temporal, "xb") as f:  # "x": falla si el archivo ya existiera
+            creado = True
+            with requests.get(url, headers={"User-Agent": AGENTE}, stream=True, timeout=(30, 120)) as r:
+                r.raise_for_status()
+                esperado = int(r.headers.get("Content-Length", 0))
+                for bloque in r.iter_content(chunk_size=BLOQUE):
                     if time.monotonic() - inicio > PLAZO_TOTAL_S:
                         raise TimeoutError(f"{anio}: la descarga superó {PLAZO_TOTAL_S} s")
                     f.write(bloque)
+        if time.monotonic() - inicio > PLAZO_TOTAL_S:  # también si el final llegó tarde, sin un bloque más
+            raise TimeoutError(f"{anio}: la descarga superó {PLAZO_TOTAL_S} s")
         if esperado and temporal.stat().st_size != esperado:
             raise IOError(f"{anio}: descarga incompleta")
         temporal.replace(destino)
     finally:
-        temporal.unlink(missing_ok=True)
+        if creado:
+            temporal.unlink(missing_ok=True)
     return f"{anio}: {destino.stat().st_size:,} bytes"
 
 

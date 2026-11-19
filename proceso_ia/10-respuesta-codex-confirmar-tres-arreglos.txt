@@ -1,0 +1,10 @@
+=== Respuesta de Codex ===
+**2. JSON corregido.** Ambos escritores convierten los valores no finitos en `null` y usan `allow_nan=False`. Las predicciones, tablas y contrastes guardados coinciden con la versión anterior al normalizar los finales de línea.
+
+**3. Temporales.** Si `open(..., "xb")` falla porque el archivo ya existe, el `finally` puede borrar ese archivo ajeno. En `extraer` puede ocurrir si el temporal aparece después de `exists()`. La limpieza debe ejecutarse solo si esta llamada creó el temporal. [descargar_datos.py:68](<C:/Programas creados por mi/pronostico-ecobici/src/descargar_datos.py:68>) · [serie_horaria.py:72](<C:/Programas creados por mi/pronostico-ecobici/src/serie_horaria.py:72>)
+
+**4. Plazo.** El reloj ya empieza antes de la solicitud. Falta comprobar el plazo al salir del bucle: si el fin de la respuesta llega después de la hora sin entregar otro bloque, el ZIP se acepta. [descargar_datos.py:64](<C:/Programas creados por mi/pronostico-ecobici/src/descargar_datos.py:64>)
+
+No pude ejecutar las 15 pruebas ni repetir el experimento porque el entorno denegó la ejecución de Python.
+=== gpt-6.2-sol / medium · tarea revision · 120 s · tokens: 259022 de entrada, 2048 de salida · encargo 01a1f400-2e0c-7043-afe2-32dc2d8b254f
+Límites de Codex — 5 horas: 2% usado (se reinicia 19/11 01:25 PM); semana: 12% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

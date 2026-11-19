@@ -14,6 +14,7 @@ respondió, tal cual.
 | Capítulos 2 y 3 | Codex (GPT-6.1 Terra) | `02-encargo-codex-capitulos-2-3.md`: estado del arte y metodología, citando solo la bibliografía comprobada; `04-…`: ajuste de ambos capítulos ya con los resultados |
 | Resto de la memoria | Claude | Capítulos 1 y 4 a 8, resumen y anexos, con las cifras de la ejecución |
 | Revisión final | Codex (GPT-6.2 Sol) | `03-…`: revisión de la memoria y del código completos, 30 observaciones. Claude verificó cada una: corrigió cifras, contó por separado los 3.379 recorridos sin llegada, reforzó la seguridad del código, agregó pruebas y moderó afirmaciones; lo que habría exigido volver a evaluar la prueba quedó como limitación |
+| Confirmaciones | Codex (GPT-6.2 Sol) | `05-…` a `11-…`: rondas cortas de verificación después de cada tanda de arreglos (cifras actualizadas tras el feriado del 2/9/2022, JSON sin NaN, nombres temporales únicos, plazo de descarga). Se repitió hasta que Codex respondió «SIN ERRORES PENDIENTES» (encargo 11) |
 
 Reglas que se siguieron: ninguna referencia sin comprobar en Crossref, arXiv o la página oficial; ninguna cifra que
 no salga del código; ninguna columna con datos de personas seleccionada; todo lo que hizo Codex, revisado por Claude

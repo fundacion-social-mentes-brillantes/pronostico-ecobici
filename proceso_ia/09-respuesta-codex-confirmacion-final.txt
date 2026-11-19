@@ -1,0 +1,10 @@
+=== Respuesta de Codex ===
+El arreglo 1 quedó bien en ambos documentos. Quedan tres problemas:
+
+- **2.** `src/tablas_memoria.py:113–116,148–149` escribe `null` en `ic95` cuando el intervalo es incalculable, pero todavía emite `NaN` en `estadistico_dm` si la varianza es nula y la diferencia media es distinta de cero. En ese caso, el JSON sigue siendo inválido.
+- **3.** `src/serie_horaria.py:58–67,150–153` separa procesos simultáneos por PID, pero si el sistema reutiliza un PID, la ejecución puede sobrescribir y borrar archivos que dejó una ejecución anterior.
+- **4.** `src/descargar_datos.py:26–27,50–57` afirma que el exceso máximo es de unos 120 s. Ese tiempo limita la inactividad de lectura, y una respuesta lenta puede tardar más en entregar un bloque. Además, la hora se empieza a contar después de recibir las cabeceras.
+
+No pude ejecutar las pruebas porque el intérprete del entorno virtual no arrancó.
+=== gpt-6.2-sol / medium · tarea revision · 83 s · tokens: 190180 de entrada, 1396 de salida · encargo 01a1f3fb-bc69-7aa3-9074-fe507434add3
+Límites de Codex — 5 horas: 1% usado (se reinicia 19/11 01:25 PM); semana: 12% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

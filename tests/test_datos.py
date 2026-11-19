@@ -65,3 +65,35 @@ def test_extraer_usa_un_nombre_fijo_y_no_el_del_zip(tmp_path, monkeypatch):
     assert ruta.read_text(encoding="utf-8") == CABECERA
     assert not (tmp_path.parent / "fuera.csv").exists()
     assert not list((tmp_path / "csv").glob("*.parcial"))
+
+
+class _MarcaFija:
+    hex = "a" * 32
+
+
+def test_extraer_no_borra_un_temporal_ajeno(tmp_path, monkeypatch):
+    monkeypatch.setattr(serie_horaria, "DATOS_CRUDOS", tmp_path)
+    monkeypatch.setattr(serie_horaria.uuid, "uuid4", lambda: _MarcaFija())
+    with zipfile.ZipFile(tmp_path / "recorridos-realizados-2030.zip", "w") as z:
+        z.writestr("a.csv", CABECERA)
+    (tmp_path / "csv").mkdir()
+    marca = f"{serie_horaria.os.getpid()}-{'a' * 12}"
+    ajeno = tmp_path / "csv" / f"2030.csv.{marca}.parcial"
+    ajeno.write_text("de otra ejecución", encoding="utf-8")
+    with pytest.raises(FileExistsError):
+        serie_horaria.extraer(2030)
+    assert ajeno.read_text(encoding="utf-8") == "de otra ejecución"
+
+
+def test_la_descarga_no_borra_un_temporal_ajeno(tmp_path, monkeypatch):
+    from src import descargar_datos
+
+    monkeypatch.setattr(descargar_datos, "DATOS_CRUDOS", tmp_path)
+    monkeypatch.setattr(descargar_datos.uuid, "uuid4", lambda: _MarcaFija())
+    monkeypatch.setattr(descargar_datos.requests, "get", lambda *a, **k: pytest.fail("no debía pedir nada"))
+    destino = descargar_datos.ruta_zip(2030)
+    ajeno = destino.with_suffix(f".zip.{descargar_datos.os.getpid()}-{'a' * 12}.parcial")
+    ajeno.write_bytes(b"de otra ejecucion")
+    with pytest.raises(FileExistsError):
+        descargar_datos.bajar(2030, {})
+    assert ajeno.read_bytes() == b"de otra ejecucion"

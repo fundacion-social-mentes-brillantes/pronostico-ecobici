@@ -23,12 +23,13 @@ else:
 
 
 def redondear(x, dec=2):
+    """Redondea floats y deja null (None) donde un valor no es finito, para que el JSON sea siempre válido."""
     if isinstance(x, dict):
         return {str(k): redondear(v, dec) for k, v in x.items()}
-    if isinstance(x, list):
+    if isinstance(x, (list, tuple)):
         return [redondear(v, dec) for v in x]
     if isinstance(x, (float, np.floating)):
-        return round(float(x), dec)
+        return round(float(x), dec) if np.isfinite(x) else None
     if isinstance(x, (np.integer,)):
         return int(x)
     return x
@@ -146,7 +147,7 @@ def main():
                                                ("laborable", "sabado", "domingo_o_feriado")}
 
     (config.RESULTADOS / "tablas_memoria.json").write_text(
-        json.dumps(redondear(salida), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        json.dumps(redondear(salida), ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     escribir_anexos_de_tablas()
     return salida
 

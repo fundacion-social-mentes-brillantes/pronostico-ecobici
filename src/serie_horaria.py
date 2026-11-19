@@ -20,6 +20,7 @@ Salidas: datos/procesados/serie_horaria.csv, resultados/calidad_datos.json y res
 """
 import json
 import os
+import uuid
 import zipfile
 
 import duckdb
@@ -53,18 +54,26 @@ def extraer(anio):
         miembro = csvs[0]
         if miembro.file_size > LIMITE_DESCOMPRIMIDO:
             raise ValueError(f"{anio}: el CSV ocupa {miembro.file_size:,} bytes, más que el límite")
-        # Nombre propio de esta ejecución (el nombre interno del ZIP nunca se usa como ruta): así dos ejecuciones
-        # simultáneas no se pisan y al final solo se borran los archivos que creó esta.
-        ruta = destino / f"{anio}.{os.getpid()}.csv"
-        temporal = destino / f"{anio}.csv.{os.getpid()}.parcial"  # único por ejecución
+        # Nombre propio de esta ejecución (el nombre interno del ZIP nunca se usa como ruta): proceso + marca
+        # aleatoria, así ni dos ejecuciones simultáneas ni un número de proceso reutilizado pisan archivos ajenos,
+        # y al final solo se borran los archivos que creó esta.
+        marca = f"{os.getpid()}-{uuid.uuid4().hex[:12]}"
+        ruta = destino / f"{anio}.{marca}.csv"
+        temporal = destino / f"{anio}.csv.{marca}.parcial"
+        if ruta.exists() or temporal.exists():
+            raise FileExistsError(f"{anio}: el nombre temporal {marca} ya existe")
+        creado = False  # solo se borra el temporal si lo creó esta llamada
         try:
             # Siempre se extrae de nuevo: zipfile comprueba el CRC al leer, así que el CSV queda verificado.
-            with z.open(miembro) as fuente, open(temporal, "wb") as sal:
-                while bloque := fuente.read(16 * 1024 * 1024):
-                    sal.write(bloque)
+            with open(temporal, "xb") as sal:  # "x": falla si ya existiera
+                creado = True
+                with z.open(miembro) as fuente:
+                    while bloque := fuente.read(16 * 1024 * 1024):
+                        sal.write(bloque)
             temporal.replace(ruta)
         finally:
-            temporal.unlink(missing_ok=True)
+            if creado:
+                temporal.unlink(missing_ok=True)
     return ruta
 
 

@@ -1,0 +1,8 @@
+=== Respuesta de Codex ===
+Los dos retoques están correctos. `extraer` y `bajar` solo limpian el temporal si lo crearon, y `bajar` rechaza la descarga si el plazo venció al terminar la lectura.
+
+No pude ejecutar las pruebas porque Python no arrancó. Por inspección, la prueba de `extraer` cubre un temporal preexistente y se detiene en `exists()`, antes de llegar a `open(..., "xb")`.
+
+SIN ERRORES PENDIENTES.
+=== gpt-6.2-sol / medium · tarea revision · 62 s · tokens: 126292 de entrada, 701 de salida · encargo 01a1f402-b730-79e3-82b7-d70625d6fe26
+Límites de Codex — 5 horas: 2% usado (se reinicia 19/11 01:25 PM); semana: 12% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

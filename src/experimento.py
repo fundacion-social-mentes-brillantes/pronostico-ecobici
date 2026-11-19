@@ -39,9 +39,21 @@ def inicio_con_margen(particion):
     return (pd.Timestamp(particion[0]) + pd.Timedelta(days=config.MARGEN_DIAS)).date().isoformat()
 
 
+def sin_no_finitos(x):
+    """Cambia NaN e infinitos por None (null): el JSON estándar no los admite."""
+    if isinstance(x, dict):
+        return {k: sin_no_finitos(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [sin_no_finitos(v) for v in x]
+    if isinstance(x, (float, np.floating)) and not np.isfinite(x):
+        return None
+    return x
+
+
 def guardar_json(nombre, datos):
     ruta = config.RESULTADOS / nombre
-    ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    ruta.write_text(json.dumps(sin_no_finitos(datos), ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+                    encoding="utf-8")
 
 
 def seleccionar_horas_prueba(serie, escenarios):
