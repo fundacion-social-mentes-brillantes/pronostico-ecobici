@@ -1,7 +1,7 @@
 # Anexo A. Declaración de uso de inteligencia artificial
 
 Este trabajo es una **prueba de capacidades de dos asistentes de inteligencia artificial**, encargada por
-Sebastián (Fundación Social Mentes Brillantes), que no es programador, para comprobar hasta dónde pueden llevar por
+una persona de la Fundación Social Mentes Brillantes que no es programadora, para comprobar hasta dónde pueden llevar por
 sí solos un trabajo con la forma y la exigencia de un Trabajo Fin de Máster. **No es un Trabajo Fin de Estudios
 presentado ante UNIR ni ante ninguna otra universidad**, y no debe presentarse como tal.
 
@@ -41,11 +41,12 @@ El repositorio público (https://github.com/fundacion-social-mentes-brillantes/p
 | `src/descargar_clima.py` | Temperatura y precipitación horarias de Open-Meteo (ERA5) |
 | `src/feriados.py` | Calendario de feriados y días no laborables 2022-2025 |
 | `src/variables.py`, `src/modelos.py`, `src/estadistica.py`, `src/experimento.py` | Variables por escenario, alternativas, métricas y contraste, y protocolo |
-| `src/graficos.py`, `src/tablas_memoria.py`, `src/ejecutar_todo.py` | Figuras, tablas complementarias y ejecución completa con registro |
-| `tests/` | Catorce pruebas automáticas |
+| `src/graficos.py`, `src/tablas_memoria.py`, `src/exportar_web.py`, `src/ejecutar_todo.py` | Figuras, tablas complementarias, datos de la página web y ejecución completa con registro |
+| `tests/` | Veinte pruebas automáticas |
 | `datos/procesados/` | Serie horaria, clima, feriados y manifiesto de la descarga |
 | `resultados/` | Métricas, hiperparámetros, contrastes, predicciones, tablas, registro de ejecución y figuras |
-| `memoria/` | Esta memoria, en Markdown por capítulos y en Word |
+| `memoria/` | Esta memoria, en Markdown por capítulos, en Word y en PDF (`construir_docx.py` y `construir_pdf.py`) |
+| `web/` | Página del proyecto, publicada en https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/ |
 | `proceso_ia/` | Encargos y respuestas de Codex |
 
 Pasos, con Python 3.12 (en Linux o macOS, `.venv/bin/python` en lugar de `.venv/Scripts/python`):

@@ -12,3 +12,11 @@ memoria/solicitud_del_tema.md
 memoria/borradores/
 *.docx#
 ~$*
+
+# Copias locales de la memoria para ver la web sin servidor (en GitHub Pages las copia el flujo de publicación)
+web/memoria.pdf
+web/memoria.docx
+.taste-skill/
+
+# Documento intermedio del PDF (lleva las letras incrustadas)
+memoria/memoria.html

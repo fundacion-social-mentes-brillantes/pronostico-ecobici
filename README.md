@@ -4,8 +4,11 @@ Comparativa de cinco técnicas para pronosticar cuántos viajes de **Ecobici** (
 Buenos Aires) se inician en cada hora, y de **cuánto empeora cada una cuando el último dato disponible tiene 1, 24
 o 168 horas de antigüedad**. Datos reales: 11,9 millones de recorridos de 2022 a 2025.
 
+**Página del proyecto:** https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/ (el hallazgo con un gráfico interactivo, el método, los límites y la memoria
+en PDF para descargar).
+
 > **Qué es este repositorio.** Una prueba de capacidades de dos asistentes de IA, **Claude** (Anthropic) y
-> **Codex** (OpenAI), encargada por Sebastián (Fundación Social Mentes Brillantes): llevar de principio a fin un
+> **Codex** (OpenAI), encargada por la Fundación Social Mentes Brillantes: llevar de principio a fin un
 > trabajo con la forma y la exigencia de un Trabajo Fin de Máster en Inteligencia Artificial (tipo «comparativa de
 > soluciones»). **No es un trabajo presentado ante ninguna universidad.** El detalle de quién hizo qué está en el
 > Anexo A de la memoria, y las instrucciones que recibió Codex, en `proceso_ia/`.
@@ -46,11 +49,12 @@ Error absoluto medio (MAE) en viajes por hora, sobre 4.244 horas de prueba (juli
 | 2 | `src/serie_horaria.py` | Lee los CSV con SQL (DuckDB) sin seleccionar nunca las columnas del usuario; depura y arma la serie por hora |
 | 3 | `src/descargar_clima.py` | Temperatura y lluvia por hora de Open-Meteo (ERA5, CC BY 4.0) |
 | 4 | `src/feriados.py` | Feriados y días no laborables de Argentina 2022-2025, con las correcciones de cada año |
-| 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas y registro de la ejecución (29,24 s en la última ejecución) |
+| 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas, datos de la web (`src/exportar_web.py`) y registro de la ejecución (menos de un minuto) |
+| 6 | `memoria/construir_docx.py` y `memoria/construir_pdf.py` | La memoria en Word (editable) y en PDF (diseño editorial, con Edge o Chrome sin ventana) a partir de los capítulos en Markdown |
 
 Protocolo: entrenamiento 2022-2024, validación enero-junio de 2025 y prueba julio-diciembre de 2025, con un margen
 de siete días entre bloques; los modelos se congelan antes de la prueba y todas las alternativas se evalúan en las
-mismas horas. Las catorce pruebas automáticas (`tests/`) comprueban, entre otras cosas, que ninguna variable use datos
+mismas horas. Las veinte pruebas automáticas (`tests/`) comprueban, entre otras cosas, que ninguna variable use datos
 posteriores al corte de cada escenario; corren en GitHub Actions con cada cambio.
 
 ## Reproducir
@@ -68,9 +72,15 @@ Los datos procesados ya están en `datos/procesados/`. Para reconstruirlos desde
 de crear el entorno: `src/descargar_datos.py`, `src/serie_horaria.py`, `src/descargar_clima.py` y `src/feriados.py`,
 en ese orden.
 
-## Memoria
+## Memoria y página web
 
-La memoria completa está en `memoria/memoria.docx` (y en Markdown, por capítulos, en `memoria/`).
+- Memoria en PDF: `memoria/memoria.pdf` (también se descarga desde la página). En Word, editable:
+  `memoria/memoria.docx`. En Markdown, por capítulos, en `memoria/`.
+- Página: carpeta `web/` (HTML, CSS y JavaScript sin librerías; gráficos SVG dibujados a mano). Se publica en
+  GitHub Pages con `.github/workflows/pagina.yml`. Sus cifras salen de `web/datos.js`, que genera
+  `src/exportar_web.py`; una prueba comprueba que coincidan con los resultados.
+- Sistema de diseño común a la web, el PDF y las figuras: `DESIGN.md` (letras Newsreader y Schibsted Grotesk, con
+  licencia OFL, en `web/fuentes/` y `recursos/fuentes/`).
 
 ## Licencias
 

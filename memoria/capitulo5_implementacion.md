@@ -78,7 +78,7 @@ mezclado el efecto del modelo con el de los datos.
 ## 5.4. Pruebas automáticas
 
 El riesgo principal de este trabajo es usar sin querer información del futuro: un error así no produce ningún
-fallo visible, solo resultados mejores de lo que deberían. Por eso se escribieron catorce pruebas automáticas
+fallo visible, solo resultados mejores de lo que deberían. Por eso se escribieron veinte pruebas automáticas
 (`tests/`), que se ejecutan con `pytest` en pocos segundos y también en el servicio de integración continua del
 repositorio cada vez que se sube un cambio:
 
@@ -98,6 +98,10 @@ repositorio cada vez que se sube un cambio:
    solo conserva el identificador y la hora de salida.
 7. **Extracción de los ZIP**: se rechaza un ZIP con más de un CSV, y el nombre interno del ZIP nunca se usa como
    ruta (un nombre malicioso como `../../fuera.csv` no puede escribir fuera de la carpeta de datos).
+8. **Archivos temporales y resultados**: ni la extracción ni la descarga borran un archivo temporal que no crearon, y
+   los resultados en JSON nunca llevan valores no numéricos (NaN o infinitos).
+9. **La página web está al día**: sus datos coinciden con los resultados guardados y cada cifra escrita en la
+   página coincide con esos datos.
 
 Su utilidad quedó demostrada durante la propia verificación, en dos ocasiones. La prueba de la depuración detectó
 que el contador de recorridos de menos de 60 segundos también contaba los que llegan antes de salir (en los datos
@@ -142,7 +146,8 @@ versiones de las librerías queda en `resultados/registro_ejecucion.json`). Cons
 ZIP, incluida la extracción de los 3,2 GB de CSV, tarda unos 25 segundos; DuckDB recorre cada tabla una sola vez
 para todos los contadores de calidad, y los CSV extraídos se borran en cuanto dejan de hacer falta. El experimento
 completo, con la búsqueda de configuraciones de los tres escenarios, el ajuste final, la prueba, los contrastes, las
-seis figuras y las tablas complementarias, tardó **29,24 segundos** en la última ejecución.
+seis figuras y las tablas complementarias, tardó **29,24 segundos** con el equipo libre (es la ejecución que queda en
+`resultados/registro_ejecucion.json`); con el equipo ocupado por otros programas puede acercarse al minuto.
 
 Durante el experimento se limitó a un hilo el paralelismo interno de las bibliotecas numéricas, para que los
 tiempos de ajuste fueran comparables entre métodos. En los ajustes finales, Ridge tardó unas 0,03 s, el *boosting*

@@ -1,0 +1,1692 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="408.036719pt" height="192.476375pt" viewBox="0 0 408.036719 192.476375" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 192.476375 
+L 408.036719 192.476375 
+L 408.036719 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 36.876719 158.112 
+L 405.156719 158.112 
+L 405.156719 2.88 
+L 36.876719 2.88 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mc7629a1255" d="M 0 0 
+L 0 3 
+" style="stroke: #62686f; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc7629a1255" x="36.876719" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0:00 -->
+      <g style="fill: #4f555d" transform="translate(27.794336 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-82" d="M 1956 -75 
+Q 1175 -75 744 536 
+Q 313 1147 313 2250 
+Q 313 3353 744 3964 
+Q 1175 4575 1956 4575 
+Q 2741 4575 3170 3964 
+Q 3600 3353 3600 2250 
+Q 3600 1147 3170 536 
+Q 2741 -75 1956 -75 
+z
+M 1956 375 
+Q 2475 375 2740 853 
+Q 3006 1331 3006 2250 
+Q 3006 3169 2740 3647 
+Q 2475 4125 1956 4125 
+Q 1438 4125 1172 3647 
+Q 906 3169 906 2250 
+Q 906 1331 1172 853 
+Q 1438 375 1956 375 
+z
+" transform="scale(0.015625)"/>
+        <path id="SchibstedGrotesk-Regular-bf" d="M 897 -75 
+Q 697 -75 559 62 
+Q 422 200 422 400 
+Q 422 600 559 737 
+Q 697 875 897 875 
+Q 1097 875 1234 737 
+Q 1372 600 1372 400 
+Q 1372 200 1234 62 
+Q 1097 -75 897 -75 
+z
+M 897 2500 
+Q 697 2500 559 2637 
+Q 422 2775 422 2975 
+Q 422 3175 559 3312 
+Q 697 3450 897 3450 
+Q 1097 3450 1234 3312 
+Q 1372 3175 1372 2975 
+Q 1372 2775 1234 2637 
+Q 1097 2500 897 2500 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-82"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(61.140625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(89.171875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(152.5625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mc7629a1255" x="68.901067" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 2:00 -->
+      <g style="fill: #4f555d" transform="translate(59.984699 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-84" d="M 219 0 
+L 219 369 
+L 1800 1709 
+Q 2122 1984 2326 2209 
+Q 2531 2434 2628 2665 
+Q 2725 2897 2725 3181 
+Q 2725 3491 2617 3702 
+Q 2509 3913 2306 4019 
+Q 2103 4125 1809 4125 
+Q 1472 4125 1264 3992 
+Q 1056 3859 954 3634 
+Q 853 3409 834 3128 
+L 234 3313 
+Q 253 3613 451 3903 
+Q 650 4194 997 4384 
+Q 1344 4575 1806 4575 
+Q 2069 4575 2334 4500 
+Q 2600 4425 2823 4261 
+Q 3047 4097 3183 3833 
+Q 3319 3569 3319 3194 
+Q 3319 2659 3028 2239 
+Q 2738 1819 2216 1397 
+L 994 406 
+L 597 481 
+L 3406 481 
+L 3406 0 
+L 219 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-84"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(57.234375 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(85.265625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(148.65625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mc7629a1255" x="100.925414" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 4:00 -->
+      <g style="fill: #4f555d" transform="translate(92.021664 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-86" d="M 2481 0 
+L 2481 1488 
+L 2488 1488 
+L 2488 4150 
+L 2625 3850 
+L 631 1481 
+L 444 1644 
+L 3556 1644 
+L 3556 1163 
+L 194 1163 
+L 194 1700 
+L 2566 4500 
+L 3031 4500 
+L 3031 0 
+L 2481 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-86"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(56.9375 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(84.96875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(148.359375 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mc7629a1255" x="132.949762" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 6:00 -->
+      <g style="fill: #4f555d" transform="translate(123.938434 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-88" d="M 1975 -75 
+Q 1156 -75 732 525 
+Q 309 1125 309 2159 
+Q 309 2666 412 3105 
+Q 516 3544 727 3873 
+Q 938 4203 1256 4389 
+Q 1575 4575 2006 4575 
+Q 2450 4575 2776 4392 
+Q 3103 4209 3290 3934 
+Q 3478 3659 3509 3375 
+L 2938 3228 
+Q 2919 3631 2676 3878 
+Q 2434 4125 2016 4125 
+Q 1700 4125 1490 3987 
+Q 1281 3850 1154 3625 
+Q 1028 3400 964 3133 
+Q 900 2866 879 2603 
+Q 859 2341 859 2131 
+L 809 2181 
+Q 941 2488 1245 2725 
+Q 1550 2963 2041 2963 
+Q 2434 2963 2767 2786 
+Q 3100 2609 3300 2270 
+Q 3500 1931 3500 1444 
+Q 3500 981 3309 639 
+Q 3119 297 2775 111 
+Q 2431 -75 1975 -75 
+z
+M 1975 375 
+Q 2434 375 2686 664 
+Q 2938 953 2938 1453 
+Q 2938 1956 2688 2234 
+Q 2438 2513 1994 2513 
+Q 1538 2513 1258 2223 
+Q 978 1934 978 1434 
+Q 978 947 1248 661 
+Q 1519 375 1975 375 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-88"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(59.46875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(87.5 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(150.890625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mc7629a1255" x="164.97411" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 8:00 -->
+      <g style="fill: #4f555d" transform="translate(156.029188 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-8a" d="M 1850 -75 
+Q 1388 -75 1030 95 
+Q 672 266 470 572 
+Q 269 878 269 1278 
+Q 269 1706 525 2045 
+Q 781 2384 1275 2475 
+Q 1016 2538 822 2672 
+Q 628 2806 523 3001 
+Q 419 3197 419 3438 
+Q 419 3766 601 4023 
+Q 784 4281 1107 4428 
+Q 1431 4575 1853 4575 
+Q 2278 4575 2598 4428 
+Q 2919 4281 3100 4023 
+Q 3281 3766 3281 3438 
+Q 3281 3197 3176 3001 
+Q 3072 2806 2881 2672 
+Q 2691 2538 2431 2475 
+Q 2925 2384 3181 2045 
+Q 3438 1706 3438 1278 
+Q 3438 878 3234 572 
+Q 3031 266 2673 95 
+Q 2316 -75 1850 -75 
+z
+M 1853 419 
+Q 2319 419 2587 659 
+Q 2856 900 2856 1319 
+Q 2856 1728 2587 1973 
+Q 2319 2219 1853 2219 
+Q 1391 2219 1117 1973 
+Q 844 1728 844 1319 
+Q 844 897 1117 658 
+Q 1391 419 1853 419 
+z
+M 1853 2681 
+Q 2256 2681 2487 2865 
+Q 2719 3050 2719 3378 
+Q 2719 3719 2487 3920 
+Q 2256 4122 1853 4122 
+Q 1450 4122 1215 3920 
+Q 981 3719 981 3378 
+Q 981 3050 1215 2865 
+Q 1450 2681 1853 2681 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-8a"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(57.90625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(85.9375 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(149.328125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mc7629a1255" x="196.998458" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 10:00 -->
+      <g style="fill: #4f555d" transform="translate(186.45713 172.912781) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-83" d="M 1134 0 
+L 1134 3584 
+Q 888 3372 672 3226 
+Q 456 3081 191 2981 
+L 191 3513 
+Q 328 3578 481 3676 
+Q 634 3775 829 3967 
+Q 1025 4159 1281 4500 
+L 1684 4500 
+L 1684 0 
+L 1134 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(34.328125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(95.46875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(123.5 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(186.890625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mc7629a1255" x="229.022806" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 12:00 -->
+      <g style="fill: #4f555d" transform="translate(218.636868 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-84" transform="translate(34.578125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(91.8125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(119.84375 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(183.234375 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mc7629a1255" x="261.047154" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 14:00 -->
+      <g style="fill: #4f555d" transform="translate(250.684458 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-86" transform="translate(34.328125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(91.265625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(119.296875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(182.6875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mc7629a1255" x="293.071501" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 16:00 -->
+      <g style="fill: #4f555d" transform="translate(282.601228 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-88" transform="translate(34.328125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(93.796875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(121.828125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(185.21875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mc7629a1255" x="325.095849" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 18:00 -->
+      <g style="fill: #4f555d" transform="translate(314.650146 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-8a" transform="translate(35.3125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(93.21875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(121.25 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(184.640625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mc7629a1255" x="357.120197" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 20:00 -->
+      <g style="fill: #4f555d" transform="translate(345.578127 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-84"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(57.875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(119.015625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(147.046875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(210.4375 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mc7629a1255" x="389.144545" y="158.112" style="fill: #62686f; stroke: #62686f; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 22:00 -->
+      <g style="fill: #4f555d" transform="translate(377.751889 172.912781) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-84"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-84" transform="translate(58.265625 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-bf" transform="translate(115.5 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(143.53125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(206.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_13">
+     <!-- hora del día (dato de 1 día) -->
+     <g style="fill: #4f555d" transform="translate(170.619687 187.404969) scale(0.085 -0.085)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-4e" d="M 513 0 
+L 513 4688 
+L 1038 4688 
+L 1038 2581 
+L 984 2719 
+Q 1116 3034 1408 3242 
+Q 1700 3450 2122 3450 
+Q 2478 3450 2736 3290 
+Q 2994 3131 3134 2836 
+Q 3275 2541 3275 2125 
+L 3275 0 
+L 2750 0 
+L 2750 2084 
+Q 2750 2513 2589 2763 
+Q 2428 3013 2019 3013 
+Q 1581 3013 1309 2702 
+Q 1038 2391 1038 1766 
+L 1038 0 
+L 513 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-5d" d="M 1909 -75 
+Q 1434 -75 1071 148 
+Q 709 372 506 769 
+Q 303 1166 303 1688 
+Q 303 2209 506 2606 
+Q 709 3003 1071 3226 
+Q 1434 3450 1909 3450 
+Q 2384 3450 2746 3226 
+Q 3109 3003 3312 2606 
+Q 3516 2209 3516 1688 
+Q 3516 1166 3312 769 
+Q 3109 372 2746 148 
+Q 2384 -75 1909 -75 
+z
+M 1909 363 
+Q 2388 363 2664 719 
+Q 2941 1075 2941 1688 
+Q 2941 2303 2664 2658 
+Q 2388 3013 1909 3013 
+Q 1431 3013 1154 2658 
+Q 878 2303 878 1688 
+Q 878 1075 1154 719 
+Q 1431 363 1909 363 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-68" d="M 509 0 
+L 509 3375 
+L 1003 3375 
+L 1003 2659 
+L 984 2741 
+Q 1134 3091 1436 3270 
+Q 1738 3450 2047 3450 
+Q 2138 3450 2223 3434 
+Q 2309 3419 2384 3381 
+L 2316 2888 
+Q 2144 2941 1975 2941 
+Q 1869 2941 1711 2898 
+Q 1553 2856 1398 2729 
+Q 1244 2603 1139 2353 
+Q 1034 2103 1034 1688 
+L 1034 0 
+L 509 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-3a" d="M 1375 -75 
+Q 1038 -75 789 54 
+Q 541 184 406 409 
+Q 272 634 272 919 
+Q 272 1222 450 1478 
+Q 628 1734 1001 1889 
+Q 1375 2044 1959 2044 
+L 2522 2044 
+L 2466 1988 
+L 2466 2172 
+Q 2466 2578 2303 2795 
+Q 2141 3013 1759 3013 
+Q 1400 3013 1206 2827 
+Q 1013 2641 1000 2328 
+L 409 2463 
+Q 438 2734 617 2957 
+Q 797 3181 1098 3315 
+Q 1400 3450 1797 3450 
+Q 2206 3450 2464 3295 
+Q 2722 3141 2844 2850 
+Q 2966 2559 2966 2150 
+L 2966 609 
+Q 2966 506 2995 472 
+Q 3025 438 3122 438 
+L 3313 438 
+L 3313 0 
+L 2978 0 
+Q 2766 0 2622 133 
+Q 2478 266 2478 469 
+L 2478 706 
+L 2556 706 
+Q 2506 575 2412 439 
+Q 2319 303 2175 186 
+Q 2031 69 1832 -3 
+Q 1634 -75 1375 -75 
+z
+M 1494 363 
+Q 1753 363 1975 491 
+Q 2197 619 2333 892 
+Q 2469 1166 2469 1603 
+L 2469 1631 
+L 1941 1631 
+Q 1525 1631 1286 1522 
+Q 1047 1413 947 1252 
+Q 847 1091 847 931 
+Q 847 772 919 644 
+Q 991 516 1134 439 
+Q 1278 363 1494 363 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-b9" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-45" d="M 1650 -75 
+Q 1241 -75 927 140 
+Q 613 356 438 753 
+Q 263 1150 263 1691 
+Q 263 2231 439 2626 
+Q 616 3022 928 3236 
+Q 1241 3450 1650 3450 
+Q 1981 3450 2306 3284 
+Q 2631 3119 2797 2725 
+L 2738 2700 
+L 2738 4688 
+L 3263 4688 
+L 3263 0 
+L 2769 0 
+L 2769 703 
+L 2784 653 
+Q 2647 284 2328 104 
+Q 2009 -75 1650 -75 
+z
+M 1788 363 
+Q 2053 363 2272 500 
+Q 2491 638 2622 930 
+Q 2753 1222 2753 1678 
+Q 2753 2359 2472 2686 
+Q 2191 3013 1794 3013 
+Q 1375 3013 1106 2667 
+Q 838 2322 838 1678 
+Q 838 1053 1097 708 
+Q 1356 363 1788 363 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-47" d="M 1878 -75 
+Q 1397 -75 1045 140 
+Q 694 356 503 751 
+Q 313 1147 313 1684 
+Q 313 2225 503 2622 
+Q 694 3019 1041 3234 
+Q 1388 3450 1856 3450 
+Q 2125 3450 2395 3364 
+Q 2666 3278 2889 3067 
+Q 3113 2856 3248 2489 
+Q 3384 2122 3384 1563 
+L 650 1563 
+L 650 1988 
+L 2928 1988 
+L 2778 1791 
+Q 2763 2234 2634 2503 
+Q 2506 2772 2301 2892 
+Q 2097 3013 1847 3013 
+Q 1550 3013 1334 2858 
+Q 1119 2703 1003 2406 
+Q 888 2109 888 1681 
+Q 888 1050 1145 706 
+Q 1403 363 1878 363 
+Q 2219 363 2451 534 
+Q 2684 706 2794 1031 
+L 3309 856 
+Q 3188 563 2984 355 
+Q 2781 147 2501 36 
+Q 2222 -75 1878 -75 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-59" d="M 1003 0 
+Q 803 0 653 133 
+Q 503 266 503 469 
+L 503 4688 
+L 1028 4688 
+L 1028 609 
+Q 1028 506 1058 472 
+Q 1088 438 1184 438 
+L 1513 438 
+L 1513 0 
+L 1003 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-51" d="M 513 0 
+L 513 3375 
+L 1038 3375 
+L 1038 0 
+L 513 0 
+z
+M 850 3791 
+L 494 4000 
+L 1062 5022 
+L 1537 4741 
+L 850 3791 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-de" d="M 1272 -1056 
+Q 788 -438 538 292 
+Q 288 1022 288 1813 
+Q 288 2600 539 3331 
+Q 791 4063 1272 4688 
+L 1828 4688 
+Q 1291 3972 1039 3286 
+Q 788 2600 788 1813 
+Q 788 1013 1031 328 
+Q 1275 -356 1828 -1056 
+L 1272 -1056 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-6b" d="M 1231 0 
+Q 1031 0 881 133 
+Q 731 266 731 469 
+L 731 2938 
+L 188 2938 
+L 188 3375 
+L 731 3375 
+L 731 4081 
+L 1256 4194 
+L 1256 3375 
+L 1925 3375 
+L 1925 2938 
+L 1256 2938 
+L 1256 609 
+Q 1256 506 1286 472 
+Q 1316 438 1413 438 
+L 1928 438 
+L 1928 0 
+L 1231 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-e0" d="M 147 -1056 
+Q 700 -356 944 328 
+Q 1188 1013 1188 1813 
+Q 1188 2600 938 3286 
+Q 688 3972 147 4688 
+L 703 4688 
+Q 1184 4063 1436 3331 
+Q 1688 2600 1688 1813 
+Q 1688 1022 1438 292 
+Q 1188 -438 703 -1056 
+L 147 -1056 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-4e"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(58.15625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(117.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(154.453125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(209.578125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(234.96875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(293.65625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-59" transform="translate(350.984375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(377.15625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(402.546875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-51" transform="translate(461.484375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(485.703125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(540.828125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-de" transform="translate(566.21875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(590.828125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(649.765625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6b" transform="translate(702.984375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(734.875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(794.546875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(819.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(878.625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(935.953125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-83" transform="translate(961.34375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(995.671875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(1021.0625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-51" transform="translate(1080 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(1104.21875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-e0" transform="translate(1154.953125 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <path d="M 36.876719 158.112 
+L 405.156719 158.112 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #d6d3ca; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_14">
+      <!-- 0 -->
+      <g style="fill: #4f555d" transform="translate(27.679766 162.262391) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-82"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_15">
+      <path d="M 36.876719 126.174514 
+L 405.156719 126.174514 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #d6d3ca; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_15">
+      <!-- 50 -->
+      <g style="fill: #4f555d" transform="translate(22.574453 130.324905) scale(0.085 -0.085)">
+       <defs>
+        <path id="SchibstedGrotesk-Regular-87" d="M 1881 -75 
+Q 1491 -75 1134 86 
+Q 778 247 539 558 
+Q 300 869 259 1319 
+L 828 1497 
+Q 863 1022 1117 698 
+Q 1372 375 1863 375 
+Q 2166 375 2395 520 
+Q 2625 666 2756 922 
+Q 2888 1178 2888 1509 
+Q 2888 2013 2598 2281 
+Q 2309 2550 1881 2550 
+Q 1503 2550 1289 2361 
+Q 1075 2172 975 1938 
+L 431 1994 
+L 613 4500 
+L 3188 4500 
+L 3188 4019 
+L 1078 4019 
+L 959 2319 
+L 806 2331 
+Q 975 2619 1275 2816 
+Q 1575 3013 2006 3013 
+Q 2419 3013 2747 2825 
+Q 3075 2638 3265 2303 
+Q 3456 1969 3456 1528 
+Q 3456 1041 3237 680 
+Q 3019 319 2659 122 
+Q 2300 -75 1881 -75 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SchibstedGrotesk-Regular-87"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(60.0625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <path d="M 36.876719 94.237029 
+L 405.156719 94.237029 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #d6d3ca; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_16">
+      <!-- 100 -->
+      <g style="fill: #4f555d" transform="translate(19.373672 98.387419) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(34.328125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(97.71875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_19">
+      <path d="M 36.876719 62.299543 
+L 405.156719 62.299543 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #d6d3ca; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_17">
+      <!-- 150 -->
+      <g style="fill: #4f555d" transform="translate(19.582187 66.449934) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-83"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-87" transform="translate(35.203125 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(95.265625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_21">
+      <path d="M 36.876719 30.362057 
+L 405.156719 30.362057 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #d6d3ca; stroke-width: 0.7; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_18">
+      <!-- 200 -->
+      <g style="fill: #4f555d" transform="translate(17.372187 34.512448) scale(0.085 -0.085)">
+       <use xlink:href="#SchibstedGrotesk-Regular-84"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(57.875 0)"/>
+       <use xlink:href="#SchibstedGrotesk-Regular-82" transform="translate(121.265625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_19">
+     <!-- MAE (viajes por hora) -->
+     <g style="fill: #4f555d" transform="translate(11.180781 122.238305) rotate(-90) scale(0.085 -0.085)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-1e" d="M 388 0 
+L 638 4500 
+L 1563 4500 
+L 2838 406 
+L 2713 406 
+L 3994 4500 
+L 4919 4500 
+L 5169 0 
+L 4625 0 
+L 4406 4075 
+L 4416 4075 
+L 3094 0 
+L 2469 0 
+L 1141 4075 
+L 1150 4075 
+L 931 0 
+L 388 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-1" d="M 63 0 
+L 1963 4500 
+L 2525 4500 
+L 4419 0 
+L 3819 0 
+L 2244 3913 
+L 663 0 
+L 63 0 
+z
+M 1038 1475 
+L 1038 1938 
+L 3444 1938 
+L 3444 1475 
+L 1038 1475 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-e" d="M 513 0 
+L 513 4500 
+L 3478 4500 
+L 3478 4038 
+L 1075 4038 
+L 1075 2625 
+L 3178 2625 
+L 3178 2163 
+L 1075 2163 
+L 1075 463 
+L 3522 463 
+L 3522 0 
+L 513 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-71" d="M 1441 0 
+L 172 3375 
+L 753 3375 
+L 1825 297 
+L 1725 297 
+L 2791 3375 
+L 3372 3375 
+L 2109 0 
+L 1441 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-4f" d="M 513 0 
+L 513 3375 
+L 1038 3375 
+L 1038 0 
+L 513 0 
+z
+M 775 3941 
+Q 594 3941 466 4069 
+Q 338 4197 338 4378 
+Q 338 4563 466 4689 
+Q 594 4816 775 4816 
+Q 959 4816 1086 4689 
+Q 1213 4563 1213 4378 
+Q 1213 4197 1086 4069 
+Q 959 3941 775 3941 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-56" d="M 163 -1219 
+L 163 -781 
+L 556 -781 
+Q 656 -781 684 -747 
+Q 713 -713 713 -609 
+L 713 3375 
+L 1238 3375 
+L 1238 -750 
+Q 1238 -953 1088 -1086 
+Q 938 -1219 738 -1219 
+L 163 -1219 
+z
+M 975 3941 
+Q 794 3941 666 4069 
+Q 538 4197 538 4378 
+Q 538 4563 666 4689 
+Q 794 4816 975 4816 
+Q 1159 4816 1286 4689 
+Q 1413 4563 1413 4378 
+Q 1413 4197 1286 4069 
+Q 1159 3941 975 3941 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-69" d="M 1663 -75 
+Q 1297 -75 998 45 
+Q 700 166 503 411 
+Q 306 656 241 1034 
+L 791 1141 
+Q 825 744 1061 550 
+Q 1297 356 1653 356 
+Q 2006 356 2215 534 
+Q 2425 713 2425 969 
+Q 2425 1188 2276 1316 
+Q 2128 1444 1847 1497 
+L 1438 1575 
+Q 1272 1606 1094 1662 
+Q 916 1719 761 1819 
+Q 606 1919 511 2081 
+Q 416 2244 416 2491 
+Q 416 2822 589 3033 
+Q 763 3244 1048 3347 
+Q 1334 3450 1666 3450 
+Q 2028 3450 2297 3337 
+Q 2566 3225 2734 3015 
+Q 2903 2806 2959 2509 
+L 2381 2394 
+Q 2359 2584 2279 2725 
+Q 2200 2866 2048 2942 
+Q 1897 3019 1656 3019 
+Q 1366 3019 1156 2897 
+Q 947 2775 947 2528 
+Q 947 2391 1017 2294 
+Q 1088 2197 1230 2133 
+Q 1372 2069 1588 2022 
+L 2003 1934 
+Q 2266 1881 2487 1776 
+Q 2709 1672 2843 1487 
+Q 2978 1303 2978 1000 
+Q 2978 666 2811 423 
+Q 2644 181 2348 53 
+Q 2053 -75 1663 -75 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-65" d="M 509 -1219 
+L 509 3375 
+L 1003 3375 
+L 1003 2672 
+L 988 2722 
+Q 1125 3091 1444 3270 
+Q 1763 3450 2122 3450 
+Q 2534 3450 2846 3234 
+Q 3159 3019 3334 2622 
+Q 3509 2225 3509 1684 
+Q 3509 1144 3332 748 
+Q 3156 353 2843 139 
+Q 2531 -75 2122 -75 
+Q 1791 -75 1466 90 
+Q 1141 256 975 650 
+L 1022 675 
+L 1022 -1219 
+L 509 -1219 
+z
+M 1978 363 
+Q 2397 363 2665 708 
+Q 2934 1053 2934 1697 
+Q 2934 2322 2675 2667 
+Q 2416 3013 1984 3013 
+Q 1722 3013 1501 2875 
+Q 1281 2738 1150 2447 
+Q 1019 2156 1019 1697 
+Q 1019 1019 1300 691 
+Q 1581 363 1978 363 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-1e"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-1" transform="translate(87.546875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-e" transform="translate(157.5625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(216.109375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-de" transform="translate(241.5 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-71" transform="translate(266.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(321.734375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(345.953125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-56" transform="translate(398.640625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(425.703125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-69" transform="translate(483.03125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(534.296875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-65" transform="translate(559.6875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(621.359375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(680.59375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(720.734375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4e" transform="translate(746.125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(804.28125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(863.515625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(900.578125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-e0" transform="translate(951.3125 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 36.876719 130.360671 
+L 52.888893 134.301432 
+L 68.901067 141.868992 
+L 84.91324 146.5712 
+L 100.925414 149.389638 
+L 116.937588 144.932825 
+L 132.949762 130.064753 
+L 148.961936 95.233045 
+L 164.97411 86.98343 
+L 180.986284 96.788419 
+L 196.998458 103.525965 
+L 213.010632 93.591061 
+L 229.022806 64.576668 
+L 245.03498 58.885536 
+L 261.047154 62.767718 
+L 277.059327 46.983985 
+L 293.071501 28.7309 
+L 309.083675 14.429402 
+L 325.095849 16.32039 
+L 341.108023 50.372606 
+L 357.120197 69.502619 
+L 373.132371 92.169212 
+L 389.144545 113.049471 
+L 405.156719 122.767849 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke-dasharray: 3,2; stroke-dashoffset: 0; stroke: #80858c"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 36.876719 118.729652 
+L 52.888893 124.456747 
+L 68.901067 137.958905 
+L 84.91324 145.694273 
+L 100.925414 148.014702 
+L 116.937588 142.763963 
+L 132.949762 125.986859 
+L 148.961936 87.862162 
+L 164.97411 76.343015 
+L 180.986284 93.731803 
+L 196.998458 104.444393 
+L 213.010632 96.326498 
+L 229.022806 64.434122 
+L 245.03498 61.433193 
+L 261.047154 62.604401 
+L 277.059327 47.655213 
+L 293.071501 28.097563 
+L 309.083675 13.556083 
+L 325.095849 9.983415 
+L 341.108023 38.580998 
+L 357.120197 58.095343 
+L 373.132371 82.109806 
+L 389.144545 99.992994 
+L 405.156719 112.706639 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke-dasharray: 1,1.6; stroke-dashoffset: 0; stroke: #80858c"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 36.876719 132.11899 
+L 52.888893 134.307863 
+L 68.901067 142.772268 
+L 84.91324 147.815551 
+L 100.925414 150.135605 
+L 116.937588 148.177081 
+L 132.949762 138.13298 
+L 148.961936 112.952456 
+L 164.97411 103.599366 
+L 180.986284 114.673771 
+L 196.998458 118.802703 
+L 213.010632 109.937198 
+L 229.022806 83.690034 
+L 245.03498 75.015006 
+L 261.047154 74.565184 
+L 277.059327 58.144348 
+L 293.071501 39.16442 
+L 309.083675 30.078774 
+L 325.095849 39.44629 
+L 341.108023 66.097336 
+L 357.120197 83.75181 
+L 373.132371 103.872219 
+L 389.144545 118.727819 
+L 405.156719 128.127777 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke-dasharray: 5,1.5; stroke-dashoffset: 0; stroke: #62686f"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 36.876719 136.642579 
+L 52.888893 137.613799 
+L 68.901067 144.438893 
+L 84.91324 148.606974 
+L 100.925414 151.420111 
+L 116.937588 148.257937 
+L 132.949762 139.919184 
+L 148.961936 117.975326 
+L 164.97411 110.104081 
+L 180.986284 119.272111 
+L 196.998458 120.230679 
+L 213.010632 113.420428 
+L 229.022806 92.432211 
+L 245.03498 86.24086 
+L 261.047154 86.716843 
+L 277.059327 71.785547 
+L 293.071501 54.242342 
+L 309.083675 39.362388 
+L 325.095849 47.344993 
+L 341.108023 71.794594 
+L 357.120197 92.294686 
+L 373.132371 109.830322 
+L 389.144545 123.745024 
+L 405.156719 130.418798 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #965806; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 36.876719 132.859035 
+L 52.888893 136.682967 
+L 68.901067 144.614156 
+L 84.91324 149.110226 
+L 100.925414 150.990926 
+L 116.937588 148.076764 
+L 132.949762 138.81327 
+L 148.961936 116.715091 
+L 164.97411 106.892183 
+L 180.986284 115.655763 
+L 196.998458 116.863074 
+L 213.010632 110.4254 
+L 229.022806 90.623928 
+L 245.03498 85.133937 
+L 261.047154 84.489225 
+L 277.059327 67.8448 
+L 293.071501 51.387787 
+L 309.083675 43.306273 
+L 325.095849 45.645349 
+L 341.108023 73.682312 
+L 357.120197 90.863207 
+L 373.132371 106.893245 
+L 389.144545 119.843107 
+L 405.156719 128.947806 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke: #4f555d; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 36.876719 138.13952 
+L 52.888893 139.664496 
+L 68.901067 145.992595 
+L 84.91324 149.528379 
+L 100.925414 152.051723 
+L 116.937588 149.983036 
+L 132.949762 143.022823 
+L 148.961936 125.110468 
+L 164.97411 121.696979 
+L 180.986284 127.604607 
+L 196.998458 127.271596 
+L 213.010632 124.900217 
+L 229.022806 109.798603 
+L 245.03498 111.375507 
+L 261.047154 106.837219 
+L 277.059327 94.726075 
+L 293.071501 85.490226 
+L 309.083675 72.606065 
+L 325.095849 72.235194 
+L 341.108023 94.935654 
+L 357.120197 108.816684 
+L 373.132371 119.764892 
+L 389.144545 128.810065 
+L 405.156719 134.603853 
+" clip-path="url(#p3cb0442758)" style="fill: none; stroke-dasharray: 1.1,1.76; stroke-dashoffset: 0; stroke: #965806; stroke-width: 1.1"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 36.876719 158.112 
+L 405.156719 158.112 
+" style="fill: none; stroke: #62686f; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_29">
+     <path d="M 44.076719 15.0925 
+L 51.276719 15.0925 
+L 58.476719 15.0925 
+" style="fill: none; stroke-dasharray: 3,2; stroke-dashoffset: 0; stroke: #80858c"/>
+    </g>
+    <g id="text_20">
+     <!-- Ingenuo semanal -->
+     <g transform="translate(64.876719 17.8925) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-16" d="M 253 0 
+L 253 438 
+L 850 438 
+L 850 4063 
+L 253 4063 
+L 253 4500 
+L 2009 4500 
+L 2009 4063 
+L 1413 4063 
+L 1413 438 
+L 2009 438 
+L 2009 0 
+L 253 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-5b" d="M 509 0 
+L 509 3375 
+L 1003 3375 
+L 1003 2613 
+L 981 2750 
+Q 1116 3041 1406 3245 
+Q 1697 3450 2113 3450 
+Q 2472 3450 2731 3290 
+Q 2991 3131 3131 2836 
+Q 3272 2541 3272 2125 
+L 3272 0 
+L 2747 0 
+L 2747 2084 
+Q 2747 2500 2576 2756 
+Q 2406 3013 2016 3013 
+Q 1594 3013 1314 2692 
+Q 1034 2372 1034 1766 
+L 1034 0 
+L 509 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-4d" d="M 1697 -1294 
+Q 944 -1294 587 -1083 
+Q 231 -872 231 -431 
+Q 231 -181 359 16 
+Q 488 213 803 319 
+Q 684 391 609 509 
+Q 534 628 534 775 
+Q 534 950 643 1089 
+Q 753 1228 956 1288 
+Q 706 1434 567 1686 
+Q 428 1938 428 2272 
+Q 428 2634 589 2898 
+Q 750 3163 1048 3306 
+Q 1347 3450 1759 3450 
+Q 2172 3450 2473 3306 
+Q 2775 3163 2939 2897 
+Q 3103 2631 3103 2266 
+Q 3103 1906 2939 1645 
+Q 2775 1384 2472 1242 
+Q 2169 1100 1750 1100 
+L 1459 1100 
+Q 1066 1100 1066 866 
+Q 1066 644 1447 644 
+L 2122 644 
+Q 2522 644 2767 551 
+Q 3013 459 3142 314 
+Q 3272 169 3319 0 
+Q 3366 -169 3366 -322 
+Q 3366 -819 3006 -1056 
+Q 2647 -1294 1891 -1294 
+L 1697 -1294 
+z
+M 1697 -875 
+L 1891 -875 
+Q 2822 -875 2822 -319 
+Q 2822 -88 2655 59 
+Q 2488 206 2084 206 
+L 1503 206 
+Q 1191 206 981 79 
+Q 772 -47 772 -334 
+Q 772 -609 998 -742 
+Q 1225 -875 1697 -875 
+z
+M 1759 1469 
+Q 2156 1469 2368 1673 
+Q 2581 1878 2581 2266 
+Q 2581 2650 2368 2862 
+Q 2156 3075 1759 3075 
+Q 1366 3075 1156 2864 
+Q 947 2653 947 2266 
+Q 947 1878 1156 1673 
+Q 1366 1469 1759 1469 
+z
+M 2316 3097 
+L 2316 3431 
+Q 2316 3634 2466 3767 
+Q 2616 3900 2816 3900 
+L 3222 3900 
+L 3222 3463 
+L 2888 3463 
+Q 2791 3463 2761 3428 
+Q 2731 3394 2731 3291 
+L 2731 3097 
+L 2316 3097 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-6c" d="M 1600 -75 
+Q 1247 -75 987 84 
+Q 728 244 587 541 
+Q 447 838 447 1250 
+L 447 3375 
+L 972 3375 
+L 972 1291 
+Q 972 878 1128 620 
+Q 1284 363 1691 363 
+Q 1994 363 2216 519 
+Q 2438 675 2561 987 
+Q 2684 1300 2684 1769 
+L 2684 3375 
+L 3209 3375 
+L 3209 0 
+L 2716 0 
+L 2716 794 
+L 2738 656 
+Q 2606 344 2314 134 
+Q 2022 -75 1600 -75 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-5a" d="M 509 0 
+L 509 3375 
+L 1003 3375 
+L 1003 2797 
+Q 1122 3059 1397 3254 
+Q 1672 3450 2050 3450 
+Q 2384 3450 2632 3267 
+Q 2881 3084 3003 2750 
+Q 3163 3059 3439 3254 
+Q 3716 3450 4084 3450 
+Q 4569 3450 4851 3098 
+Q 5134 2747 5134 2125 
+L 5134 0 
+L 4609 0 
+L 4609 2084 
+Q 4609 2372 4550 2580 
+Q 4491 2788 4355 2900 
+Q 4219 3013 3984 3013 
+Q 3728 3013 3523 2867 
+Q 3319 2722 3201 2444 
+Q 3084 2166 3084 1766 
+L 3084 0 
+L 2559 0 
+L 2559 2084 
+Q 2559 2372 2500 2580 
+Q 2441 2788 2306 2900 
+Q 2172 3013 1941 3013 
+Q 1684 3013 1478 2869 
+Q 1272 2725 1153 2447 
+Q 1034 2169 1034 1766 
+L 1034 0 
+L 509 0 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-16"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(35.359375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4d" transform="translate(94.453125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(149.671875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(207 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6c" transform="translate(265.109375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(322.78125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(382.453125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-69" transform="translate(407.84375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(459.84375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5a" transform="translate(517.171875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(604.671875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(659.796875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(718.15625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-59" transform="translate(773.28125 0)"/>
+     </g>
+    </g>
+    <g id="line2d_30">
+     <path d="M 44.076719 28.9675 
+L 51.276719 28.9675 
+L 58.476719 28.9675 
+" style="fill: none; stroke-dasharray: 1,1.6; stroke-dashoffset: 0; stroke: #80858c"/>
+    </g>
+    <g id="text_21">
+     <!-- Mediana de calendario -->
+     <g transform="translate(64.876719 31.7675) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-43" d="M 1856 -75 
+Q 1381 -75 1034 140 
+Q 688 356 500 751 
+Q 313 1147 313 1688 
+Q 313 2228 500 2623 
+Q 688 3019 1034 3234 
+Q 1381 3450 1856 3450 
+Q 2219 3450 2505 3317 
+Q 2791 3184 2989 2936 
+Q 3188 2688 3281 2338 
+L 2747 2197 
+Q 2659 2591 2432 2802 
+Q 2206 3013 1856 3013 
+Q 1391 3013 1139 2667 
+Q 888 2322 888 1688 
+Q 888 1050 1139 706 
+Q 1391 363 1856 363 
+Q 2203 363 2428 567 
+Q 2653 772 2744 1159 
+L 3275 1009 
+Q 3200 753 3069 553 
+Q 2938 353 2758 212 
+Q 2578 72 2351 -1 
+Q 2125 -75 1856 -75 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-1e"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(86.8125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(146.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(205.328125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(229.546875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(284.671875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(343.03125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(398.15625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(423.546875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(482.234375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(539.5625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-43" transform="translate(564.953125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(620.8125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-59" transform="translate(675.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(701.8125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(759.140625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(818.28125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(877.21875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(932.34375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(971.515625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(995.25 0)"/>
+     </g>
+    </g>
+    <g id="line2d_31">
+     <path d="M 44.076719 42.8425 
+L 51.276719 42.8425 
+L 58.476719 42.8425 
+" style="fill: none; stroke-dasharray: 5,1.5; stroke-dashoffset: 0; stroke: #62686f"/>
+    </g>
+    <g id="text_22">
+     <!-- Ridge -->
+     <g transform="translate(64.876719 45.6425) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-2c" d="M 513 0 
+L 513 4500 
+L 2228 4500 
+Q 3791 4500 3791 3316 
+Q 3791 2122 2219 2122 
+L 1075 2122 
+L 1075 0 
+L 513 0 
+z
+M 3153 0 
+L 1959 2278 
+L 2597 2278 
+L 3791 0 
+L 3153 0 
+z
+M 1075 2584 
+L 2228 2584 
+Q 2703 2584 2959 2770 
+Q 3216 2956 3216 3306 
+Q 3216 3659 2959 3848 
+Q 2703 4038 2228 4038 
+L 1075 4038 
+L 1075 2584 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-2c"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(63.671875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-45" transform="translate(87.890625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4d" transform="translate(146.828125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(202.046875 0)"/>
+     </g>
+    </g>
+    <g id="line2d_32">
+     <path d="M 160.470469 15.0925 
+L 167.670469 15.0925 
+L 174.870469 15.0925 
+" style="fill: none; stroke: #965806; stroke-width: 1.8; stroke-linecap: round"/>
+    </g>
+    <g id="text_23">
+     <!-- Boosting -->
+     <g transform="translate(181.270469 17.8925) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-9" d="M 513 0 
+L 513 4500 
+L 2228 4500 
+Q 2888 4500 3284 4229 
+Q 3681 3959 3681 3438 
+Q 3681 3119 3540 2908 
+Q 3400 2697 3179 2583 
+Q 2959 2469 2716 2441 
+L 2725 2453 
+Q 3219 2372 3536 2065 
+Q 3853 1759 3853 1209 
+Q 3853 763 3645 497 
+Q 3438 231 3094 115 
+Q 2750 0 2341 0 
+L 513 0 
+z
+M 1075 463 
+L 2341 463 
+Q 2706 463 2912 589 
+Q 3119 716 3201 912 
+Q 3284 1109 3284 1322 
+Q 3284 1625 3143 1822 
+Q 3003 2019 2747 2116 
+Q 2491 2213 2141 2213 
+L 1075 2213 
+L 1075 463 
+z
+M 1075 2675 
+L 2200 2675 
+Q 2569 2675 2831 2833 
+Q 3094 2991 3094 3363 
+Q 3094 3659 2892 3848 
+Q 2691 4038 2231 4038 
+L 1075 4038 
+L 1075 2675 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-9"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(66.21875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(127.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-69" transform="translate(187.609375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6b" transform="translate(238.1875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(272.171875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(296.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4d" transform="translate(355.484375 0)"/>
+     </g>
+    </g>
+    <g id="line2d_33">
+     <path d="M 160.470469 28.9675 
+L 167.670469 28.9675 
+L 174.870469 28.9675 
+" style="fill: none; stroke: #4f555d; stroke-linecap: round"/>
+    </g>
+    <g id="text_24">
+     <!-- Perceptrón multicapa -->
+     <g transform="translate(181.270469 31.7675) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-29" d="M 513 0 
+L 513 4500 
+L 2134 4500 
+Q 2919 4500 3312 4178 
+Q 3706 3856 3706 3247 
+Q 3706 2650 3314 2322 
+Q 2922 1994 2125 1994 
+L 1075 1994 
+L 1075 0 
+L 513 0 
+z
+M 1075 2456 
+L 2134 2456 
+Q 2622 2456 2876 2665 
+Q 3131 2875 3131 3238 
+Q 3131 3563 2903 3800 
+Q 2675 4038 2134 4038 
+L 1075 4038 
+L 1075 2456 
+z
+" transform="scale(0.015625)"/>
+       <path id="SchibstedGrotesk-Regular-5e" d="M 1909 -75 
+Q 1434 -75 1071 148 
+Q 709 372 506 769 
+Q 303 1166 303 1688 
+Q 303 2209 506 2606 
+Q 709 3003 1071 3226 
+Q 1434 3450 1909 3450 
+Q 2384 3450 2746 3226 
+Q 3109 3003 3312 2606 
+Q 3516 2209 3516 1688 
+Q 3516 1166 3312 769 
+Q 3109 372 2746 148 
+Q 2384 -75 1909 -75 
+z
+M 1909 363 
+Q 2388 363 2664 719 
+Q 2941 1075 2941 1688 
+Q 2941 2303 2664 2658 
+Q 2388 3013 1909 3013 
+Q 1431 3013 1154 2658 
+Q 878 2303 878 1688 
+Q 878 1075 1154 719 
+Q 1431 363 1909 363 
+z
+M 1985 3791 
+L 1629 4000 
+L 2197 5022 
+L 2672 4741 
+L 1985 3791 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-29"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(59.609375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(116.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-43" transform="translate(154.15625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-47" transform="translate(209.28125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-65" transform="translate(266.609375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6b" transform="translate(325.453125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-68" transform="translate(359.4375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5e" transform="translate(396.59375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(455.828125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(513.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5a" transform="translate(539.328125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6c" transform="translate(626.578125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-59" transform="translate(684.59375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6b" transform="translate(709.734375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(743.71875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-43" transform="translate(767.640625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(823.5 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-65" transform="translate(878.765625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(939.125 0)"/>
+     </g>
+    </g>
+    <g id="line2d_34">
+     <path d="M 160.470469 42.8425 
+L 167.670469 42.8425 
+L 174.870469 42.8425 
+" style="fill: none; stroke-dasharray: 1.1,1.76; stroke-dashoffset: 0; stroke: #965806; stroke-width: 1.1"/>
+    </g>
+    <g id="text_25">
+     <!-- Boosting + clima -->
+     <g transform="translate(181.270469 45.6425) scale(0.08 -0.08)">
+      <defs>
+       <path id="SchibstedGrotesk-Regular-10d" d="M 1788 531 
+L 1788 1881 
+L 438 1881 
+L 438 2369 
+L 1788 2369 
+L 1788 3719 
+L 2275 3719 
+L 2275 2369 
+L 3625 2369 
+L 3625 1881 
+L 2275 1881 
+L 2275 531 
+L 1788 531 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#SchibstedGrotesk-Regular-9"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(66.21875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5d" transform="translate(127.9375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-69" transform="translate(187.609375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-6b" transform="translate(238.1875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(272.171875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5b" transform="translate(296.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4d" transform="translate(355.484375 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(411 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-10d" transform="translate(436.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-b9" transform="translate(499.875 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-43" transform="translate(525.265625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-59" transform="translate(580.390625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-4f" transform="translate(606.90625 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-5a" transform="translate(631.125 0)"/>
+      <use xlink:href="#SchibstedGrotesk-Regular-3a" transform="translate(718.625 0)"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3cb0442758">
+   <rect x="36.876719" y="2.88" width="368.28" height="155.232"/>
+  </clipPath>
+ </defs>
+</svg>

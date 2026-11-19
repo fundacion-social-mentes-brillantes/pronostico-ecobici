@@ -75,12 +75,14 @@ def enlace(par, url, texto):
     par._p.append(h)
 
 
-TOKEN = re.compile(r"(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|https?://[^\s)]+|\$[^$]+\$)")
+# Las URL admiten paréntesis equilibrados (p. ej. https://doi.org/10.1016/S0169-2070(00)00065-0); un «)» suelto
+# las cierra, para que una URL entre paréntesis no se lleve el paréntesis de cierre.
+TOKEN = re.compile(r"(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|https?://(?:[^\s()]|\([^\s()]*\))+|\$[^$]+\$)")
 
 
 def texto_latex(s):
     """Convierte LaTeX en línea sencillo a texto legible."""
-    reemplazos = {r"\in": "∈", r"\{": "{", r"\}": "}", r"\hat y": "ŷ", r"\hat{y}": "ŷ", r"\sum": "Σ",
+    reemplazos = {r"\in": "∈", r"\{": "{", r"\}": "}", r"\hat y": "ŷ", r"\hat{y}": "ŷ", r"\sum": "∑",
                   r"\sqrt": "√", r"\log": "log", r"\exp": "exp", r"\alpha": "α", r"\times": "×", r"\le": "≤",
                   r"\ge": "≥", r"\cdot": "·", r"\,": " ", r"\left": "", r"\right": "", r"\ldots": "…",
                   r"\dots": "…", r"\mathrm": "", r"\text": "", r"\neq": "≠", r"\approx": "≈"}
@@ -165,7 +167,7 @@ def portada(doc):
                        ("Memoria con la estructura de un Trabajo Fin de Máster en Inteligencia Artificial", 12),
                        ("", 12),
                        ("Realizada por Claude (Anthropic) y Codex (OpenAI) como prueba de capacidades,", 11),
-                       ("por encargo de Sebastián, Fundación Social Mentes Brillantes", 11),
+                       ("por encargo de la Fundación Social Mentes Brillantes", 11),
                        ("No es un trabajo presentado ante ninguna universidad (ver Anexo A)", 11),
                        ("", 12), ("Noviembre de 2026", 12)):
         q = doc.add_paragraph()

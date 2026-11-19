@@ -1,4 +1,4 @@
-01_viajes_diarios|**Figura 4.1.** Viajes iniciados por día en Ecobici, 2022-2025, con las particiones de ajuste, validación y prueba. Los puntos rojos marcan los días con alguna hora de cobertura dudosa. Fuente: elaboración propia a partir de los recorridos de Buenos Aires Data.
+01_viajes_diarios|**Figura 4.1.** Viajes iniciados por día en Ecobici, 2022-2025, con las particiones de ajuste, validación y prueba. Los círculos marcan los días con alguna hora de cobertura dudosa (su subtotal observado). Fuente: elaboración propia a partir de los recorridos de Buenos Aires Data.
 02_perfil_horario|**Figura 4.2.** Perfil horario medio de los viajes según el tipo de día, bloque de ajuste 2022-2024. Fuente: elaboración propia.
 03_mae_por_metodo|**Figura 6.1.** Error absoluto medio (MAE) de prueba de cada método con 1, 24 y 168 horas de retraso. Fuente: elaboración propia.
 04_semana_de_prueba|**Figura 6.2.** Viajes reales y pronosticados durante la primera semana completa del periodo de prueba: modelo de *boosting* con los tres retrasos e ingenuo semanal. Fuente: elaboración propia.

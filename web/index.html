@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La edad del dato · Pronóstico de viajes de Ecobici</title>
+<meta name="description" content="Cuánto empeora el pronóstico de viajes por hora de Ecobici, en Buenos Aires, cuando el último dato tiene una hora, un día o una semana de atraso. Cinco técnicas comparadas con 11,9 millones de viajes reales.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121518" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El dato fresco pesa más que el modelo">
+<meta property="og:description" content="Pronóstico de viajes de Ecobici con datos de hace una hora, un día o una semana: cinco técnicas comparadas con 11,9 millones de viajes.">
+<meta property="og:url" content="https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/">
+<meta property="og:image" content="https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fuentes/Newsreader-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/SchibstedGrotesk-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilos.css">
+<script src="datos.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="marco cabecera__fila">
+    <a class="marca" href="#hallazgo">Pronóstico Ecobici</a>
+    <nav class="secciones" aria-label="Secciones">
+      <ul>
+        <li class="solo-ancho"><a href="#hallazgo">Hallazgo</a></li>
+        <li><a href="#datos">Datos</a></li>
+        <li><a href="#metodo">Método</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#limites">Límites</a></li>
+        <li><a href="#descargas">Descargas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section id="hallazgo" class="portada marco" aria-labelledby="titular">
+  <h1 id="titular">El dato fresco pesa más que el modelo.</h1>
+  <p class="entrada">Este estudio pronostica cuántos viajes empiezan cada hora en <strong>Ecobici</strong>, las bicicletas
+    públicas de Buenos Aires, cuando el último conteo disponible tiene una hora, un día o una semana de atraso. Elegir
+    entre modelos competentes cambió el error alrededor de un 10&nbsp;%. Perder la hora más reciente lo multiplicó por
+    dos y medio.</p>
+
+  <figure class="edad" id="edad" data-retraso="1" aria-labelledby="edad-titulo">
+    <div class="edad__cabeza">
+    <div class="edad__mando">
+      <span class="etiqueta" id="edad-titulo">Edad del último dato que ve el modelo</span>
+      <div class="segmentos" role="group" aria-labelledby="edad-titulo">
+        <button type="button" data-retraso="1" aria-pressed="true">1 hora</button>
+        <button type="button" data-retraso="24" aria-pressed="false">1 día</button>
+        <button type="button" data-retraso="168" aria-pressed="false">1 semana</button>
+      </div>
+    </div>
+
+    <p class="edad__lectura" id="lectura" aria-live="polite">Con el último dato de hace 1 hora, el mejor modelo se
+      equivoca en promedio <span class="cifra-edad"><span data-cifra="metricas.1.boosting.mae">31</span> viajes por
+      hora</span> en el semestre de prueba.</p>
+    </div>
+
+    <div class="grafico" id="grafico-edad" tabindex="0" role="img"
+         aria-label="Viajes reales y pronosticados, hora por hora, durante una semana de prueba">
+      <noscript><p class="nota">El gráfico interactivo necesita JavaScript. Las cifras completas están en la tabla de
+        resultados y en la memoria.</p></noscript>
+    </div>
+
+    <div class="edad__pie">
+      <ul class="leyenda" aria-label="Leyenda">
+        <li><span class="muestra" aria-hidden="true"></span>Viajes reales</li>
+        <li><span class="muestra muestra--pred" aria-hidden="true"></span>Pronóstico</li>
+        <li><span class="muestra muestra--error" aria-hidden="true"></span>Error</li>
+      </ul>
+      <div class="semanas-nav">
+        <button type="button" class="boton-icono" id="semana-antes" aria-label="Semana anterior">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>
+        </button>
+        <output id="semana-etiqueta" aria-live="polite">30 sep – 6 oct · típica</output>
+        <button type="button" class="boton-icono" id="semana-despues" aria-label="Semana siguiente">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <figcaption class="nota">Cada línea de color es el pronóstico del <em>boosting</em> de árboles, el modelo con menos
+      error en los tres casos. La página abre en la semana cuyo error más se parece al del semestre completo; con las
+      flechas se recorren las <span data-cifra="semanas.lista.length">26</span>. Pasa el cursor o el dedo por el gráfico
+      para ver qué conteo veía el modelo en cada hora (con el teclado: flechas, y Mayús + flechas para saltar un día).</figcaption>
+
+    <details class="datos-tabla" id="tabla-semana">
+      <summary>Ver esta semana en una tabla</summary>
+      <div class="tabla-desplazable"></div>
+    </details>
+  </figure>
+</section>
+
+<section class="seccion" aria-labelledby="t-importa">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-importa">Por qué importa la edad del dato</h2></div>
+    <div class="seccion__cuerpo">
+      <p>Un sistema de bicicletas públicas necesita saber cuántos viajes vienen en las próximas horas para mover
+        bicicletas y repartir personal. Pero el último dato no siempre está a mano: los registros se publican tarde, un
+        servicio se cae, una exportación corre una vez al día o una vez por semana.</p>
+      <p>Lo habitual es comparar modelos dando por hecho que el dato de la hora anterior está disponible. Aquí la
+        pregunta fue otra: con el mismo protocolo y los mismos datos, ¿cuánto se pierde cuando el último conteo
+        llega con una hora, un día o una semana de atraso, y cuánto cambia según el modelo?</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-vista" role="img"
+             aria-label="Esquema: qué conteo ve el modelo según la edad del dato"></div>
+        <figcaption>Para pronosticar una hora, el modelo solo puede usar conteos de antes. Con el dato de una hora ve el
+          conteo inmediatamente anterior; con el de un día, el de la misma hora de ayer; con el de una semana, el de la
+          misma hora siete días atrás.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="datos" class="seccion" aria-labelledby="t-datos">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-datos">Casi doce millones de viajes</h2></div>
+    <div class="seccion__cuerpo">
+      <p>La Ciudad de Buenos Aires publica cada recorrido de Ecobici como dato abierto. De 2022 a 2025 quedaron
+        <span data-cifra="cifras.viajes">11.936.199</span> viajes válidos, que se agruparon con SQL en
+        <span data-cifra="cifras.horas">35.064</span> horas. A cada hora se le sumó la lluvia y la temperatura
+        observadas, y el calendario de feriados de Argentina, corregido a mano con los decretos de cada año.</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-perfil" role="img"
+             aria-label="Viajes promedio por hora del día en días laborables, sábados y domingos o feriados, 2022 a 2024"></div>
+        <figcaption>Viajes promedio por hora del día, 2022-2024. Entre semana hay dos subidas, a las 8:00 y a las 17:00
+          (<span data-cifra="cifras.pico_laborable.viajes">949</span> viajes, el pico); los fines de semana, una sola
+          loma por la tarde.</figcaption>
+      </figure>
+      <h3>Lo que apareció al limpiar los datos</h3>
+      <ul class="cuenta">
+        <li><span class="num" data-cifra="cifras.cortos_2024">321.015</span>
+          <p>recorridos de <strong>menos de un minuto</strong> en el archivo de 2024, frente a ninguno en 2022 y 2023 y
+            8 en 2025. Lo más probable es que el publicador los filtre en los demás años; para que los cuatro sean
+            comparables, se aplicó a todos la misma regla.</p></li>
+        <li><span class="num" data-cifra="cifras.horas_dudosas">21</span>
+          <p>horas con <strong>cero viajes en pleno día</strong> o en rachas de cuatro horas o más: con mucha
+            probabilidad, cortes del servicio o del registro. Se marcaron como faltantes en vez de enseñarle al modelo que hubo cero viajes.</p></li>
+        <li><span class="num">−35&nbsp;%</span>
+          <p>de viajes en los <strong>días laborables con lluvia</strong> de 10&nbsp;mm o más: en promedio
+            <span data-cifra="cifras.lluvia.media_lluvia">6.990</span>, frente a
+            <span data-cifra="cifras.lluvia.media_seca">10.728</span> en los días secos.</p></li>
+        <li><span class="num" data-cifra="cifras.record.viajes">1.527</span>
+          <p>viajes en la <strong>hora con más uso</strong> de los cuatro años: el lunes 10 de noviembre de 2025 a las
+            18:00.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="metodo" class="seccion" aria-labelledby="t-metodo">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-metodo">Una prueba sin mirar el futuro</h2></div>
+    <div class="seccion__cuerpo">
+      <p>Los datos se cortaron en orden: los modelos aprenden con 2022-2024, se ajustan con el primer semestre de 2025 y
+        se evalúan, ya congelados y sin reajustarlos, con las <span data-cifra="cifras.horas_prueba">4.244</span> horas del
+        segundo semestre. Entre cada tramo quedan siete días sin usar, para que ninguna hora de evaluación se cuele en
+        el aprendizaje.</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-tramos" role="img"
+             aria-label="Línea de tiempo: entrenamiento de 2022 a 2024, validación de enero a junio de 2025 y prueba de julio a diciembre de 2025, con siete días sin usar entre tramos. El ajuste final de los modelos elegidos usa de enero de 2022 a junio de 2025."></div>
+      </figure>
+      <h3>Cinco maneras de pronosticar</h3>
+      <dl class="metodos">
+        <div><dt>Ingenuo semanal<span class="tipo">referencia simple</span></dt>
+          <dd>Repite lo que pasó a la misma hora siete días antes. No usa el dato reciente, así que su error no cambia
+            con el atraso.</dd></div>
+        <div><dt>Mediana de calendario<span class="tipo">referencia simple</span></dt>
+          <dd>La mediana histórica de esa hora y ese tipo de día. Tampoco usa el dato reciente.</dd></div>
+        <div><dt>Regresión Ridge<span class="tipo">modelo lineal</span></dt>
+          <dd>Suma ponderada del calendario y de los conteos disponibles, con un freno para no sobreajustar.</dd></div>
+        <div><dt><em>Boosting</em> de árboles<span class="tipo">aprendizaje automático</span></dt>
+          <dd>Trescientos árboles de decisión pequeños, cada uno corrigiendo los errores de los anteriores.</dd></div>
+        <div><dt>Perceptrón multicapa<span class="tipo">red neuronal</span></dt>
+          <dd>Una red neuronal pequeña, de una o dos capas, con parada temprana.</dd></div>
+      </dl>
+      <p class="pie">Los tres modelos ajustados reciben la misma información, aunque cada uno la codifica a su manera:
+        hora, día de la semana, mes, feriados y días no laborables, el último conteo disponible, la media de las 24 horas que terminan en ese conteo y el conteo de la misma hora una semana antes. Cada uno se
+        afinó por separado para cada edad del dato, solo con la validación.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resultados" class="seccion" aria-labelledby="t-resultados">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-resultados">El error crece con la edad del dato</h2></div>
+    <div class="seccion__cuerpo">
+      <p>Con el dato de hace una hora, los tres modelos ajustados quedan a menos de cuatro viajes por hora entre sí. Con
+        el de hace un día, los tres se disparan. Las dos referencias simples no usan el dato reciente: su error es el
+        mismo en los tres casos, y aun así quedan por encima de los modelos.</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-pendiente" role="img"
+             aria-label="Error medio de cada método según la edad del dato"></div>
+        <figcaption>Error absoluto medio en viajes por hora, en las <span data-cifra="cifras.horas_prueba">4.244</span>
+          horas de prueba (julio a diciembre de 2025), cuando en una hora promedio hay
+          <span data-cifra="cifras.media_real_prueba">375</span> viajes.</figcaption>
+      </figure>
+
+      <div class="tabla-ancha">
+        <table class="tabla" id="tabla-resultados">
+          <caption>En negrita, el menor error de cada columna entre los cinco métodos principales. El último renglón es
+            un análisis secundario con el clima observado.</caption>
+          <thead>
+            <tr><th scope="col">Método</th>
+              <th scope="col"><span class="marca-edad" style="--c: var(--fresco)">1 hora</span></th>
+              <th scope="col"><span class="marca-edad" style="--c: var(--dia)">1 día</span></th>
+              <th scope="col"><span class="marca-edad" style="--c: var(--semana)">1 semana</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><em>Boosting</em> de árboles</th>
+              <td class="mejor" data-cifra="metricas.1.boosting.mae" data-dec="1">31,1</td>
+              <td class="mejor" data-cifra="metricas.24.boosting.mae" data-dec="1">78,3</td>
+              <td class="mejor" data-cifra="metricas.168.boosting.mae" data-dec="1">89,4</td></tr>
+            <tr><th scope="row">Perceptrón multicapa</th>
+              <td data-cifra="metricas.1.mlp.mae" data-dec="1">33,3</td>
+              <td data-cifra="metricas.24.mlp.mae" data-dec="1">80,7</td>
+              <td data-cifra="metricas.168.mlp.mae" data-dec="1">89,6</td></tr>
+            <tr><th scope="row">Regresión Ridge</th>
+              <td data-cifra="metricas.1.ridge.mae" data-dec="1">34,9</td>
+              <td data-cifra="metricas.24.ridge.mae" data-dec="1">87,4</td>
+              <td data-cifra="metricas.168.ridge.mae" data-dec="1">92,4</td></tr>
+            <tr><th scope="row">Ingenuo semanal</th>
+              <td data-cifra="metricas.1.ingenuo_semanal.mae" data-dec="1">104,4</td>
+              <td data-cifra="metricas.24.ingenuo_semanal.mae" data-dec="1">104,4</td>
+              <td data-cifra="metricas.168.ingenuo_semanal.mae" data-dec="1">104,4</td></tr>
+            <tr><th scope="row">Mediana de calendario</th>
+              <td data-cifra="metricas.1.mediana_calendario.mae" data-dec="1">111,7</td>
+              <td data-cifra="metricas.24.mediana_calendario.mae" data-dec="1">111,7</td>
+              <td data-cifra="metricas.168.mediana_calendario.mae" data-dec="1">111,7</td></tr>
+            <tr class="secundario separa"><th scope="row"><em>Boosting</em> + clima observado</th>
+              <td data-cifra="metricas.1.boosting_clima.mae" data-dec="1">30,2</td>
+              <td data-cifra="metricas.24.boosting_clima.mae" data-dec="1">59,3</td>
+              <td data-cifra="metricas.168.boosting_clima.mae" data-dec="1">65,3</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>La ventaja del <em>boosting</em> sobre repetir la semana anterior fue del
+        <strong><span data-cifra="contrastes.1.ventaja_pct">70</span>&nbsp;%</strong> con el dato de una hora, del
+        <strong><span data-cifra="contrastes.24.ventaja_pct">25</span>&nbsp;%</strong> con el de un día y del
+        <strong><span data-cifra="contrastes.168.ventaja_pct">14</span>&nbsp;%</strong> con el de una semana. En los
+        tres casos la diferencia es significativa según la prueba de Diebold-Mariano con corrección de Holm, y se
+        mantiene al cambiar los supuestos de la prueba.</p>
+
+      <h3>No es una semana con suerte</h3>
+      <p>En <span data-cifra="semanas.error_crece_en">23</span> de las
+        <span data-cifra="semanas.lista.length">26</span> semanas de prueba el error del <em>boosting</em> sube con la
+        edad del dato. Las tres excepciones son la semana del feriado del 9 de julio y dos semanas con días de lluvia:
+        ahí, el dato de ayer puede engañar más que el de hace una semana.</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-semanas" role="img"
+             aria-label="Error del boosting en cada una de las semanas de prueba, según la edad del dato"></div>
+        <figcaption>Error medio de cada semana de prueba con cada edad del dato. Toca o haz clic en una semana para
+          verla arriba, en el gráfico principal.</figcaption>
+      </figure>
+      <details class="datos-tabla" id="tabla-semanas">
+        <summary>Ver el error de cada semana en una tabla</summary>
+        <div class="tabla-desplazable"></div>
+      </details>
+
+      <h3>El clima ayuda cuando el dato es viejo</h3>
+      <p>Con el dato de hace una hora, sumar la lluvia y la temperatura casi no cambió nada
+        (−<span data-cifra="cifras.clima.1.reduccion_pct">3</span>&nbsp;%), probablemente porque el conteo reciente
+        ya refleja si está lloviendo. Con datos de un día o de una semana, el error bajó un
+        <span data-cifra="cifras.clima.24.reduccion_pct">24</span>&nbsp;% y un
+        <span data-cifra="cifras.clima.168.reduccion_pct">27</span>&nbsp;%.</p>
+      <figure class="fig">
+        <div class="grafico grafico--chico" id="grafico-clima" role="img"
+             aria-label="Error del boosting con y sin clima observado, según la edad del dato"></div>
+        <figcaption>Ojo: se usó el clima <em>observado</em>, que se publica después de la hora pronosticada. Un pronóstico
+          del tiempo tiene sus propios errores, y cuánto ayudaría con uno real no se midió.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="limites" class="seccion" aria-labelledby="t-limites">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-limites">Lo que este estudio no dice</h2></div>
+    <div class="seccion__cuerpo">
+      <ul class="lista-limites">
+        <li><strong>Un solo semestre de prueba.</strong> Otro periodo, por ejemplo con un cambio de tarifas o de flota,
+          podría dar otras cifras.</li>
+        <li><strong>Los atrasos son simulados.</strong> No se midió cuándo recibe de verdad el operador sus conteos.</li>
+        <li><strong>Toda la red, no cada estación.</strong> Se pronostican los viajes de todo el sistema; mover
+          bicicletas exige pronosticar estación por estación.</li>
+        <li><strong>Clima en retrospectiva.</strong> La mejora con el clima se midió con observaciones, no con
+          pronósticos del tiempo.</li>
+        <li><strong>Pocas configuraciones y una sola semilla.</strong> Cada modelo probó entre 4 y 6 configuraciones, y la
+          red neuronal se entrenó con una sola semilla; con una semana de atraso, su diferencia con el <em>boosting</em> es tan
+          pequeña que podría invertirse.</li>
+        <li><strong>Datos publicados imperfectos.</strong> Los recorridos de menos de un minuto de 2024 se resolvieron con
+          una regla razonable, pero no se conoce el filtro exacto del publicador.</li>
+      </ul>
+      <p class="pie">La memoria detalla doce limitaciones en el capítulo 7, con sus consecuencias.</p>
+    </div>
+  </div>
+</section>
+
+<section id="descargas" class="seccion" aria-labelledby="t-descargas">
+  <div class="marco">
+    <div class="seccion__titulo"><h2 id="t-descargas">Para leerlo completo</h2></div>
+    <div class="seccion__cuerpo">
+      <ul class="descargas">
+        <li><a href="memoria.pdf">
+          <span class="titulo">Memoria completa en PDF</span>
+          <span class="detalle" id="detalle-pdf">Ocho capítulos, anexos y bibliografía comprobada</span>
+          <svg class="flecha" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v12M5 10.5l5 5 5-5"/></svg>
+        </a></li>
+        <li><a href="memoria.docx">
+          <span class="titulo">Memoria en Word, editable</span>
+          <span class="detalle">El mismo texto, para comentar o corregir</span>
+          <svg class="flecha" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v12M5 10.5l5 5 5-5"/></svg>
+        </a></li>
+        <li><a href="https://github.com/fundacion-social-mentes-brillantes/pronostico-ecobici">
+          <span class="titulo">Código y datos en GitHub</span>
+          <span class="detalle">Se reproduce paso a paso, con pruebas automáticas</span>
+          <svg class="flecha" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14 14 6M7 6h7v7"/></svg>
+        </a></li>
+        <li><a href="https://github.com/fundacion-social-mentes-brillantes/pronostico-ecobici/tree/main/proceso_ia">
+          <span class="titulo">Cómo trabajaron Claude y Codex</span>
+          <span class="detalle">Cada encargo a Codex y su respuesta, tal cual</span>
+          <svg class="flecha" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14 14 6M7 6h7v7"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie-pagina">
+  <div class="marco">
+    <div class="quien">
+      <p>Estudio hecho por Claude (Anthropic) y Codex (OpenAI) como prueba de capacidades, por encargo de la Fundación
+        Social Mentes Brillantes. Tiene la forma de un Trabajo Fin de Máster en Inteligencia Artificial, pero no se
+        presentó ante ninguna universidad.</p>
+      <p>Código con licencia MIT; textos y figuras, CC BY 4.0.</p>
+    </div>
+    <div class="fuentes">
+      <p>Viajes: Gobierno de la Ciudad de Buenos Aires, Buenos Aires Data, «Bicicletas públicas: recorridos
+        realizados» (CC BY 2.5 AR), depurados y sumados por hora. Clima: Open-Meteo, reanálisis ERA5 de Copernicus
+        (CC BY 4.0).</p>
+      <p>Letras: Newsreader y Schibsted Grotesk (SIL Open Font License 1.1).</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
