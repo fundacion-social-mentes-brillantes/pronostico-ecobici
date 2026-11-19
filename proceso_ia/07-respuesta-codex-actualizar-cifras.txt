@@ -1,0 +1,59 @@
+=== Respuesta de Codex ===
+Actualicé 11 archivos Markdown autorizados en UTF-8 y cotejé las tablas con los resultados locales. El calendario corregido suma 76 feriados y 7 días no laborables. Añadí el Decreto 573/2022 a las dos bibliografías y actualicé el tiempo total de la última ejecución a 29,24 segundos.
+
+### MAE de prueba antes → ahora
+
+| Método | 1 h | 24 h | 168 h |
+|---|---:|---:|---:|
+| Ingenuo semanal | 104,36 → 104,36 | 104,36 → 104,36 | 104,36 → 104,36 |
+| Mediana de calendario | 111,75 → 111,71 | 111,75 → 111,71 | 111,75 → 111,71 |
+| Ridge | 34,90 → 34,88 | 87,65 → 87,41 | 92,71 → 92,43 |
+| *Boosting* | 31,23 → 31,15 | 78,25 → 78,28 | 89,59 → **89,44** |
+| Perceptrón | 33,24 → 33,34 | 79,36 → 80,75 | 89,41 → 89,61 |
+| *Boosting* con clima observado | 29,78 → 30,21 | 59,03 → 59,33 | 64,40 → 65,29 |
+
+### Diebold–Mariano antes → ahora
+
+Contraste principal del *boosting* frente al ingenuo semanal, con 24 rezagos de Newey–West.
+
+| Retraso | Estadístico DM | Diferencia de MAE | IC del 95 % | *p* de Holm |
+|---|---:|---:|---|---:|
+| 1 h | −12,39 → −12,44 | −73,12 → −73,21 | [−84,69, −61,56] → [−84,75, −61,67] | 8,77 × 10⁻³⁵ → 4,96 × 10⁻³⁵ |
+| 24 h | −5,20 → −5,16 | −26,11 → −26,07 | [−35,96, −16,26] → [−35,98, −16,17] | 4,08 × 10⁻⁷ → 4,95 × 10⁻⁷ |
+| 168 h | −3,18 → −3,23 | −14,77 → −14,92 | [−23,88, −5,65] → [−23,98, −5,86] | 1,49 × 10⁻³ → 1,25 × 10⁻³ |
+
+### Clima observado antes → ahora
+
+Cada par de MAE muestra primero el modelo sin clima y luego el modelo con clima.
+
+| Retraso | Reducción del MAE total | MAE en horas lluviosas | MAE en horas secas | Aporte de las horas secas a la reducción |
+|---|---:|---|---|---:|
+| 1 h | 4,67 % → 3,00 % | 38,63 / 37,31 → 37,75 / 37,36 | 30,28 / 28,81 → 30,30 / 29,29 | 89,70 % → 95,16 % |
+| 24 h | 24,56 % → 24,21 % | 149,40 / 83,69 → 149,90 / 83,67 | 69,09 / 55,85 → 69,06 / 56,19 | 61,01 % → 60,15 % |
+| 168 h | 28,12 % → 27,00 % | 152,15 / 84,64 → 152,07 / 86,11 | 81,54 / 61,79 → 81,37 / 62,61 | 69,45 % → 68,85 % |
+
+### Afirmaciones corregidas
+
+- El *boosting* tiene el menor MAE de prueba entre las cinco alternativas principales en los tres retrasos. Con 168 horas, el perceptrón queda segundo por 0,17 viajes por hora y conserva el menor RMSE y el menor MAE en horas pico.
+- El orden de los modelos ajustados se mantiene entre validación y prueba con 1 y 24 horas. Con 168 horas, el perceptrón gana en validación y el *boosting* gana en prueba.
+- La validación eligió la misma tasa de aprendizaje del *boosting* para los tres retrasos. Con 1 hora eligió más hojas, y con 24 horas el perceptrón elegido pasó a tener dos capas ocultas.
+- En los capítulos 6 y 7.2, copiar un día normal de la semana anterior figura como explicación probable del error del ingenuo en feriados. Los sábados siguen registrando el menor MAE para todos los métodos en los tres retrasos.
+- La primera repetición tras las correcciones de robustez dio resultados idénticos. Después se detectó el feriado faltante, se corrigió el calendario y se repitió el experimento. Las cifras de la memoria corresponden a esa última ejecución.
+
+Sin bloqueos
+=== gpt-6.2-sol / medium · tarea codigo · 348 s · tokens: 1123710 de entrada, 12250 de salida · encargo 01a1f269-2fcc-76f1-8b53-a4c7c0907784
+Archivos que cambió (12) — REVÍSALOS antes de dar el trabajo por bueno:
+   README.md
+   memoria\anexos.md
+   memoria\bibliografia_verificada.md
+   memoria\capitulo3_objetivos_metodologia.md
+   memoria\capitulo4_datos.md
+   memoria\capitulo5_implementacion.md
+   memoria\capitulo6_resultados.md
+   memoria\capitulo7_discusion.md
+   memoria\capitulo8_conclusiones.md
+   memoria\referencias.md
+   memoria\resumen.md
+   proceso_ia\07-respuesta-codex-actualizar-cifras.txt
+Límites de Codex — 5 horas: 26% usado (se reinicia 19/11 04:51 AM); semana: 11% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %
+fin 0

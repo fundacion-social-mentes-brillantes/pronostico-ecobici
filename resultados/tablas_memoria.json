@@ -2,104 +2,104 @@
   "mae_por_grupo_de_dia": {
     "1h": {
       "laborable": {
-        "boosting": 33.24,
-        "boosting_clima": 31.74,
+        "boosting": 32.97,
+        "boosting_clima": 32.1,
         "ingenuo_semanal": 107.0,
-        "mediana_calendario": 126.38,
-        "mlp": 36.32,
-        "ridge": 37.48
+        "mediana_calendario": 126.37,
+        "mlp": 36.43,
+        "ridge": 37.45
       },
       "sabado": {
-        "boosting": 23.85,
-        "boosting_clima": 21.77,
+        "boosting": 23.8,
+        "boosting_clima": 22.06,
         "ingenuo_semanal": 69.88,
         "mediana_calendario": 68.62,
-        "mlp": 24.42,
+        "mlp": 24.12,
         "ridge": 26.0
       },
       "domingo": {
-        "boosting": 28.49,
-        "boosting_clima": 27.8,
+        "boosting": 29.19,
+        "boosting_clima": 28.47,
         "ingenuo_semanal": 100.01,
-        "mediana_calendario": 80.18,
-        "mlp": 27.99,
-        "ridge": 31.32
+        "mediana_calendario": 80.0,
+        "mlp": 28.39,
+        "ridge": 31.31
       },
       "feriado": {
-        "boosting": 32.31,
-        "boosting_clima": 31.2,
+        "boosting": 32.51,
+        "boosting_clima": 32.74,
         "ingenuo_semanal": 211.7,
-        "mediana_calendario": 120.56,
-        "mlp": 28.6,
-        "ridge": 34.03
+        "mediana_calendario": 120.41,
+        "mlp": 28.64,
+        "ridge": 33.79
       }
     },
     "24h": {
       "laborable": {
-        "boosting": 82.74,
-        "boosting_clima": 60.4,
+        "boosting": 82.6,
+        "boosting_clima": 60.86,
         "ingenuo_semanal": 107.0,
-        "mediana_calendario": 126.38,
-        "mlp": 84.75,
-        "ridge": 94.93
+        "mediana_calendario": 126.37,
+        "mlp": 85.47,
+        "ridge": 94.64
       },
       "sabado": {
-        "boosting": 58.14,
-        "boosting_clima": 44.38,
+        "boosting": 57.97,
+        "boosting_clima": 44.58,
         "ingenuo_semanal": 69.88,
         "mediana_calendario": 68.62,
-        "mlp": 59.18,
-        "ridge": 62.1
+        "mlp": 59.66,
+        "ridge": 62.12
       },
       "domingo": {
-        "boosting": 77.28,
-        "boosting_clima": 66.11,
+        "boosting": 78.58,
+        "boosting_clima": 66.05,
         "ingenuo_semanal": 100.01,
-        "mediana_calendario": 80.18,
-        "mlp": 74.09,
-        "ridge": 76.5
+        "mediana_calendario": 80.0,
+        "mlp": 77.38,
+        "ridge": 76.41
       },
       "feriado": {
-        "boosting": 74.77,
-        "boosting_clima": 63.92,
+        "boosting": 74.17,
+        "boosting_clima": 62.88,
         "ingenuo_semanal": 211.7,
-        "mediana_calendario": 120.56,
-        "mlp": 75.2,
-        "ridge": 90.86
+        "mediana_calendario": 120.41,
+        "mlp": 86.25,
+        "ridge": 89.91
       }
     },
     "168h": {
       "laborable": {
-        "boosting": 96.68,
-        "boosting_clima": 66.88,
+        "boosting": 96.73,
+        "boosting_clima": 68.28,
         "ingenuo_semanal": 107.0,
-        "mediana_calendario": 126.38,
-        "mlp": 97.23,
-        "ridge": 100.51
+        "mediana_calendario": 126.37,
+        "mlp": 97.54,
+        "ridge": 100.16
       },
       "sabado": {
-        "boosting": 62.33,
-        "boosting_clima": 44.83,
+        "boosting": 62.21,
+        "boosting_clima": 44.43,
         "ingenuo_semanal": 69.88,
         "mediana_calendario": 68.62,
-        "mlp": 62.81,
-        "ridge": 65.15
+        "mlp": 62.9,
+        "ridge": 65.19
       },
       "domingo": {
-        "boosting": 83.35,
-        "boosting_clima": 69.95,
+        "boosting": 82.7,
+        "boosting_clima": 70.7,
         "ingenuo_semanal": 100.01,
-        "mediana_calendario": 80.18,
-        "mlp": 78.68,
-        "ridge": 80.06
+        "mediana_calendario": 80.0,
+        "mlp": 78.95,
+        "ridge": 79.98
       },
       "feriado": {
-        "boosting": 84.15,
-        "boosting_clima": 73.18,
+        "boosting": 81.63,
+        "boosting_clima": 69.75,
         "ingenuo_semanal": 211.7,
-        "mediana_calendario": 120.56,
-        "mlp": 84.21,
-        "ridge": 99.83
+        "mediana_calendario": 120.41,
+        "mlp": 82.5,
+        "ridge": 98.87
       }
     }
   },
@@ -111,51 +111,51 @@
   },
   "media_real_prueba": 374.7,
   "porcentaje_horas_boosting_mejor_que_ingenuo": {
-    "1h": 76.65,
-    "24h": 60.82,
-    "168h": 53.7
+    "1h": 77.62,
+    "24h": 61.05,
+    "168h": 53.91
   },
   "porcentaje_horas_boosting_mejor_que_mlp": {
-    "1h": 53.32,
-    "24h": 51.37,
-    "168h": 52.1
+    "1h": 54.81,
+    "24h": 53.49,
+    "168h": 52.12
   },
   "clima": {
     "1h": {
       "horas_lluvia": 484,
       "horas_secas": 3760,
-      "mae_boosting_lluvia": 38.63,
-      "mae_boosting_clima_lluvia": 37.31,
-      "mae_boosting_seco": 30.28,
-      "mae_boosting_clima_seco": 28.81,
-      "reduccion_media_por_hora_lluvia": 1.32,
-      "reduccion_media_por_hora_seca": 1.48,
-      "parte_de_la_reduccion_total_en_horas_secas_pct": 89.7,
-      "reduccion_relativa_total_pct": 4.67
+      "mae_boosting_lluvia": 37.75,
+      "mae_boosting_clima_lluvia": 37.36,
+      "mae_boosting_seco": 30.3,
+      "mae_boosting_clima_seco": 29.29,
+      "reduccion_media_por_hora_lluvia": 0.4,
+      "reduccion_media_por_hora_seca": 1.0,
+      "parte_de_la_reduccion_total_en_horas_secas_pct": 95.16,
+      "reduccion_relativa_total_pct": 3.0
     },
     "24h": {
       "horas_lluvia": 484,
       "horas_secas": 3760,
-      "mae_boosting_lluvia": 149.4,
-      "mae_boosting_clima_lluvia": 83.69,
-      "mae_boosting_seco": 69.09,
-      "mae_boosting_clima_seco": 55.85,
-      "reduccion_media_por_hora_lluvia": 65.71,
-      "reduccion_media_por_hora_seca": 13.24,
-      "parte_de_la_reduccion_total_en_horas_secas_pct": 61.01,
-      "reduccion_relativa_total_pct": 24.56
+      "mae_boosting_lluvia": 149.9,
+      "mae_boosting_clima_lluvia": 83.67,
+      "mae_boosting_seco": 69.06,
+      "mae_boosting_clima_seco": 56.19,
+      "reduccion_media_por_hora_lluvia": 66.23,
+      "reduccion_media_por_hora_seca": 12.87,
+      "parte_de_la_reduccion_total_en_horas_secas_pct": 60.15,
+      "reduccion_relativa_total_pct": 24.21
     },
     "168h": {
       "horas_lluvia": 484,
       "horas_secas": 3760,
-      "mae_boosting_lluvia": 152.15,
-      "mae_boosting_clima_lluvia": 84.64,
-      "mae_boosting_seco": 81.54,
-      "mae_boosting_clima_seco": 61.79,
-      "reduccion_media_por_hora_lluvia": 67.51,
-      "reduccion_media_por_hora_seca": 19.75,
-      "parte_de_la_reduccion_total_en_horas_secas_pct": 69.45,
-      "reduccion_relativa_total_pct": 28.12
+      "mae_boosting_lluvia": 152.07,
+      "mae_boosting_clima_lluvia": 86.11,
+      "mae_boosting_seco": 81.37,
+      "mae_boosting_clima_seco": 62.61,
+      "reduccion_media_por_hora_lluvia": 65.96,
+      "reduccion_media_por_hora_seca": 18.77,
+      "parte_de_la_reduccion_total_en_horas_secas_pct": 68.85,
+      "reduccion_relativa_total_pct": 27.0
     }
   },
   "autocorrelacion_diferencia_de_perdidas": {
@@ -171,130 +171,130 @@
     },
     "168h": {
       "rezago_1": 0.84,
-      "rezago_24": 0.16,
+      "rezago_24": 0.15,
       "rezago_168": 0.04
     }
   },
   "parte_de_la_ventaja_en_feriados_pct": {
-    "1h": 8.32,
-    "24h": 17.79,
-    "168h": 29.31
+    "1h": 8.3,
+    "24h": 17.9,
+    "168h": 29.58
   },
   "porcentaje_horas_feriado": 3.39,
   "diebold_mariano_sensibilidad_rezagos": {
     "24": {
       "1h": {
-        "estadistico_dm": -12.39,
-        "p_holm": "8.77e-35",
-        "diferencia_mae": -73.12,
+        "estadistico_dm": -12.44,
+        "p_holm": "4.96e-35",
+        "diferencia_mae": -73.21,
         "ic95": [
-          -84.69,
-          -61.56
+          -84.75,
+          -61.67
         ]
       },
       "24h": {
-        "estadistico_dm": -5.2,
-        "p_holm": "4.08e-07",
-        "diferencia_mae": -26.11,
+        "estadistico_dm": -5.16,
+        "p_holm": "4.95e-07",
+        "diferencia_mae": -26.07,
         "ic95": [
-          -35.96,
-          -16.26
+          -35.98,
+          -16.17
         ]
       },
       "168h": {
-        "estadistico_dm": -3.18,
-        "p_holm": "1.49e-03",
-        "diferencia_mae": -14.77,
+        "estadistico_dm": -3.23,
+        "p_holm": "1.25e-03",
+        "diferencia_mae": -14.92,
         "ic95": [
-          -23.88,
-          -5.65
+          -23.98,
+          -5.86
         ]
       }
     },
     "48": {
       "1h": {
-        "estadistico_dm": -10.88,
-        "p_holm": "4.08e-27",
-        "diferencia_mae": -73.12,
+        "estadistico_dm": -10.94,
+        "p_holm": "2.35e-27",
+        "diferencia_mae": -73.21,
         "ic95": [
-          -86.29,
-          -59.96
+          -86.33,
+          -60.09
         ]
       },
       "24h": {
-        "estadistico_dm": -4.7,
-        "p_holm": "5.22e-06",
-        "diferencia_mae": -26.11,
+        "estadistico_dm": -4.67,
+        "p_holm": "5.94e-06",
+        "diferencia_mae": -26.07,
         "ic95": [
-          -37.0,
-          -15.22
+          -37.01,
+          -15.14
         ]
       },
       "168h": {
-        "estadistico_dm": -2.84,
-        "p_holm": "4.56e-03",
-        "diferencia_mae": -14.77,
+        "estadistico_dm": -2.9,
+        "p_holm": "3.78e-03",
+        "diferencia_mae": -14.92,
         "ic95": [
-          -24.97,
-          -4.56
+          -25.02,
+          -4.82
         ]
       }
     },
     "168": {
       "1h": {
-        "estadistico_dm": -10.5,
-        "p_holm": "2.56e-25",
-        "diferencia_mae": -73.12,
+        "estadistico_dm": -10.62,
+        "p_holm": "7.08e-26",
+        "diferencia_mae": -73.21,
         "ic95": [
-          -86.77,
-          -59.48
+          -86.72,
+          -59.7
         ]
       },
       "24h": {
-        "estadistico_dm": -4.57,
-        "p_holm": "9.93e-06",
-        "diferencia_mae": -26.11,
+        "estadistico_dm": -4.53,
+        "p_holm": "1.20e-05",
+        "diferencia_mae": -26.07,
         "ic95": [
-          -37.32,
-          -14.9
+          -37.36,
+          -14.79
         ]
       },
       "168h": {
-        "estadistico_dm": -2.84,
-        "p_holm": "4.58e-03",
-        "diferencia_mae": -14.77,
+        "estadistico_dm": -2.92,
+        "p_holm": "3.49e-03",
+        "diferencia_mae": -14.92,
         "ic95": [
-          -24.97,
-          -4.56
+          -24.93,
+          -4.91
         ]
       }
     },
     "336": {
       "1h": {
-        "estadistico_dm": -8.92,
-        "p_holm": "1.39e-18",
-        "diferencia_mae": -73.12,
+        "estadistico_dm": -9.04,
+        "p_holm": "4.73e-19",
+        "diferencia_mae": -73.21,
         "ic95": [
-          -89.19,
-          -57.06
+          -89.09,
+          -57.34
         ]
       },
       "24h": {
-        "estadistico_dm": -4.52,
-        "p_holm": "1.25e-05",
-        "diferencia_mae": -26.11,
+        "estadistico_dm": -4.47,
+        "p_holm": "1.56e-05",
+        "diferencia_mae": -26.07,
         "ic95": [
-          -37.44,
-          -14.78
+          -37.51,
+          -14.64
         ]
       },
       "168h": {
-        "estadistico_dm": -3.01,
-        "p_holm": "2.59e-03",
-        "diferencia_mae": -14.77,
+        "estadistico_dm": -3.11,
+        "p_holm": "1.84e-03",
+        "diferencia_mae": -14.92,
         "ic95": [
-          -24.37,
-          -5.16
+          -24.31,
+          -5.53
         ]
       }
     }
@@ -303,14 +303,14 @@
     "dias_completos": 1458,
     "media_diaria_por_grupo_dias_completos": {
       "domingo": 3833.83,
-      "feriado": 4199.81,
-      "laborable": 10245.55,
+      "feriado": 4260.15,
+      "laborable": 10247.1,
       "sabado": 3810.93
     },
-    "feriados_entre_semana_media": 4458.71,
+    "feriados_entre_semana_media": 4531.02,
     "laborables_secos_menos_1mm": {
-      "dias": 763,
-      "media": 10725.59
+      "dias": 762,
+      "media": 10728.22
     },
     "laborables_lluvia_10mm_o_mas": {
       "dias": 69,
@@ -325,23 +325,23 @@
         "3": 29.0,
         "4": 29.9,
         "5": 81.7,
-        "6": 192.8,
-        "7": 419.9,
-        "8": 544.3,
-        "9": 452.5,
-        "10": 372.6,
-        "11": 421.1,
-        "12": 540.3,
+        "6": 192.9,
+        "7": 420.2,
+        "8": 544.7,
+        "9": 452.8,
+        "10": 372.7,
+        "11": 421.2,
+        "12": 540.5,
         "13": 601.1,
         "14": 584.4,
         "15": 652.5,
-        "16": 805.1,
-        "17": 949.1,
-        "18": 933.2,
-        "19": 677.9,
-        "20": 574.9,
-        "21": 420.4,
-        "22": 289.8,
+        "16": 805.0,
+        "17": 949.2,
+        "18": 933.4,
+        "19": 678.1,
+        "20": 575.0,
+        "21": 420.6,
+        "22": 289.9,
         "23": 214.4
       },
       "sabado": {
@@ -371,30 +371,30 @@
         "23": 97.5
       },
       "domingo_o_feriado": {
-        "0": 103.8,
-        "1": 97.6,
-        "2": 76.2,
-        "3": 47.9,
+        "0": 104.2,
+        "1": 97.7,
+        "2": 76.1,
+        "3": 47.8,
         "4": 36.7,
-        "5": 40.0,
-        "6": 42.4,
-        "7": 43.6,
-        "8": 48.5,
-        "9": 79.3,
-        "10": 122.1,
-        "11": 172.6,
-        "12": 210.2,
-        "13": 228.1,
-        "14": 248.3,
-        "15": 306.8,
-        "16": 359.8,
-        "17": 348.6,
-        "18": 312.3,
-        "19": 259.9,
-        "20": 197.2,
-        "21": 133.5,
-        "22": 102.1,
-        "23": 83.9
+        "5": 40.1,
+        "6": 42.8,
+        "7": 44.3,
+        "8": 49.5,
+        "9": 80.3,
+        "10": 123.1,
+        "11": 173.7,
+        "12": 211.4,
+        "13": 229.7,
+        "14": 249.8,
+        "15": 308.6,
+        "16": 362.3,
+        "17": 351.3,
+        "18": 314.7,
+        "19": 261.3,
+        "20": 198.6,
+        "21": 134.4,
+        "22": 102.9,
+        "23": 84.4
       }
     }
   }

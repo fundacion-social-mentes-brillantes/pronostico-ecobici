@@ -14,6 +14,8 @@ urban-bike-sharing demand prediction. *Sustainability, 18*(8), Artículo 3766. h
 
 Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32. https://doi.org/10.1023/A:1010933404324
 
+Decreto 573 de 2022 [Poder Ejecutivo Nacional]. Declárase feriado nacional el 2 de septiembre de 2022. 2 de septiembre de 2022. Boletín Oficial de la República Argentina. https://www.boletinoficial.gob.ar/detalleAviso/primera/270892/20220902
+
 Decreto 1027 de 2024 [Poder Ejecutivo Nacional]. Días no laborables con fines turísticos para el año 2025. 20 de
 noviembre de 2024. Boletín Oficial de la República Argentina, 35551.
 https://www.argentina.gob.ar/normativa/nacional/norma-406417/texto

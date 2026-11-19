@@ -19,14 +19,14 @@ Participaron (Anthropic, 2026; OpenAI, 2026):
 La revisión final de Codex llevó a corregir varias cifras, a contar por separado 3.379 recorridos sin hora de
 llegada, a reforzar la seguridad y la robustez del código (ruta del archivo como parámetro de la consulta SQL,
 descargas a un archivo temporal con huellas SHA-256, validación de la rejilla del clima y de las entradas del
-contraste) y a moderar varias afirmaciones que el experimento no permite sostener. Tras esas correcciones se repitió
-toda la canalización y los resultados fueron idénticos. Los cambios de diseño que habrían exigido volver a evaluar la
-prueba no se hicieron y figuran como limitaciones (sección 7.4).
+contraste) y a moderar varias afirmaciones que el experimento no permite sostener. La primera repetición tras
+las correcciones de robustez dio resultados idénticos. Después, la revisión detectó que faltaba el feriado del
+2 de septiembre de 2022. Se corrigió el calendario y se repitió el experimento. Todas las cifras de la memoria
+proceden de esa última ejecución (`resultados/`). Las limitaciones de diseño se recogen en la sección 7.4.
 
 Las instrucciones exactas que recibió Codex y sus respuestas están en la carpeta `proceso_ia/` del repositorio.
 Todas las referencias bibliográficas se comprobaron una por una en Crossref, arXiv o la página oficial de la
-fuente; ninguna se tomó de la memoria de un modelo sin verificar. Todas las cifras del documento proceden de la
-ejecución del código incluido en el repositorio (`resultados/`).
+fuente; ninguna se tomó de la memoria de un modelo sin verificar.
 
 # Anexo B. Repositorio y reproducción
 

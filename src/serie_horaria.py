@@ -19,6 +19,7 @@ Pasos:
 Salidas: datos/procesados/serie_horaria.csv, resultados/calidad_datos.json y resultados/cobertura_mensual.csv.
 """
 import json
+import os
 import zipfile
 
 import duckdb
@@ -53,7 +54,7 @@ def extraer(anio):
         if miembro.file_size > LIMITE_DESCOMPRIMIDO:
             raise ValueError(f"{anio}: el CSV ocupa {miembro.file_size:,} bytes, más que el límite")
         ruta = destino / f"{anio}.csv"  # nombre fijo: el nombre interno del ZIP nunca se usa como ruta
-        temporal = destino / f"{anio}.csv.parcial"
+        temporal = destino / f"{anio}.csv.{os.getpid()}.parcial"  # único por ejecución
         try:
             # Siempre se extrae de nuevo: zipfile comprueba el CRC al leer, así que el CSV queda verificado.
             with z.open(miembro) as fuente, open(temporal, "wb") as sal:

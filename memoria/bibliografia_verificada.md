@@ -92,6 +92,7 @@ estas. Al lado va lo que cada una respalda; no atribuirles nada más.
   Datos CC BY 4.0; producto ERA5 de Copernicus.
 - Ley 27.399 de 2017. Ley de establecimiento de feriados y fines de semana largos. 18 de octubre de 2017. Boletín
   Oficial de la República Argentina, 33732. https://www.argentina.gob.ar/normativa/nacional/ley-27399-281835/texto
+- Decreto 573 de 2022 [Poder Ejecutivo Nacional]. Declárase feriado nacional el 2 de septiembre de 2022. 2 de septiembre de 2022. Boletín Oficial de la República Argentina. https://www.boletinoficial.gob.ar/detalleAviso/primera/270892/20220902
 - Decreto 1027 de 2024 [Poder Ejecutivo Nacional]. Días no laborables con fines turísticos para el año 2025. 20 de
   noviembre de 2024. Boletín Oficial de la República Argentina, 35551.
   https://www.argentina.gob.ar/normativa/nacional/norma-406417/texto — 2 de mayo, 15 de agosto y 21 de noviembre de

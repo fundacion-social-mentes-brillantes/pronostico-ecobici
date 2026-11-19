@@ -15,7 +15,7 @@
         "alpha": 1
       },
       "boosting": {
-        "learning_rate": 0.1,
+        "learning_rate": 0.05,
         "max_leaf_nodes": 63
       },
       "mlp": {
@@ -26,7 +26,7 @@
         "alpha": 0.001
       },
       "boosting_clima": {
-        "learning_rate": 0.1,
+        "learning_rate": 0.05,
         "max_leaf_nodes": 63
       }
     },
@@ -42,7 +42,8 @@
       },
       "mlp": {
         "hidden_layer_sizes": [
-          64
+          64,
+          32
         ],
         "alpha": 0.001
       },

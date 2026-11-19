@@ -1,10 +1,10 @@
 {
-  "fecha_utc": "2026-11-19T05:35:15+00:00",
+  "fecha_utc": "2026-11-19T06:05:17+00:00",
   "tiempos_s": {
-    "experimento": 55.91,
-    "figuras": 1.17,
-    "tablas_memoria": 0.19,
-    "total": 57.27
+    "experimento": 28.54,
+    "figuras": 0.59,
+    "tablas_memoria": 0.12,
+    "total": 29.24
   },
   "python": "3.12.10",
   "sistema": "Windows-11-10.0.26300-SP0",

@@ -17,19 +17,21 @@ Error absoluto medio (MAE) en viajes por hora, sobre 4.244 horas de prueba (juli
 
 | Método | Dato de hace 1 h | Dato de hace 24 h | Dato de hace 168 h |
 |---|---|---|---|
-| *Boosting* de árboles | **31,2** | **78,2** | 89,6 |
-| Perceptrón multicapa | 33,2 | 79,4 | **89,4** |
-| Regresión Ridge | 34,9 | 87,7 | 92,7 |
-| Ingenuo semanal | 104,4 | 104,4 | 104,4 |
-| Mediana de calendario | 111,7 | 111,7 | 111,7 |
-| *Boosting* + clima observado (secundario) | 29,8 | 59,0 | 64,4 |
+| *Boosting* de árboles | **31,15** | **78,28** | **89,44** |
+| Perceptrón multicapa | 33,34 | 80,75 | 89,61 |
+| Regresión Ridge | 34,88 | 87,41 | 92,43 |
+| Ingenuo semanal | 104,36 | 104,36 | 104,36 |
+| Mediana de calendario | 111,71 | 111,71 | 111,71 |
+| *Boosting* + clima observado (secundario) | 30,21 | 59,33 | 65,29 |
 
 - **En este caso, la frescura del dato pesó más que el modelo.** Entre modelos competentes hubo un 10 % de
-  diferencia; con el dato de hace un día, el error de los modelos ajustados se multiplicó por cerca de 2,5.
+  diferencia. Con el dato de hace un día, el error de los modelos ajustados se multiplicó por cerca de 2,5.
+  Entre las cinco alternativas principales, el *boosting* tuvo el menor MAE en los tres retrasos. Con 168 horas,
+  el perceptrón quedó segundo, a 0,17 viajes por hora.
 - La ventaja del *boosting* sobre la referencia ingenua fue del 70 %, el 25 % y el 14 % con datos de 1, 24 y 168 h,
   significativa en cada escenario (Diebold-Mariano con varianza de Newey-West y corrección de Holm; se mantiene con
   48, 168 y 336 rezagos).
-- El clima casi no cambió el error con datos frescos (−4,7 %) y lo redujo mucho con datos atrasados (−25 % a −28 %).
+- El clima casi no cambió el error con datos frescos (−3,0 %) y lo redujo mucho con datos atrasados (−24 % a −27 %).
   Ojo: se usó el clima observado (ERA5), que se publica después; no es lo que daría un pronóstico del tiempo.
 - Hallazgo de datos: el archivo de 2024 trae 321.015 recorridos de menos de un minuto (frente a 0 en 2022 y 2023 y 8
   en 2025) y 3.379 sin hora de llegada; se filtraron con el mismo criterio en los cuatro años.
@@ -44,7 +46,7 @@ Error absoluto medio (MAE) en viajes por hora, sobre 4.244 horas de prueba (juli
 | 2 | `src/serie_horaria.py` | Lee los CSV con SQL (DuckDB) sin seleccionar nunca las columnas del usuario; depura y arma la serie por hora |
 | 3 | `src/descargar_clima.py` | Temperatura y lluvia por hora de Open-Meteo (ERA5, CC BY 4.0) |
 | 4 | `src/feriados.py` | Feriados y días no laborables de Argentina 2022-2025, con las correcciones de cada año |
-| 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas y registro de la ejecución (~1 minuto) |
+| 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas y registro de la ejecución (29,24 s en la última ejecución) |
 
 Protocolo: entrenamiento 2022-2024, validación enero-junio de 2025 y prueba julio-diciembre de 2025, con un margen
 de siete días entre bloques; los modelos se congelan antes de la prueba y todas las alternativas se evalúan en las

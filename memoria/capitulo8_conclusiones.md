@@ -20,16 +20,16 @@ conviene en cada escenario. Los cinco objetivos específicos se cumplieron:
 
 Las respuestas a las preguntas de investigación son:
 
-- **P1.** Con el último conteo de hace una hora, el *boosting* de árboles obtuvo el menor error (31,2 viajes por
-  hora, un 8,3 % del nivel medio), seguido muy de cerca por el perceptrón (33,2) y por Ridge (34,9). Este orden es
+- **P1.** Con el último conteo de hace una hora, el *boosting* de árboles obtuvo el menor error (31,1 viajes por
+  hora, un 8,3 % del nivel medio), seguido muy de cerca por el perceptrón (33,3) y por Ridge (34,9). Este orden es
   descriptivo.
 - **P2.** El retraso fue el factor dominante. Con un día de antigüedad, el error de los tres modelos ajustados se
   multiplicó por entre 2,4 y 2,5, y con una semana, por entre 2,7 y 2,9. En cada escenario el *boosting* cometió
   significativamente menos error que la referencia ingenua, con una ventaja del 70 %, el 25 % y el 14 %; esa
-  disminución entre escenarios es descriptiva. Con un día de retraso el *boosting* tuvo el menor error; con una
-  semana quedó a 0,19 viajes por hora del perceptrón.
-- **P3.** El clima observado casi no cambió el error con el dato fresco (−4,7 %) y lo redujo mucho con datos
-  antiguos (−25 % con 24 horas y −28 % con 168). Con 24 y 168 horas, la mejora por hora fue mucho mayor en las horas
+  disminución entre escenarios es descriptiva. El *boosting* tuvo el menor MAE en los tres retrasos. Con una semana,
+  el perceptrón quedó segundo, a 0,17 viajes por hora.
+- **P3.** El clima observado casi no cambió el error con el dato fresco (−3,0 %) y lo redujo mucho con datos
+  antiguos (−24 % con 24 horas y −27 % con 168). Con 24 y 168 horas, la mejora por hora fue mucho mayor en las horas
   de lluvia, aunque, por ser más numerosas, las horas secas aportaron la mayor parte de la reducción total. Como el clima usado es
   retrospectivo, estas cifras no equivalen a lo que aportaría un pronóstico meteorológico.
 

@@ -1,0 +1,15 @@
+=== Respuesta de Codex ===
+- **4.** `memoria/anexos.md:22–23` afirma que todos los resultados de la canalización fueron idénticos. El recuento de días secos sí cambió entre rondas, de 764 a 763 (`proceso_ia/05-respuesta-codex-verificar-correcciones.txt:39`, `resultados/tablas_memoria.json:311–313`).
+- **6.** `src/tablas_memoria.py:110–114,146–147` calcula el error estándar dividiendo por el estadístico DM. Con pérdidas idénticas hace `0/0` y escribe `NaN` en el JSON (`src/estadistica.py:53–54`).
+- **13.** `memoria/capitulo6_resultados.md:133–134` y `memoria/capitulo7_discusion.md:27–29` atribuyen el mayor error en feriados a copiar la semana anterior. La comparación por tipo de día mide la diferencia de error, pero no identifica su causa.
+- **19.** `datos/procesados/feriados.csv:15–16` omite el feriado nacional del **2 de septiembre de 2022**. Se trata como laborable en el ajuste y en las cifras descriptivas. Al reclasificar ese día, quedan **762 días laborables secos y 10.728 viajes diarios de media** (`memoria/capitulo4_datos.md:157–158,180–183`). [Decreto 573/2022](https://www.boletinoficial.gob.ar/detalleAviso/primera/270892/20220902).
+- **21.** `src/serie_horaria.py:55–64,147–150` sobrescribe un CSV preexistente del mismo año y luego lo borra. Dos ejecuciones simultáneas comparten el mismo temporal, también en `src/descargar_datos.py:45–60`. El plazo anunciado como máximo se comprueba solo al recibir bloques, después de esperar la respuesta (`src/descargar_datos.py:25,47–54`).
+- **23.** `src/variables.py:35–37` permite que queden horas sin clima tras la unión. `src/tablas_memoria.py:69–80,120–124` cuenta esas horas como secas y puede clasificar un día con precipitación incompleta como seco.
+- **24.** `src/graficos.py:101–110` dibuja líneas que atraviesan los huecos cuando no encuentra una semana completa. `src/experimento.py:165–170` y `src/ejecutar_todo.py:26–42` pueden dejar resultados nuevos junto a un registro de ejecución anterior si falla un paso posterior.
+- **28.** `memoria/solicitud_del_tema.md:78–80` atribuye el día de la semana a los tres modelos. Ridge y el perceptrón reciben el tipo de día, mientras que *boosting* recibe el día de la semana real (`memoria/capitulo5_implementacion.md:60–61`).
+- **30.** `memoria/solicitud_del_tema.md:258–259` indica que el título alternativo de Washington tiene 14 palabras. Tiene **13**.
+
+No pude ejecutar las pruebas ni el experimento en local, verificar el estado de la ejecución por *push* en GitHub Actions ni cotejar el cierre histórico del protocolo y la identidad de las dos corridas.
+=== gpt-6.2-sol / medium · tarea revision · 258 s · tokens: 1127206 de entrada, 6787 de salida · encargo 01a1f262-dace-77c3-b21f-eac892e526fd
+Límites de Codex — 5 horas: 22% usado (se reinicia 19/11 04:51 AM); semana: 11% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~1 %
+fin 0

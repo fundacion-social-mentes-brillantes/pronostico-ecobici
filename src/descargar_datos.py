@@ -9,6 +9,7 @@ Uso: python src/descargar_datos.py            (descarga lo que falte y rehace el
 """
 import hashlib
 import json
+import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -42,7 +43,7 @@ def bajar(anio, conocidas):
     if destino.exists() and conocidas.get(destino.name) == huella(destino):
         return f"{anio}: ya estaba y su huella coincide con el manifiesto"
     url = URL_RECORRIDOS.format(anio=anio)
-    temporal = destino.with_suffix(".zip.parcial")
+    temporal = destino.with_suffix(f".zip.{os.getpid()}.parcial")  # único por ejecución
     try:
         with requests.get(url, headers={"User-Agent": AGENTE}, stream=True, timeout=(30, 120)) as r:
             r.raise_for_status()

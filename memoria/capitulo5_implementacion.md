@@ -117,12 +117,12 @@ elegidas.
 | Método | 1 h | 24 h | 168 h |
 |---|---|---|---|
 | Ridge (penalización α) | 1 | 10 | 0,1 |
-| *Boosting* (tasa de aprendizaje; hojas máximas) | 0,1; 63 | 0,05; 15 | 0,05; 15 |
-| Perceptrón (capas ocultas; α) | 64 y 32; 0,001 | 64; 0,001 | 64; 0,001 |
+| *Boosting* (tasa de aprendizaje; hojas máximas) | 0,05; 63 | 0,05; 15 | 0,05; 15 |
+| Perceptrón (capas ocultas; α) | 64 y 32; 0,001 | 64 y 32; 0,001 | 64; 0,001 |
 
-En el *boosting*, con datos de hace una hora la validación prefirió árboles más grandes y un aprendizaje más rápido,
-y con datos de hace un día o una semana, árboles pequeños y pasos más cortos. Una lectura posible, que el
-experimento no comprueba, es que con menos señal reciente un modelo más prudente aprende menos ruido. La Tabla 5.4
+En el *boosting*, con datos de hace una hora la validación prefirió árboles más grandes que con datos de hace
+un día o una semana. La tasa de aprendizaje elegida fue la misma en los tres escenarios. Una lectura posible es
+que, con menos señal reciente, los árboles más pequeños aprenden menos ruido. La Tabla 5.4
 muestra el error de validación de la configuración elegida.
 
 **Tabla 5.4.** MAE de validación (8 de enero a 30 de junio de 2025), en viajes por hora.
@@ -130,10 +130,10 @@ muestra el error de validación de la configuración elegida.
 | Método | 1 h | 24 h | 168 h |
 |---|---|---|---|
 | Ingenuo semanal | 106,63 | 106,63 | 106,63 |
-| Mediana de calendario | 105,47 | 105,47 | 105,47 |
-| Ridge | 37,18 | 85,44 | 93,01 |
-| *Boosting* | 31,46 | 72,16 | 87,23 |
-| Perceptrón | 32,72 | 77,78 | 86,81 |
+| Mediana de calendario | 105,43 | 105,43 | 105,43 |
+| Ridge | 37,17 | 85,39 | 92,99 |
+| *Boosting* | 31,65 | 72,54 | 86,96 |
+| Perceptrón | 32,80 | 78,77 | 86,31 |
 
 ## 5.6. Ejecución y coste computacional
 
@@ -142,14 +142,13 @@ versiones de las librerías queda en `resultados/registro_ejecucion.json`). Cons
 ZIP, incluida la extracción de los 3,2 GB de CSV, tarda unos 25 segundos; DuckDB recorre cada tabla una sola vez
 para todos los contadores de calidad, y los CSV extraídos se borran en cuanto dejan de hacer falta. El experimento
 completo, con la búsqueda de configuraciones de los tres escenarios, el ajuste final, la prueba, los contrastes, las
-seis figuras y las tablas complementarias, tarda unos **57 segundos**.
+seis figuras y las tablas complementarias, tardó **29,24 segundos** en la última ejecución.
 
 Durante el experimento se limitó a un hilo el paralelismo interno de las bibliotecas numéricas, para que los
-tiempos de ajuste fueran comparables entre métodos. En los ajustes finales, Ridge tardó unas 0,05 s; el *boosting*,
-entre 0,6 y 1,2 s, y el perceptrón, unos 2,6 s (en la búsqueda de validación, algunas configuraciones llegaron a
-unos 1,4 y 3 s; los tiempos varían ligeramente de una ejecución a otra). Pronosticar las 4.244 horas de prueba tardó menos de una décima de segundo con cualquiera de ellos. El
-coste computacional, por tanto, no distingue a las alternativas en este problema.
+tiempos de ajuste fueran comparables entre métodos. En los ajustes finales, Ridge tardó unas 0,03 s, el *boosting*
+de 0,3 a 0,6 s, el *boosting* con clima de 0,4 a 0,7 s y el perceptrón de 1,3 a 1,5 s. En la búsqueda de
+validación, los ajustes tardaron de 0,028 a 0,048 s para Ridge, de 0,3 a 0,6 s para el *boosting* y de 0,8 a 1,3 s para
+el perceptrón. Pronosticar las 4.244 horas de prueba tardó menos de una décima de segundo con cualquiera de ellos.
 
-Para comprobar que las correcciones de robustez y seguridad hechas tras la revisión del código no alteraban nada,
-se repitió toda la canalización: la serie horaria y el clima salieron idénticos byte a byte, y las predicciones y
-los contrastes de prueba también.
+La primera repetición confirmó la reproducibilidad tras las correcciones de robustez. El registro citado arriba
+corresponde a la ejecución final con el calendario corregido (véase el capítulo 6).

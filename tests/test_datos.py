@@ -64,4 +64,4 @@ def test_extraer_usa_un_nombre_fijo_y_no_el_del_zip(tmp_path, monkeypatch):
     assert ruta == tmp_path / "csv" / "2030.csv"
     assert ruta.read_text(encoding="utf-8") == CABECERA
     assert not (tmp_path.parent / "fuera.csv").exists()
-    assert not (tmp_path / "csv" / "2030.csv.parcial").exists()
+    assert not list((tmp_path / "csv").glob("*.parcial"))

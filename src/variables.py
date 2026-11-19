@@ -35,6 +35,8 @@ def preparar_serie(serie, feriados, clima=None):
     if clima is not None:
         tiempo = clima.set_index(pd.to_datetime(clima["hora"]))
         df = df.join(tiempo[CLIMA], validate="one_to_one")
+        if df[CLIMA].isna().any().any():
+            raise ValueError("Hay horas de la serie sin clima")
     return df
 
 

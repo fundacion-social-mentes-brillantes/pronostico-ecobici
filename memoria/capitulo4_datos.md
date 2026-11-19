@@ -16,7 +16,7 @@ una persona en el conjunto finalmente analizado.
 |---|---|---|---|---|
 | Recorridos de Ecobici (Gobierno de la Ciudad de Buenos Aires, s. f.) | 2022-2025 | Un ZIP por año con un CSV; 701,5 MB comprimidos y 3.261 MB sin comprimir en total | Conteo de viajes iniciados por hora | CC BY 2.5 Argentina |
 | Open-Meteo, producto ERA5 (Zippenfenig, 2023) | 25/12/2021-31/12/2025 | API; 35.232 horas | Temperatura y precipitación (análisis secundario) | CC BY 4.0 |
-| Feriados y días no laborables de Argentina (Ley 27.399 de 2017; Decreto 1027/2024; Resolución 139/2025) | 2022-2025 | Calendario construido en `src/feriados.py` | Variables de calendario | Normativa pública |
+| Feriados y días no laborables de Argentina (Ley 27.399 de 2017; Decreto 573/2022; Decreto 1027/2024; Resolución 139/2025) | 2022-2025 | Calendario construido en `src/feriados.py` | Variables de calendario | Normativa pública |
 
 Los archivos de recorridos se descargaron el 19 de noviembre de 2026 desde el servidor de contenidos del portal
 Buenos Aires Data; su tamaño y su huella SHA-256 quedaron registrados en `datos/procesados/manifiesto_descarga.json`.
@@ -127,12 +127,12 @@ primavera, de septiembre a noviembre. El mes con más viajes fue octubre de 2025
 ### 4.4.2. Ciclo semanal y diario
 
 La diferencia entre días laborables y fines de semana es la característica más marcada de la serie. Contando solo
-los días con las 24 horas válidas de 2022-2025, un día laborable tiene en promedio 10.246 viajes; un sábado, 3.811;
-un domingo, 3.834, y un feriado, 4.200. El perfil horario también cambia de forma (Figura 4.2, bloque 2022-2024): en
+los días con las 24 horas válidas de 2022-2025, un día laborable tiene en promedio 10.247 viajes; un sábado, 3.811;
+un domingo, 3.834, y un feriado, 4.260. El perfil horario también cambia de forma (Figura 4.2, bloque 2022-2024): en
 los laborables el uso sube con fuerza desde las 6:00, tiene un
-primer máximo a las 8:00 (544 viajes por hora de media), baja a media mañana, vuelve a subir al mediodía y alcanza
+primer máximo a las 8:00 (545 viajes por hora de media), baja a media mañana, vuelve a subir al mediodía y alcanza
 el máximo a las 17:00 y 18:00 (949 y 933). Los sábados, y también los domingos y feriados, el uso crece despacio a lo
-largo del día y llega a su máximo a las 16:00 (326 y 360 viajes por hora de media), sin pico de mañana. Las seis horas con mayor media en días laborables del bloque 2022-2024 son las 13:00, 15:00, 16:00,
+largo del día y llega a su máximo a las 16:00 (326 y 362 viajes por hora de media), sin pico de mañana. Las seis horas con mayor media en días laborables del bloque 2022-2024 son las 13:00, 15:00, 16:00,
 17:00, 18:00 y 19:00; son las que se usan como **horas pico** en la evaluación. La hora con más viajes de todo el
 periodo fue el 10 de noviembre de 2025 a las 18:00 (1.527 viajes).
 
@@ -140,8 +140,8 @@ periodo fue el 10 de noviembre de 2025 a las 18:00 (1.527 viajes).
 
 Este patrón justifica dos decisiones del diseño. Primero, que Ridge y el perceptrón reciban la combinación de hora y
 tipo de día, y no solo la hora: la misma hora significa cosas distintas un martes y un domingo. Segundo, que los
-feriados se agrupen con los domingos en el tipo de día: su nivel (4.200 viajes diarios) se parece mucho más al de un
-domingo que al de un laborable, aunque es algo mayor, sobre todo cuando el feriado cae entre semana (4.459).
+feriados se agrupen con los domingos en el tipo de día: su nivel (4.260 viajes diarios) se parece mucho más al de un
+domingo que al de un laborable, aunque es algo mayor, sobre todo cuando el feriado cae entre semana (4.531).
 
 ### 4.4.3. Dependencia temporal
 
@@ -154,8 +154,8 @@ relativo.
 
 ### 4.4.4. Lluvia y demanda
 
-Los días de lluvia registraron menos viajes. Entre los días laborables con las 24 horas válidas, los 763 días
-prácticamente secos (menos de 1 mm) tuvieron en promedio 10.726 viajes, y los 69 días con 10 mm o más, 6.990: un
+Los días de lluvia registraron menos viajes. Entre los días laborables con las 24 horas válidas, los 762 días
+prácticamente secos (menos de 1 mm) tuvieron en promedio 10.728 viajes, y los 69 días con 10 mm o más, 6.990: un
 35 % menos. Es una comparación
 descriptiva, que no controla otros factores como la estación del año, pero muestra que el clima contiene
 información relevante para el análisis secundario.
@@ -174,12 +174,13 @@ prueba. La consulta exacta, la celda y la fecha de extracción quedaron guardada
 ## 4.6. Feriados y días no laborables
 
 El calendario se construyó con la librería `holidays` y se corrigió con lo efectivamente aplicado según la Ley
-27.399 de 2017 y las normas de 2025. Se hicieron estas correcciones: el Jueves Santo se trata como día no laborable y
-no como feriado, en todos los años; en 2025, el feriado del 12 de octubre (domingo) se trasladó al viernes 10
-(Resolución 139/2025), y el 2 de mayo, el 15 de agosto y el 21 de noviembre fueron días no laborables con fines
-turísticos y no feriados (Decreto 1027/2024). El calendario incluye también los dos feriados extraordinarios de 2022
+27.399 de 2017 y las normas aplicables a cada año. El Jueves Santo se clasificó como día no laborable en los cuatro
+años. Se añadió el feriado nacional del 2 de septiembre de 2022 (Decreto 573/2022). En 2025 se trasladó el feriado
+del 12 de octubre (domingo) al viernes 10 (Resolución 139/2025) y se clasificaron el 2 de mayo, el 15 de agosto y
+el 21 de noviembre como días no laborables con fines turísticos (Decreto 1027/2024). El calendario incluye también
+los dos feriados extraordinarios de 2022
 que recoge la librería: el del Censo Nacional (18 de mayo) y el de la celebración de la Copa Mundial (20 de
-diciembre). Estos dos no se cotejaron con las normas que los establecieron. En total hay 75 feriados y 7 días no laborables en los
+diciembre). Estos dos no se cotejaron con las normas que los establecieron. En total hay 76 feriados y 7 días no laborables en los
 cuatro años.
 
 ## 4.7. Conjunto resultante

@@ -107,7 +107,8 @@ def main():
         sensibilidad[str(rezagos)] = {}
         for d, f, ph in zip(config.RETRASOS, filas, p_holm):
             # Intervalo del 95 % para la diferencia de MAE: diferencia ± 1,96 × error estándar de Newey-West.
-            error_estandar = abs(f["diferencia_mae"] / f["estadistico_dm"])
+            dm = f["estadistico_dm"]
+            error_estandar = abs(f["diferencia_mae"] / dm) if np.isfinite(dm) and dm != 0 else np.nan
             sensibilidad[str(rezagos)][f"{d}h"] = {
                 "estadistico_dm": f["estadistico_dm"], "p_holm": f"{ph:.2e}",
                 "diferencia_mae": f["diferencia_mae"],

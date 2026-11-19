@@ -4,10 +4,10 @@
 
 El resultado más claro del trabajo no es qué modelo gana, sino cuánto importó tener el dato reciente. Con el conteo
 de hace una hora, la diferencia entre el mejor y el peor de los modelos ajustados fue de unos 4 viajes por hora
-(31,2 frente a 34,9), alrededor de un 10 % del error. En cambio, para un mismo modelo, pasar de una hora a un día de
-retraso multiplicó el error por dos y medio (el *boosting* pasó de 31,2 a 78,2). En este sistema y este periodo,
+(31,1 frente a 34,9), alrededor de un 10 % del error. En cambio, para un mismo modelo, pasar de una hora a un día de
+retraso multiplicó el error por dos y medio (el *boosting* pasó de 31,1 a 78,3). En este sistema y este periodo,
 elegir entre modelos competentes movió el error en torno a un 10 %, mientras que perder la hora más reciente lo
-empeoró en un 150 %.
+empeoró entre un 142 % y un 151 %.
 
 Una explicación plausible está en la propia serie. Su autocorrelación con un desfase de una hora es de 0,93 (sección
 4.4.3): la hora anterior se parece mucho a la actual, y es probable que en ella se reflejen el nivel de uso de esos
@@ -24,10 +24,10 @@ atrasados, algo que habría que comprobar con pronósticos reales.
 
 Con 168 horas, el ingenuo semanal y los modelos ajustados disponen del mismo conteo reciente, y aun así el *boosting*
 reduce el error un 14 %, con una diferencia significativa. Los modelos reciben además el calendario y la media de las
-24 horas que terminan en ese conteo. El calendario parece ser una fuente importante de la ventaja: el ingenuo trata
-un feriado como el día normal de la semana anterior, y por eso su error en los feriados (211,7 viajes por hora)
-duplica el de los domingos ordinarios (100,0); los feriados son solo el 3,4 % de las horas de prueba, pero concentran
-el 29 % de la ventaja del *boosting* con 168 horas. Probablemente influye también que los modelos combinan el último
+24 horas que terminan en ese conteo. El calendario parece ser una fuente importante de la ventaja. El error del
+ingenuo en feriados (211,7 viajes por hora) duplica el de los domingos ordinarios (100,0), probablemente porque
+copia un día normal de la semana anterior. Los feriados son el 3,4 % de las horas de prueba y concentran el 29,6 %
+de la ventaja del *boosting* con 168 horas. Probablemente influye también que los modelos combinan el último
 dato con el patrón típico de esa hora y ese tipo de día, mientras que el ingenuo lo copia tal cual, aunque sea una
 hora atípica.
 
@@ -41,10 +41,9 @@ ajustados combinan ambas fuentes de información.
 
 Los resultados son coherentes con la bibliografía consultada. Torres et al. (2024) encontraron en Nueva York que el
 bosque aleatorio, el *gradient boosting* y una red neuronal alcanzan precisiones parecidas, y aquí ocurrió algo
-similar: el *boosting* y el perceptrón quedaron a un viaje por hora con 24 horas de retraso y a 0,19 con 168. También
-coinciden con Grinsztajn et al. (2022), según quienes los modelos de árboles siguen siendo muy competitivos en datos
-tabulares: el *boosting* obtuvo el menor MAE con 1 y 24 horas y quedó a 0,19 del perceptrón con 168, con un ajuste
-más rápido que el de la red.
+similar. El *boosting* y el perceptrón quedaron a 2,46 viajes por hora con 24 horas de retraso y a 0,17 con 168.
+También coinciden con Grinsztajn et al. (2022), según quienes los modelos de árboles siguen siendo muy competitivos
+en datos tabulares. El *boosting* obtuvo el menor MAE en los tres escenarios y se ajustó más rápido que la red.
 
 Las cifras absolutas no son comparables con las de los estudios que usan el conjunto de Washington. Brajevic et al.
 (2026), por ejemplo, reportan un coeficiente de determinación de 0,955 con repartos aleatorios de las horas y

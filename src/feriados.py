@@ -17,6 +17,7 @@ else:
 
 CORRECCIONES = {
     # fecha: (tipo, nombre) ; tipo None = quitar
+    "2022-09-02": ("feriado", "Feriado nacional (Decreto 573/2022)"),
     "2025-10-12": (None, None),
     "2025-10-10": ("feriado", "Día del Respeto a la Diversidad Cultural (trasladado, Res. 139/2025)"),
     "2025-05-02": ("no_laborable", "Día no laborable con fines turísticos (Decreto 1027/2024)"),

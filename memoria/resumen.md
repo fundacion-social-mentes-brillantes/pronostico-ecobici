@@ -9,11 +9,12 @@ que el archivo de 2024 incluye 321.015 recorridos de menos de un minuto, frente 
 Se compararon dos referencias simples (ingenuo semanal y mediana de calendario), regresión Ridge, *gradient
 boosting* de árboles y un perceptrón multicapa, con particiones cronológicas, márgenes de siete días y modelos
 congelados en un semestre de prueba de 4.244 horas. Con datos de hace una hora, el *boosting* obtuvo el menor error
-de las cinco alternativas (31,2 viajes por hora, un 8,3 % del nivel medio). Con un día de retraso, el error de los
-tres modelos ajustados se multiplicó por cerca de 2,5. La ventaja del *boosting* sobre la referencia ingenua fue del
-70 % con datos de una hora, del 25 % con un día y del 14 % con una semana, significativa en los tres casos según la
-prueba de Diebold-Mariano. El clima observado, que es información retrospectiva, apenas cambió el error con datos
-frescos, pero lo redujo un 25-28 % con datos atrasados. En este caso, la frescura de los datos pesó más que la
+de las cinco alternativas (31,1 viajes por hora, un 8,3 % del nivel medio). El *boosting* también obtuvo el menor MAE
+con 24 y 168 horas de retraso. Con 168 horas, el perceptrón quedó segundo, a 0,17 viajes por hora. Con un día de
+retraso, el error de los tres modelos ajustados se multiplicó por cerca de 2,5. La ventaja del *boosting* sobre la
+referencia ingenua fue del 70 % con datos de una hora, del 25 % con un día y del 14 % con una semana, significativa
+en los tres casos según la prueba de Diebold-Mariano. El clima observado, que es información retrospectiva, apenas cambió el error con datos
+frescos, pero lo redujo un 24-27 % con datos atrasados. En este caso, la frescura de los datos pesó más que la
 elección entre modelos competentes.
 
 **Palabras clave:** pronóstico de demanda, bicicletas compartidas, aprendizaje automático, disponibilidad de datos,
@@ -29,11 +30,12 @@ and 11,936,199 cleaned trips was built with SQL; the 2024 file was found to cont
 minute, against none in 2022 and 2023 and 8 in 2025. Two simple baselines (seasonal naive and calendar median), Ridge
 regression, gradient-boosted trees and a multilayer perceptron were compared with chronological splits, seven-day
 gaps and models frozen over a 4,244-hour test semester. With one-hour-old data, gradient boosting achieved the
-lowest error of the five alternatives (31.2 trips per hour, 8.3% of the mean level). With one day of delay, the error
-of the three fitted models grew by a factor of about 2.5. The advantage of boosting over the naive baseline was 70%
-with one-hour-old data, 25% with one day and 14% with one week, significant in all three cases according to the
-Diebold-Mariano test. Observed weather, which is retrospective information, barely changed the error with fresh data
-but cut it by 25-28% with delayed data. In this case, data freshness mattered more than the choice among competent
+lowest error of the five alternatives (31.1 trips per hour, 8.3% of the mean level). Boosting also had the lowest
+MAE with 24 and 168 hours of delay. At 168 hours, the perceptron ranked second, 0.17 trips per hour behind. With one
+day of delay, the error of the three fitted models grew by a factor of about 2.5. The advantage of boosting over the
+naive baseline was 70% with one-hour-old data, 25% with one day and 14% with one week, significant in all three
+cases according to the Diebold-Mariano test. Observed weather, which is retrospective information, barely changed the error with fresh data
+but cut it by 24-27% with delayed data. In this case, data freshness mattered more than the choice among competent
 models.
 
 **Keywords:** demand forecasting, bike sharing, machine learning, data availability, chronological evaluation.
