@@ -1,0 +1,21 @@
+{
+  "horas_prueba_antes_de_excluir": 4248,
+  "horas_evaluadas": 4244,
+  "horas_excluidas": 4,
+  "horas_excluidas_por_margen": 168,
+  "solo_objetivo_faltante": 1,
+  "solo_variables_de_conteo_faltantes": 3,
+  "objetivo_y_variables_de_conteo_faltantes": 0,
+  "por_motivo_no_excluyente": {
+    "objetivo_faltante": 1,
+    "ultimo_conteo_d1": 1,
+    "media_24_d1": 0,
+    "semana_anterior_d1": 1,
+    "ultimo_conteo_d24": 1,
+    "media_24_d24": 0,
+    "semana_anterior_d24": 1,
+    "ultimo_conteo_d168": 1,
+    "media_24_d168": 0,
+    "semana_anterior_d168": 1
+  }
+}

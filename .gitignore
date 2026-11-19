@@ -1,0 +1,14 @@
+# Entorno de Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Datos crudos: son pesados (unos 700 MB); se bajan con src/descargar_datos.py
+datos/crudos/
+
+# Notas privadas y borradores que no van al repositorio público
+memoria/solicitud_del_tema.md
+memoria/borradores/
+*.docx#
+~$*

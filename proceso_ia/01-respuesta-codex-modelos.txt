@@ -1,0 +1,43 @@
+=== Respuesta de Codex ===
+Implementé los cinco modelos, el análisis retrospectivo con clima, el protocolo de evaluación, las seis figuras y las pruebas. El punto de entrada es [ejecutar_todo.py](<C:/Programas creados por mi/pronostico-ecobici/src/ejecutar_todo.py>).
+
+### MAE de prueba verificado
+
+Valores en viajes por hora, calculados de forma independiente con los datos locales. Para Ridge resolví la misma regresión penalizada con NumPy. La ejecución con scikit-learn quedó bloqueada, así que estos valores no proceden de `metricas_prueba.csv`.
+
+| Método | 1 h | 24 h | 168 h |
+|---|---:|---:|---:|
+| Ingenuo semanal | 104,70 | 104,70 | 104,70 |
+| Mediana por calendario | 111,94 | 111,94 | 111,94 |
+| Ridge | 35,18 | 88,07 | 93,00 |
+| Boosting | Pendiente | Pendiente | Pendiente |
+| MLP | Pendiente | Pendiente | Pendiente |
+| Boosting con clima | Pendiente | Pendiente | Pendiente |
+
+- **Configuraciones.** La comprobación independiente de Ridge eligió `alpha=1`, `10` y `0.1` para 1, 24 y 168 h, respectivamente. Quedó pendiente la selección de Boosting y MLP. Estandaricé el objetivo logarítmico de MLP y usé las mismas filas de ajuste para Ridge, MLP y ambas variantes de Boosting.
+- **Horas excluidas.** Las **4.248** horas del bloque posterior al margen son válidas en los tres escenarios. Hubo **0** exclusiones por datos faltantes y **168** horas quedaron fuera por el margen del protocolo. [horas_excluidas.json](<C:/Programas creados por mi/pronostico-ecobici/resultados/horas_excluidas.json>)
+- **Diebold–Mariano y tiempo total.** Pasaron las tres pruebas de estadística con un Python local alternativo. Los tres contrastes sobre datos reales y el tiempo total quedaron pendientes.
+
+**Bloqueo:** el Python base al que apunta `.venv` devolvió «Acceso denegado». Quedaron pendientes la suite completa de `pytest`, la ejecución integral y la generación de los CSV, los hiperparámetros finales y los PNG.
+=== gpt-6.2-sol / medium · tarea codigo · 636 s · tokens: 2905691 de entrada, 19648 de salida · encargo 01a1f22c-cd5f-74e3-99eb-56ac42eb74d0
+Archivos que cambió (19) — REVÍSALOS antes de dar el trabajo por bueno:
+   LICENSE
+   README.md
+   memoria\anexos.md
+   memoria\capitulo1_introduccion.md
+   memoria\capitulo4_datos.md
+   memoria\capitulo5_implementacion.md
+   memoria\construir_docx.py
+   memoria\figuras.txt
+   proceso_ia\respuesta-codex-modelos.txt
+   resultados\horas_excluidas.json
+   src\ejecutar_todo.py
+   src\estadistica.py
+   src\experimento.py
+   src\graficos.py
+   src\modelos.py
+   src\serie_horaria.py
+   src\variables.py
+   tests\test_estadistica.py
+   tests\test_variables.py
+Límites de Codex — 5 horas: 7% usado (se reinicia 19/11 04:51 AM); semana: 8% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

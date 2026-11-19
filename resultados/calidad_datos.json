@@ -1,0 +1,85 @@
+{
+  "anios": {
+    "2022": {
+      "filas": 2922805,
+      "inicio_invalido": 0,
+      "inicio_fuera_de_periodo": 0,
+      "inicio_fuera_del_anio_del_archivo": 0,
+      "llegada_ausente": 0,
+      "llegada_antes_de_salida": 0,
+      "menos_de_60_segundos": 0,
+      "menos_de_60_segundos_misma_estacion": 0,
+      "salida_y_llegada_iguales_entre_estaciones_distintas": 0,
+      "identificador_ausente": 0,
+      "inicio_minimo": "2022-01-01 00:11:07",
+      "inicio_maximo": "2022-12-31 23:55:39",
+      "columnas_del_archivo": 19,
+      "filas_tras_depurar": 2922805
+    },
+    "2023": {
+      "filas": 2622331,
+      "inicio_invalido": 0,
+      "inicio_fuera_de_periodo": 0,
+      "inicio_fuera_del_anio_del_archivo": 0,
+      "llegada_ausente": 0,
+      "llegada_antes_de_salida": 0,
+      "menos_de_60_segundos": 0,
+      "menos_de_60_segundos_misma_estacion": 0,
+      "salida_y_llegada_iguales_entre_estaciones_distintas": 0,
+      "identificador_ausente": 0,
+      "inicio_minimo": "2023-01-01 00:06:08",
+      "inicio_maximo": "2023-12-31 23:59:23",
+      "columnas_del_archivo": 18,
+      "filas_tras_depurar": 2622331
+    },
+    "2024": {
+      "filas": 3559284,
+      "inicio_invalido": 0,
+      "inicio_fuera_de_periodo": 0,
+      "inicio_fuera_del_anio_del_archivo": 0,
+      "llegada_ausente": 3379,
+      "llegada_antes_de_salida": 0,
+      "menos_de_60_segundos": 321015,
+      "menos_de_60_segundos_misma_estacion": 232507,
+      "salida_y_llegada_iguales_entre_estaciones_distintas": 28126,
+      "identificador_ausente": 0,
+      "inicio_minimo": "2024-01-01 00:06:50",
+      "inicio_maximo": "2024-12-31 23:58:25",
+      "columnas_del_archivo": 17,
+      "filas_tras_depurar": 3234890
+    },
+    "2025": {
+      "filas": 3156182,
+      "inicio_invalido": 0,
+      "inicio_fuera_de_periodo": 0,
+      "inicio_fuera_del_anio_del_archivo": 0,
+      "llegada_ausente": 0,
+      "llegada_antes_de_salida": 0,
+      "menos_de_60_segundos": 8,
+      "menos_de_60_segundos_misma_estacion": 1,
+      "salida_y_llegada_iguales_entre_estaciones_distintas": 7,
+      "identificador_ausente": 0,
+      "inicio_minimo": "2025-01-01 00:01:40",
+      "inicio_maximo": "2025-12-31 23:58:28",
+      "columnas_del_archivo": 17,
+      "filas_tras_depurar": 3156174
+    }
+  },
+  "identificadores_repetidos": 1,
+  "recorridos_repetidos_eliminados": 1,
+  "identificadores_repetidos_con_distinta_salida": 0,
+  "recorridos_validos": 11936199,
+  "horas_totales": 35064,
+  "horas_dudosas": 21,
+  "dias_con_horas_dudosas": [
+    "2024-05-25",
+    "2024-05-26",
+    "2025-10-14"
+  ],
+  "horas_en_rachas_de_ceros": 19,
+  "horas_diurnas_en_cero": [
+    "2024-05-25 16:00:00",
+    "2025-10-14 13:00:00"
+  ],
+  "horas_en_cero_conservadas": 4
+}

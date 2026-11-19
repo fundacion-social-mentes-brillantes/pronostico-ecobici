@@ -1,0 +1,83 @@
+fecha,tipo,nombre
+2022-01-01,feriado,Año Nuevo
+2022-02-28,feriado,Lunes de Carnaval
+2022-03-01,feriado,Martes de Carnaval
+2022-03-24,feriado,Día Nacional de la Memoria por la Verdad y la Justicia
+2022-04-02,feriado,Día del Veterano y de los Caidos en la Guerra de Malvinas
+2022-04-14,no_laborable,Jueves Santo
+2022-04-15,feriado,Viernes Santo
+2022-05-01,feriado,Día del Trabajo
+2022-05-18,feriado,Censo Nacional 2022
+2022-05-25,feriado,Día de la Revolución de Mayo
+2022-06-17,feriado,Paso a la Inmortalidad del General Don Martín Miguel de Güemes
+2022-06-20,feriado,Paso a la Inmortalidad del General Don Manuel Belgrano
+2022-07-09,feriado,Día de la Independencia
+2022-08-15,feriado,Paso a la Inmortalidad del General Don José de San Martín
+2022-10-07,feriado,Feriado con fines turísticos
+2022-10-10,feriado,Día del Respeto a la Diversidad Cultural
+2022-11-20,feriado,Día de la Soberanía Nacional
+2022-11-21,feriado,Feriado con fines turísticos
+2022-12-08,feriado,Inmaculada Concepción de María
+2022-12-09,feriado,Feriado con fines turísticos
+2022-12-20,feriado,Día de la Victoria de la Copa Mundial de la FIFA 2022
+2022-12-25,feriado,Navidad
+2023-01-01,feriado,Año Nuevo
+2023-02-20,feriado,Lunes de Carnaval
+2023-02-21,feriado,Martes de Carnaval
+2023-03-24,feriado,Día Nacional de la Memoria por la Verdad y la Justicia
+2023-04-02,feriado,Día del Veterano y de los Caidos en la Guerra de Malvinas
+2023-04-06,no_laborable,Jueves Santo
+2023-04-07,feriado,Viernes Santo
+2023-05-01,feriado,Día del Trabajo
+2023-05-25,feriado,Día de la Revolución de Mayo
+2023-05-26,feriado,Feriado con fines turísticos
+2023-06-17,feriado,Paso a la Inmortalidad del General Don Martín Miguel de Güemes
+2023-06-19,feriado,Feriado con fines turísticos
+2023-06-20,feriado,Paso a la Inmortalidad del General Don Manuel Belgrano
+2023-07-09,feriado,Día de la Independencia
+2023-08-21,feriado,Paso a la Inmortalidad del General Don José de San Martín
+2023-10-13,feriado,Feriado con fines turísticos
+2023-10-16,feriado,Día del Respeto a la Diversidad Cultural
+2023-11-20,feriado,Día de la Soberanía Nacional
+2023-12-08,feriado,Inmaculada Concepción de María
+2023-12-25,feriado,Navidad
+2024-01-01,feriado,Año Nuevo
+2024-02-12,feriado,Lunes de Carnaval
+2024-02-13,feriado,Martes de Carnaval
+2024-03-24,feriado,Día Nacional de la Memoria por la Verdad y la Justicia
+2024-03-28,no_laborable,Jueves Santo
+2024-03-29,feriado,Viernes Santo
+2024-04-01,feriado,Feriado con fines turísticos
+2024-04-02,feriado,Día del Veterano y de los Caidos en la Guerra de Malvinas
+2024-05-01,feriado,Día del Trabajo
+2024-05-25,feriado,Día de la Revolución de Mayo
+2024-06-17,feriado,Paso a la Inmortalidad del General Don Martín Miguel de Güemes
+2024-06-20,feriado,Paso a la Inmortalidad del General Don Manuel Belgrano
+2024-06-21,feriado,Feriado con fines turísticos
+2024-07-09,feriado,Día de la Independencia
+2024-08-17,feriado,Paso a la Inmortalidad del General Don José de San Martín
+2024-10-11,feriado,Feriado con fines turísticos
+2024-10-12,feriado,Día del Respeto a la Diversidad Cultural
+2024-11-18,feriado,Día de la Soberanía Nacional
+2024-12-08,feriado,Inmaculada Concepción de María
+2024-12-25,feriado,Navidad
+2025-01-01,feriado,Año Nuevo
+2025-03-03,feriado,Lunes de Carnaval
+2025-03-04,feriado,Martes de Carnaval
+2025-03-24,feriado,Día Nacional de la Memoria por la Verdad y la Justicia
+2025-04-02,feriado,Día del Veterano y de los Caidos en la Guerra de Malvinas
+2025-04-17,no_laborable,Jueves Santo
+2025-04-18,feriado,Viernes Santo
+2025-05-01,feriado,Día del Trabajo
+2025-05-02,no_laborable,Día no laborable con fines turísticos (Decreto 1027/2024)
+2025-05-25,feriado,Día de la Revolución de Mayo
+2025-06-16,feriado,Paso a la Inmortalidad del General Don Martín Miguel de Güemes
+2025-06-20,feriado,Paso a la Inmortalidad del General Don Manuel Belgrano
+2025-07-09,feriado,Día de la Independencia
+2025-08-15,no_laborable,Día no laborable con fines turísticos (Decreto 1027/2024)
+2025-08-17,feriado,Paso a la Inmortalidad del General Don José de San Martín
+2025-10-10,feriado,"Día del Respeto a la Diversidad Cultural (trasladado, Res. 139/2025)"
+2025-11-21,no_laborable,Día no laborable con fines turísticos (Decreto 1027/2024)
+2025-11-24,feriado,Día de la Soberanía Nacional
+2025-12-08,feriado,Inmaculada Concepción de María
+2025-12-25,feriado,Navidad

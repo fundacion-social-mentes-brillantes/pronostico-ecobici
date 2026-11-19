@@ -1,0 +1,11 @@
+{
+  "fuente": "Open-Meteo Historical Weather API (producto ERA5), datos CC BY 4.0",
+  "consulta": "https://archive-api.open-meteo.com/v1/archive?latitude=-34.6037&longitude=-58.3816&start_date=2021-12-25&end_date=2026-01-01&hourly=temperature_2m,precipitation&timezone=America/Argentina/Buenos_Aires&models=era5",
+  "latitud_celda": -34.5,
+  "longitud_celda": -58.5,
+  "elevacion": 18.0,
+  "fecha_extraccion_utc": "2026-11-19T05:51:50+00:00",
+  "filas": 35232,
+  "faltantes_temperatura": 0,
+  "faltantes_precipitacion": 0
+}

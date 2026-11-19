@@ -1,0 +1,38 @@
+{
+  "fuente": "Buenos Aires Data, Bicicletas públicas, Recorridos realizados (CC BY 2.5 AR)",
+  "generado_utc": "2026-11-19T05:32:31+00:00",
+  "archivos": [
+    {
+      "anio": 2022,
+      "archivo": "recorridos-realizados-2022.zip",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/bicicletas-publicas/recorridos-realizados-2022.zip",
+      "bytes": 167117619,
+      "sha256": "e07cce3ea391c5c8a9f4e92a2a391010816b2cf0e0b4f2d0d579d5c0072d344a",
+      "modificado_local_utc": "2026-11-19T04:50:19+00:00"
+    },
+    {
+      "anio": 2023,
+      "archivo": "recorridos-realizados-2023.zip",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/bicicletas-publicas/recorridos-realizados-2023.zip",
+      "bytes": 150364687,
+      "sha256": "88d39895a3c6466d5ac257834a34ba74393ea62da652b65ee25446f545b23853",
+      "modificado_local_utc": "2026-11-19T04:54:33+00:00"
+    },
+    {
+      "anio": 2024,
+      "archivo": "recorridos-realizados-2024.zip",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/bicicletas-publicas/recorridos-realizados-2024.zip",
+      "bytes": 176287971,
+      "sha256": "5bda973be30996f27bb7ce2d3794e42037bd4b4ef8500bf112e12f7a307875c7",
+      "modificado_local_utc": "2026-11-19T04:55:48+00:00"
+    },
+    {
+      "anio": 2025,
+      "archivo": "recorridos-realizados-2025.zip",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/bicicletas-publicas/recorridos-realizados-2025.zip",
+      "bytes": 207752882,
+      "sha256": "d044e693e7692509c1598e4ed954561b02e243e1c357f0a23ba6bbd51e7485b8",
+      "modificado_local_utc": "2026-11-19T04:57:52+00:00"
+    }
+  ]
+}

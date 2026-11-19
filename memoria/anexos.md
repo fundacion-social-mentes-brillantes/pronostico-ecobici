@@ -1,0 +1,93 @@
+# Anexo A. Declaración de uso de inteligencia artificial
+
+Este trabajo es una **prueba de capacidades de dos asistentes de inteligencia artificial**, encargada por
+Sebastián (Fundación Social Mentes Brillantes), que no es programador, para comprobar hasta dónde pueden llevar por
+sí solos un trabajo con la forma y la exigencia de un Trabajo Fin de Máster. **No es un Trabajo Fin de Estudios
+presentado ante UNIR ni ante ninguna otra universidad**, y no debe presentarse como tal.
+
+Participaron (Anthropic, 2026; OpenAI, 2026):
+
+- **Claude** (Anthropic, modelo Claude Opus 5.5), que dirigió el trabajo: definió el tema y el diseño experimental,
+  buscó y comprobó la bibliografía, descargó y depuró los datos, escribió los scripts de preparación y de tablas,
+  revisó, corrigió y ejecutó el código de los modelos, redactó los capítulos 1, 4, 5, 6, 7 y 8, el resumen y los
+  anexos, y revisó todo el documento.
+- **Codex** (OpenAI, modelos GPT-6.2 Sol y GPT-6.1 Terra), que propuso temas candidatos, revisó la propuesta como
+  segundo lector, programó los modelos, el protocolo de evaluación, las pruebas automáticas y las figuras, redactó
+  los primeros borradores de los capítulos 2 y 3 y los ajustó, y revisó el proyecto completo (memoria y código) en
+  una revisión final de 30 puntos.
+
+La revisión final de Codex llevó a corregir varias cifras, a contar por separado 3.379 recorridos sin hora de
+llegada, a reforzar la seguridad y la robustez del código (ruta del archivo como parámetro de la consulta SQL,
+descargas a un archivo temporal con huellas SHA-256, validación de la rejilla del clima y de las entradas del
+contraste) y a moderar varias afirmaciones que el experimento no permite sostener. Tras esas correcciones se repitió
+toda la canalización y los resultados fueron idénticos. Los cambios de diseño que habrían exigido volver a evaluar la
+prueba no se hicieron y figuran como limitaciones (sección 7.4).
+
+Las instrucciones exactas que recibió Codex y sus respuestas están en la carpeta `proceso_ia/` del repositorio.
+Todas las referencias bibliográficas se comprobaron una por una en Crossref, arXiv o la página oficial de la
+fuente; ninguna se tomó de la memoria de un modelo sin verificar. Todas las cifras del documento proceden de la
+ejecución del código incluido en el repositorio (`resultados/`).
+
+# Anexo B. Repositorio y reproducción
+
+El repositorio público (https://github.com/fundacion-social-mentes-brillantes/pronostico-ecobici) contiene:
+
+| Carpeta o archivo | Contenido |
+|---|---|
+| `src/config.py` | Rutas, fechas de las particiones, escenarios y semilla |
+| `src/descargar_datos.py` | Descarga de los recorridos de Ecobici 2022-2025 (unos 700 MB) y manifiesto con huellas |
+| `src/serie_horaria.py` | Lectura con SQL (DuckDB), depuración y serie horaria con control de cobertura |
+| `src/descargar_clima.py` | Temperatura y precipitación horarias de Open-Meteo (ERA5) |
+| `src/feriados.py` | Calendario de feriados y días no laborables 2022-2025 |
+| `src/variables.py`, `src/modelos.py`, `src/estadistica.py`, `src/experimento.py` | Variables por escenario, alternativas, métricas y contraste, y protocolo |
+| `src/graficos.py`, `src/tablas_memoria.py`, `src/ejecutar_todo.py` | Figuras, tablas complementarias y ejecución completa con registro |
+| `tests/` | Catorce pruebas automáticas |
+| `datos/procesados/` | Serie horaria, clima, feriados y manifiesto de la descarga |
+| `resultados/` | Métricas, hiperparámetros, contrastes, predicciones, tablas, registro de ejecución y figuras |
+| `memoria/` | Esta memoria, en Markdown por capítulos y en Word |
+| `proceso_ia/` | Encargos y respuestas de Codex |
+
+Pasos, con Python 3.12 (en Linux o macOS, `.venv/bin/python` en lugar de `.venv/Scripts/python`):
+
+```
+python -m venv .venv
+.venv/Scripts/python -m pip install -r requirements.txt
+.venv/Scripts/python -m pytest -q
+.venv/Scripts/python src/ejecutar_todo.py
+```
+
+Eso repite el experimento con los datos procesados que ya trae el repositorio. Para reconstruir antes esos datos
+desde los recorridos originales, después de crear el entorno y antes de las pruebas:
+
+```
+.venv/Scripts/python src/descargar_datos.py
+.venv/Scripts/python src/serie_horaria.py
+.venv/Scripts/python src/descargar_clima.py
+.venv/Scripts/python src/feriados.py
+```
+
+# Anexo C. Días que marcaba la regla de bajo volumen (descartada)
+
+La regla marcaba como dudosos los días con menos del 25 % de la mediana del mismo día de la semana en las cuatro
+semanas anteriores y posteriores (sección 4.3), usando el total diario de viajes incluso en los días con alguna hora
+dudosa. Se descartó porque todos los días marcados coincidían con feriados o con lluvia. La lluvia del día es la suma
+de la precipitación horaria de ERA5 en la celda de Buenos Aires.
+
+| Fecha | Día | Feriado | Lluvia del día (mm) |
+|---|---|---|---|
+| 24/03/2022 | jueves | sí | 19,5 |
+| 25/05/2022 | miércoles | sí | 21,4 |
+| 21/11/2022 | lunes | sí | 7,0 |
+| 25/05/2023 | jueves | sí | 10,7 |
+| 12/07/2023 | miércoles | no | 20,7 |
+| 03/09/2023 | domingo | no | 9,7 |
+| 02/11/2023 | jueves | no | 28,0 |
+| 21/06/2024 | viernes | sí | 11,3 |
+| 31/08/2024 | sábado | no | 41,0 |
+| 03/03/2025 | lunes | sí | 84,5 |
+| 16/05/2025 | viernes | no | 17,6 |
+| 17/05/2025 | sábado | no | 20,7 |
+| 14/06/2025 | sábado | no | 16,8 |
+| 16/06/2025 | lunes | sí | 2,9 |
+| 19/08/2025 | martes | no | 70,8 |
+| 31/08/2025 | domingo | no | 16,5 |

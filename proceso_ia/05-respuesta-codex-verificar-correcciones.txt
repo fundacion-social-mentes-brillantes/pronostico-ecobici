@@ -1,0 +1,46 @@
+=== Respuesta de Codex ===
+**Balance: 8 resueltos, 2 resueltos como limitación declarada y 20 pendientes.** Uso la numeración original y reviso aparte las 13 observaciones de cifras que quedaron sin numerar.
+
+1. **pendiente** — `src/serie_horaria.py:45–70` todavía extrae el CSV íntegro e inspecciona todo el esquema. `memoria/capitulo4_datos.md:33–40` reconoce la extracción, pero aún afirma que los campos personales nunca se guardaron.
+2. **resuelto** — El filtro separa las 3.379 llegadas ausentes y mide la duración entre marcas horarias. Los recuentos cuadran con `calidad_datos.json`.
+3. **pendiente** — `src/serie_horaria.py:159–169` todavía usa horas futuras para marcar rachas. La sección 7.4 lo reconoce, pero `tests/test_variables.py:11–24` solo prueba desplazamientos y `memoria/capitulo8_conclusiones.md:13–14` generaliza esa garantía.
+4. **pendiente** — `memoria/capitulo3_objetivos_metodologia.md:29` aún afirma «ejecución única». `resultados/registro_ejecucion.json:2–8` registra una corrida y no acredita cuándo se cerró el protocolo.
+5. **resuelto** — El capítulo 6 y la sección 7.4 distinguen los tres contrastes frente al ingenuo del descenso descriptivo de la ventaja y del orden entre modelos.
+6. **pendiente** — `memoria/capitulo6_resultados.md:98–111` publica la sensibilidad a 24, 48, 168 y 336 rezagos. Faltan los intervalos para las diferencias y explicar en la memoria cómo se conservan los huecos.
+7. **resuelto como limitación declarada** — La sección 7.4 documenta el control aleatorio del 10 %. El capítulo 5 identifica el \(R^2\) y describe el escalado del bloque de ajuste.
+8. **resuelto** — La mejora con ERA5 se atribuye a la variante retrospectiva evaluada. El aporte de un pronóstico meteorológico queda abierto.
+9. **resuelto como limitación declarada** — La sección 7.4 documenta el reajuste por escenario y la columna duplicada a 168 h. El capítulo 8 deja la configuración fija como trabajo futuro.
+10. **pendiente** — `src/experimento.py:47–69, 92–96` conserva la muestra común de prueba. Faltan cobertura por método y escenario, política de respaldo y máscara común explícita en validación.
+11. **pendiente** — `memoria/capitulo3_objetivos_metodologia.md:35` aún dice «cobertura confirmada». El Anexo C enumera los 16 días, pero `memoria/anexos.md:71–73` omite el tratamiento de días incompletos y el criterio de lluvia.
+12. **pendiente** — `memoria/capitulo4_datos.md:54–63` documenta la anomalía y matiza su causa. Falta medir la sensibilidad de la serie y del orden de modelos al umbral.
+13. **pendiente** — `memoria/capitulo6_resultados.md:129–131` y `memoria/capitulo7_discusion.md:25–38` aún atribuyen diferencias al calendario o al cambio de nivel sin aislar esos efectos.
+14. **pendiente** — La tabla 6.6 cuadra con el JSON. `memoria/capitulo8_conclusiones.md:30–32` debe acotar la mejora por hora lluviosa a 24 y 168 h. A 1 h fue mayor en seco, 1,48 frente a 1,32.
+15. **pendiente** — Se corrigieron el bloque de ajuste, el sesgo medio y la distinción entre MAE y RMSE. Falta matizar la explicación de la mediana y la lectura del sobreajuste a partir de un solo par de bloques. `memoria/capitulo7_discusion.md:34–38`, `memoria/capitulo6_resultados.md:181–188`.
+16. **resuelto** — El 9 de julio queda como ejemplo y la tabla separa domingos ordinarios y feriados, con MAE del ingenuo de 100,0 y 211,7.
+17. **pendiente** — Las conclusiones operativas se acotaron. `memoria/capitulo1_introduccion.md:26–29` todavía afirma que el portal publica **todos** los recorridos.
+18. **pendiente** — Se corrigió la atribución a Brajevic. `memoria/capitulo4_datos.md:165–169` aún atribuye especificaciones a documentación sin referencia directa y `memoria/solicitud_del_tema.md:88–91` mantiene la afirmación de novedad sin un registro de búsqueda adjunto.
+19. **pendiente** — El corpus ya incluye Anthropic, OpenAI y las dos normas de 2025. Faltan las referencias normativas de los dos feriados extraordinarios de 2022. `memoria/capitulo4_datos.md:180–182`, `memoria/referencias.md`.
+20. **resuelto** — Ambas consultas parametrizan la ruta. La prueba con apóstrofo cubre la inspección del esquema.
+21. **pendiente** — Los temporales usan nombres fijos y pueden quedar tras un fallo. Se reutilizan archivos por tamaño, sin comprobar su integridad, y se puede borrar un CSV preexistente. El plazo solo se comprueba entre bloques. `src/descargar_datos.py:35–50`, `src/serie_horaria.py:45–63, 137–140`.
+22. **pendiente** — Se cuentan identificadores ausentes, repetidos y con distinta salida. Falta distinguir duplicados exactos, comprobar el alcance global del ID y documentar la política ante conflictos. `src/serie_horaria.py:124–150`.
+23. **pendiente** — La lluvia se alinea por marca temporal. Falta verificar la rejilla esperada completa, permitir la comparativa sin clima y contabilizar lluvia faltante. `src/descargar_clima.py:35–53`, `src/variables.py:41–48`, `src/tablas_memoria.py:65–79`.
+24. **pendiente** — Persisten fechas y escenarios fijos, escrituras parciales y una figura de respaldo que une puntos a través de los huecos. `src/serie_horaria.py:42, 156`, `src/graficos.py:92–123`, `src/ejecutar_todo.py:23–42`.
+25. **pendiente** — El archivo de revisión, el manifiesto y las tablas generadas existen. El Git local carece de commits y remoto, y la afirmación de publicación sigue sin URL ni versión verificable. `memoria/capitulo1_introduccion.md:53–56`, `memoria/capitulo3_objetivos_metodologia.md:81`.
+26. **pendiente** — Se consolidaron los contadores y mejoró el contraste. Siguen la tabla concatenada y los recálculos de referencias. Faltan pruebas del filtro de llegadas, la proyección ejecutada, la causalidad de cobertura y el reajuste final. `src/serie_horaria.py:137`, `src/experimento.py:98–117`, `tests/test_datos.py:13–22`.
+27. **resuelto** — El capítulo 3 define \(d\) entre inicios de intervalos y aclara que 1 h equivale a disponibilidad al cierre, para pronosticar la hora que empieza.
+28. **pendiente** — La tabla 5.2 distingue las codificaciones. `memoria/solicitud_del_tema.md:78–80` aún promete «las mismas variables».
+29. **pendiente** — La planificación quedó como referencia. Persisten «se utilizará», «permitirá» y «se comparará», además del solapamiento entre capítulos. `memoria/capitulo2_estado_del_arte.md:71–83`, `memoria/capitulo3_objetivos_metodologia.md:17–19`.
+30. **pendiente** — Sigue «lineal… a la combinación de coeficientes» y la tabla que repite la prosa. El borrador aún promete sesgo por franja y atribuye en bloque el contraste. Corrijo mi recuento anterior: los títulos actuales tienen **14 y 13 palabras**. `memoria/capitulo2_estado_del_arte.md:49, 87–106`, `memoria/solicitud_del_tema.md:28–29, 195–202, 258–259`.
+
+**Cotejo de cifras.** Cuadran la depuración, los totales y perfiles horarios del capítulo 4, los hiperparámetros y MAE de validación del 5, las tablas de prueba y contrastes del 6 y los resultados numéricos del resumen, el *abstract* y el README. También verifiqué los 701,5 MB y las cuatro huellas SHA-256. Las 484 horas lluviosas corresponden a la muestra evaluada; el semestre completo tiene 486. El registro respalda **57,27 s y 24 núcleos lógicos**. Los **25 s** de preparación y los **3 s** de pruebas carecen de traza fechada, aunque el código define 13 casos y el capítulo ya enumera el caso Bartlett. `memoria/capitulo5_implementacion.md:80–103, 136–151`.
+
+**Problemas nuevos**
+
+- **Días secos.** El capítulo 4 y el JSON coinciden en **764 días y 10.730 viajes**, pero el recálculo en décimas de milímetro da **763 días y 10.726 viajes** para días laborables completos con **menos de 1 mm**. El generador compara una suma en coma flotante con `1`. `src/tablas_memoria.py:112–125`, `memoria/capitulo4_datos.md:157–159`.
+- **Diferencia MLP–boosting.** A 168 h, los MAE sin redondear difieren en **0,18726**, que redondea a **0,19**. El **0,18** publicado sale de restar los MAE ya redondeados. `memoria/capitulo6_resultados.md:76–78`, `memoria/capitulo7_discusion.md:44–46`, `memoria/capitulo8_conclusiones.md:28–29`.
+- **Columnas y clima.** La memoria y la prueba hablan de seis columnas seleccionadas, aunque la consulta materializa cinco y solo busca la duración en el esquema. La tabla 5.2 también coloca temperatura y precipitación en «Objetivo», aunque son entradas. `src/serie_horaria.py:33–40, 94–102`, `tests/test_datos.py:13–22`, `memoria/capitulo5_implementacion.md:56–62`.
+
+**Sin comprobar:** `pytest` y la reejecución completa porque el intérprete local no arrancó. Tampoco pude acreditar la cronología histórica del protocolo, la identidad entre corridas ni el mínimo de 61 s a partir de los resultados guardados.
+=== gpt-6.2-sol / medium · tarea revision · 324 s · tokens: 1253597 de entrada, 8996 de salida · encargo 01a1f255-29b5-7180-8f05-01c1031c893d
+Límites de Codex — 5 horas: 18% usado (se reinicia 19/11 04:51 AM); semana: 10% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~1 %
+fin 0

@@ -1,0 +1,76 @@
+{
+  "horas_pico": [
+    17,
+    18,
+    16,
+    19,
+    15,
+    13
+  ],
+  "por_retraso": {
+    "1": {
+      "ingenuo_semanal": {},
+      "mediana_calendario": {},
+      "ridge": {
+        "alpha": 1
+      },
+      "boosting": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 63
+      },
+      "mlp": {
+        "hidden_layer_sizes": [
+          64,
+          32
+        ],
+        "alpha": 0.001
+      },
+      "boosting_clima": {
+        "learning_rate": 0.1,
+        "max_leaf_nodes": 63
+      }
+    },
+    "24": {
+      "ingenuo_semanal": {},
+      "mediana_calendario": {},
+      "ridge": {
+        "alpha": 10
+      },
+      "boosting": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      },
+      "mlp": {
+        "hidden_layer_sizes": [
+          64
+        ],
+        "alpha": 0.001
+      },
+      "boosting_clima": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      }
+    },
+    "168": {
+      "ingenuo_semanal": {},
+      "mediana_calendario": {},
+      "ridge": {
+        "alpha": 0.1
+      },
+      "boosting": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      },
+      "mlp": {
+        "hidden_layer_sizes": [
+          64
+        ],
+        "alpha": 0.001
+      },
+      "boosting_clima": {
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15
+      }
+    }
+  }
+}
