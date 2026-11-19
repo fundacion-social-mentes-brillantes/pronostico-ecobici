@@ -10,7 +10,8 @@ Participaron (Anthropic, 2026; OpenAI, 2026):
 - **Claude** (Anthropic, modelo Claude Opus 5.5), que dirigió el trabajo: definió el tema y el diseño experimental,
   buscó y comprobó la bibliografía, descargó y depuró los datos, escribió los scripts de preparación y de tablas,
   revisó, corrigió y ejecutó el código de los modelos, redactó los capítulos 1, 4, 5, 6, 7 y 8, el resumen y los
-  anexos, revisó todo el documento, y diseñó y construyó la página web del proyecto y este PDF.
+  anexos, revisó todo el documento, diseñó y construyó la página web del proyecto y este PDF, y escribió el comando
+  que pronostica una hora concreta (`src/pronosticar.py`).
 - **Codex** (OpenAI, modelos GPT-6.2 Sol, GPT-6.1 Terra y GPT-6 Luna), que propuso temas candidatos, revisó la propuesta como
   segundo lector, programó los modelos, el protocolo de evaluación, las pruebas automáticas y las figuras, redactó
   los primeros borradores de los capítulos 2 y 3 y los ajustó, y revisó el proyecto completo (memoria y código) en
@@ -27,7 +28,7 @@ cambió una cifra descriptiva, los días secos, por un ajuste de redondeo. Despu
 2 de septiembre de 2022. Se corrigió el calendario y se repitió el experimento. Todas las cifras de la memoria
 proceden de esa última ejecución (`resultados/`). Las limitaciones de diseño se recogen en la sección 7.4.
 
-En total Codex recibió dieciocho encargos de revisión, programación y redacción, más los de las ilustraciones y
+En total Codex recibió más de veinte encargos de revisión, programación y redacción, más los de las ilustraciones y
 las críticas de diseño; cada tanda de arreglos se repitió hasta que respondió «SIN ERRORES PENDIENTES». Las
 instrucciones exactas que recibió Codex y sus respuestas están en la carpeta `proceso_ia/` del repositorio, incluidas
 las de las ilustraciones y las críticas de diseño (`20-ilustraciones-y-criticas-codex.md`).
@@ -47,10 +48,11 @@ El repositorio público (https://github.com/fundacion-social-mentes-brillantes/p
 | `src/feriados.py` | Calendario de feriados y días no laborables 2022-2025 |
 | `src/variables.py`, `src/modelos.py`, `src/estadistica.py`, `src/experimento.py` | Variables por escenario, alternativas, métricas y contraste, y protocolo |
 | `src/graficos.py`, `src/tablas_memoria.py`, `src/exportar_web.py`, `src/ejecutar_todo.py` | Figuras, tablas complementarias, datos de la página web y ejecución completa con registro |
-| `tests/` | Veinte pruebas automáticas |
+| `src/pronosticar.py` | Pronóstico de una hora concreta con los modelos del estudio |
+| `tests/` | Treinta y dos pruebas automáticas |
 | `datos/procesados/` | Serie horaria, clima, feriados y manifiesto de la descarga |
 | `resultados/` | Métricas, hiperparámetros, contrastes, predicciones, tablas, registro de ejecución y figuras |
-| `memoria/` | Esta memoria, en Markdown por capítulos, en Word y en PDF (`construir_docx.py` y `construir_pdf.py`) |
+| `memoria/` | Esta memoria, en Markdown por capítulos, en Word, en PDF y para Google Docs (`construir_docx.py`, `construir_pdf.py` y `construir_gdocs.py`) |
 | `web/` | Página del proyecto, publicada en https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/ |
 | `proceso_ia/` | Encargos y respuestas de Codex |
 
@@ -72,6 +74,18 @@ desde los recorridos originales, después de crear el entorno y antes de las pru
 .venv/Scripts/python src/descargar_clima.py
 .venv/Scripts/python src/feriados.py
 ```
+
+Para pedirle a los modelos del estudio el pronóstico de una hora concreta:
+
+```
+.venv/Scripts/python src/pronosticar.py "2025-12-24 18:00"
+```
+
+El comando muestra lo que pronostica cada método con el dato de hace 1 hora, 1 día y 1 semana y, si esa hora ya
+tiene dato, el valor real. Usa los mismos modelos del experimento, ajustados con los datos de 2022 a junio de 2025,
+así que en las horas de prueba da las mismas cifras que guardó el experimento (salvo diferencias de redondeo de
+menos de una billonésima de viaje). Después del último dato publicado,
+cada escenario llega solo hasta donde alcanza su retraso: una hora, un día o una semana más allá.
 
 # Anexo C. Días que marcaba la regla de bajo volumen (descartada)
 

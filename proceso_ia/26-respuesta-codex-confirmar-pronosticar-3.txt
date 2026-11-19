@@ -1,0 +1,8 @@
+=== Respuesta de Codex ===
+Confirmé los cuatro cambios. El README indica que las diferencias de redondeo son menores que una billonésima de viaje y la prueba usa `pytest.approx(..., rel=0, abs=1e-12)`. El Anexo A dice «más de veinte encargos» y `proceso_ia/LEEME.md` cita los encargos 23 a 26.
+
+No ejecuté Python, así que no pude verificar que pasaran las 32 pruebas.
+
+SIN ERRORES PENDIENTES.
+=== gpt-6.2-sol / medium · tarea revision · 129 s · tokens: 219961 de entrada, 809 de salida · encargo 01a1f4c3-372e-7a52-9f0f-f9148d64bffd
+Límites de Codex — 5 horas: 29% usado (se reinicia 19/11 01:25 PM); semana: 16% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

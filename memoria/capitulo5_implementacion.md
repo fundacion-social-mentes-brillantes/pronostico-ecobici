@@ -24,6 +24,7 @@ la semilla se leen de un único archivo de configuración (`src/config.py`).
 | `experimento.py` | Protocolo completo: búsqueda en validación, ajuste final, prueba y contrastes |
 | `graficos.py`, `tablas_memoria.py` | Figuras y tablas complementarias de la memoria, calculadas desde los resultados guardados |
 | `ejecutar_todo.py` | Ejecuta experimento, figuras y tablas, y guarda un registro con fecha, versiones, equipo y tiempos |
+| `pronosticar.py` | Pronóstico de una hora concreta con los modelos del estudio |
 
 La interfaz común es la decisión de diseño más útil del código: cada alternativa, desde el ingenuo semanal hasta
 el perceptrón, ofrece los mismos dos métodos, `ajustar(datos)` y `predecir(datos)`, y el protocolo de evaluación las
@@ -78,7 +79,7 @@ mezclado el efecto del modelo con el de los datos.
 ## 5.4. Pruebas automáticas
 
 El riesgo principal de este trabajo es usar sin querer información del futuro: un error así no produce ningún
-fallo visible, solo resultados mejores de lo que deberían. Por eso se escribieron veinte pruebas automáticas
+fallo visible, solo resultados mejores de lo que deberían. Por eso se escribieron treinta y dos pruebas automáticas
 (`tests/`), que se ejecutan con `pytest` en pocos segundos y también en el servicio de integración continua del
 repositorio cada vez que se sube un cambio:
 
@@ -102,6 +103,8 @@ repositorio cada vez que se sube un cambio:
    los resultados en JSON nunca llevan valores no numéricos (NaN o infinitos).
 9. **La página web está al día**: sus datos coinciden con los resultados guardados y cada cifra escrita en la
    página coincide con esos datos.
+10. **El pronóstico de una hora concreta** (`pronosticar.py`) repite las predicciones del experimento y respeta lo
+    que se conocería con cada retraso (Anexo B).
 
 Su utilidad quedó demostrada durante la propia verificación, en dos ocasiones. La prueba de la depuración detectó
 que el contador de recorridos de menos de 60 segundos también contaba los que llegan antes de salir (en los datos

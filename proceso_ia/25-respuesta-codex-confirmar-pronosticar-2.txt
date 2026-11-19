@@ -1,0 +1,9 @@
+=== Respuesta de Codex ===
+1. **Aviso.** `imprimir` dice que ninguno de los pronósticos es honesto si la hora cae dentro del ajuste. El comentario explica por qué el aviso se muestra una sola vez.
+2. **Prueba del 25 de mayo.** El código, la prueba y el CSV concuerdan. A las 17:00, con 1 h de retraso, pronostican el ingenuo y la mediana. A Ridge, perceptrón y boosting les falta `ultimo_conteo`.
+3. **Redacción.** La Tabla 5.1 y el LEEME están corregidos. El capítulo 5, el Anexo B y el docstring mencionan el límite de una billonésima de viaje. El [README](<C:/Programas creados por mi/pronostico-ecobici/README.md:98>) aún omite ese límite. Además, la prueba usa tolerancias de `1e-9` y permite diferencias superiores al límite documentado de `1e-12`.
+4. **Anexo A.** Confirmé los 24 encargos del 01 al 25. El 20 es el registro de ilustraciones y críticas. El recuento incluye el 09, del que solo se conserva la respuesta, y el 25.
+
+No ejecuté Python ni pude verificar el resultado de la suite o reproducir la diferencia máxima medida por Claude.
+=== gpt-6.2-sol / medium · tarea revision · 80 s · tokens: 141759 de entrada, 1140 de salida · encargo 01a1f4c1-0fb1-7c61-a633-372c80a05e9f
+Límites de Codex — 5 horas: 28% usado (se reinicia 19/11 01:25 PM); semana: 16% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

@@ -50,11 +50,12 @@ Error absoluto medio (MAE) en viajes por hora, sobre 4.244 horas de prueba (juli
 | 3 | `src/descargar_clima.py` | Temperatura y lluvia por hora de Open-Meteo (ERA5, CC BY 4.0) |
 | 4 | `src/feriados.py` | Feriados y días no laborables de Argentina 2022-2025, con las correcciones de cada año |
 | 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas, datos de la web (`src/exportar_web.py`) y registro de la ejecución (menos de un minuto) |
-| 6 | `memoria/construir_docx.py`, `memoria/construir_pdf.py` y `memoria/construir_gdocs.py` | La memoria en Word (editable), en PDF (diseño editorial, con Edge o Chrome sin ventana) y para Google Docs (el diseño del PDF en un documento editable) a partir de los capítulos en Markdown |
+| 6 | `src/pronosticar.py` | Pronóstico de una hora concreta con los modelos del estudio (ver «Pronosticar una hora») |
+| 7 | `memoria/construir_docx.py`, `memoria/construir_pdf.py` y `memoria/construir_gdocs.py` | La memoria en Word (editable), en PDF (diseño editorial, con Edge o Chrome sin ventana) y para Google Docs (el diseño del PDF en un documento editable) a partir de los capítulos en Markdown |
 
 Protocolo: entrenamiento 2022-2024, validación enero-junio de 2025 y prueba julio-diciembre de 2025, con un margen
 de siete días entre bloques; los modelos se congelan antes de la prueba y todas las alternativas se evalúan en las
-mismas horas. Las veinte pruebas automáticas (`tests/`) comprueban, entre otras cosas, que ninguna variable use datos
+mismas horas. Las treinta y dos pruebas automáticas (`tests/`) comprueban, entre otras cosas, que ninguna variable use datos
 posteriores al corte de cada escenario; corren en GitHub Actions con cada cambio.
 
 ## Reproducir
@@ -71,6 +72,32 @@ python -m venv .venv
 Los datos procesados ya están en `datos/procesados/`. Para reconstruirlos desde los recorridos originales, después
 de crear el entorno: `src/descargar_datos.py`, `src/serie_horaria.py`, `src/descargar_clima.py` y `src/feriados.py`,
 en ese orden.
+
+## Pronosticar una hora
+
+Para pedirle a los modelos del estudio cuántos viajes habrá en una hora concreta:
+
+```
+.venv/Scripts/python src/pronosticar.py "2025-09-10 08:00" --retraso 1
+```
+
+```
+Viajes que se iniciarían en Ecobici el miércoles 10 de septiembre de 2025, 08:00 (de 08:00 a 08:59, hora de Buenos Aires)
+Dato real: 655 viajes
+
+Con el dato de hace 1 hora (lo último conocido sería el conteo de las 07:00 del 10 de septiembre: 517 viajes)
+  Boosting de árboles         672 viajes  (se pasa por 17)
+  Perceptrón multicapa        686 viajes  (se pasa por 31)
+  Regresión Ridge             645 viajes  (se queda corto por 10)
+  Ingenuo semanal             427 viajes  (se queda corto por 228)
+  Mediana de calendario       564 viajes  (se queda corto por 91)
+```
+
+Sin `--retraso` muestra los tres escenarios (dato de hace 1 hora, 1 día y 1 semana). Los modelos son los del
+experimento, ajustados con 2022 a junio de 2025, así que en las horas de prueba da las mismas cifras que
+`resultados/predicciones_prueba.csv`, salvo diferencias de redondeo de la computadora de menos de una billonésima de viaje (una prueba
+lo comprueba). Después del último dato publicado (31 de diciembre de
+2025, 23:00) cada escenario llega solo hasta donde alcanza su retraso: 1 hora, 1 día o 1 semana más allá.
 
 ## Memoria y página web
 
