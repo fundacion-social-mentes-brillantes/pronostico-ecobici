@@ -178,7 +178,8 @@
           <dd>Repite lo que pasó a la misma hora siete días antes. No usa el dato reciente, así que su error no cambia
             con el atraso.</dd></div>
         <div><dt>Mediana de calendario<span class="tipo">referencia simple</span></dt>
-          <dd>La mediana histórica de esa hora y ese tipo de día. Tampoco usa el dato reciente.</dd></div>
+          <dd>La mediana histórica de esa hora en ese día de la semana (los feriados cuentan como domingo). Tampoco
+            usa el dato reciente.</dd></div>
         <div><dt>Regresión Ridge<span class="tipo">modelo lineal</span></dt>
           <dd>Suma ponderada del calendario y de los conteos disponibles, con un freno para no sobreajustar.</dd></div>
         <div><dt><em>Boosting</em> de árboles<span class="tipo">aprendizaje automático</span></dt>
@@ -186,8 +187,10 @@
         <div><dt>Perceptrón multicapa<span class="tipo">red neuronal</span></dt>
           <dd>Una red neuronal pequeña, de una o dos capas, con parada temprana.</dd></div>
       </dl>
-      <p class="pie">Los tres modelos ajustados reciben la misma información, aunque cada uno la codifica a su manera:
-        hora, día de la semana, mes, feriados y días no laborables, el último conteo disponible, la media de las 24 horas que terminan en ese conteo y el conteo de la misma hora una semana antes. Cada uno se
+      <p class="pie">Los tres modelos ajustados reciben el último conteo disponible, la media de las 24 horas que
+        terminan en ese conteo, el conteo de la misma hora una semana antes, el mes y los feriados y días no laborables.
+        El calendario les llega distinto: el <em>boosting</em> ve la hora y el día de la semana; Ridge y el
+        perceptrón, la hora combinada con el tipo de día (laborable, sábado, o domingo y feriado). Cada uno se
         afinó por separado para cada edad del dato, solo con la validación.</p>
     </div>
   </div>

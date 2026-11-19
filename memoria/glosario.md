@@ -36,7 +36,7 @@ de Ridge o el número de hojas de los árboles. Aquí se eligieron con el period
 en viajes por hora y es el criterio principal.
 
 **Mediana de calendario.** Pronóstico de referencia que usa el valor típico (la mediana) de cada combinación de hora y
-día de la semana en el historial.
+día de la semana en el historial; los feriados cuentan como domingo.
 
 **Newey-West (varianza de).** Forma de calcular la incertidumbre de un promedio cuando los datos de horas cercanas
 están relacionados entre sí (Newey y West, 1987). Se usa dentro de la prueba de Diebold-Mariano.

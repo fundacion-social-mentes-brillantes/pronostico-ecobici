@@ -1,0 +1,8 @@
+=== Respuesta de Codex ===
+Confirmé los tres arreglos. El gráfico de portada tiene texto alternativo en el HTML y en la primera página del PDF. La web describe las entradas de los modelos de acuerdo con el código. La regla de tratar los feriados como domingos figura en la web, el glosario, el Word y el PDF.
+
+No ejecuté Python ni comprobé la maquetación visual.
+
+SIN ERRORES PENDIENTES.
+=== gpt-6.2-sol / medium · tarea revision · 117 s · tokens: 276880 de entrada, 2179 de salida · encargo 01a1f43a-ae2e-7ed0-9474-5e7d64aaa6b7
+Límites de Codex — 5 horas: 15% usado (se reinicia 19/11 01:25 PM); semana: 14% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

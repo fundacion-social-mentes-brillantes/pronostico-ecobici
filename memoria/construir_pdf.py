@@ -299,6 +299,9 @@ def grafico_portada(ancho=166.0, alto=58.0):
 
 def portada():
     svg, _ = grafico_portada()
+    svg = svg.replace('aria-hidden="true"', 'role="img" aria-label="Viajes reales de Ecobici hora por hora durante la '
+                      'semana del 30 de septiembre al 6 de octubre de 2025, con los pronósticos hechos con el último '
+                      'dato de hace 1 hora, 1 día y 1 semana"')
     return f"""
 <section class="portada">
   <p class="portada-tipo">Memoria · Comparativa de soluciones · Aprendizaje automático</p>

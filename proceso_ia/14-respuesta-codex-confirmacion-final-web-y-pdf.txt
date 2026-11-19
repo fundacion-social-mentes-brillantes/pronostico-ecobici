@@ -1,0 +1,12 @@
+=== Respuesta de Codex ===
+Confirmé que GitHub Pages sirve los archivos de `e6e54f1` y que el PDF y el Word publicados coinciden byte por byte con las copias locales actualizadas. Probé en JavaScript que los `null` quedan fuera del máximo y que las semanas incompletas no dibujan puntos ni línea. Verifiqué los 83 marcadores del PDF, el DOI completo de Tashman y el símbolo `∑` en ambos documentos. El capítulo 5, el README y el Anexo B coinciden en las veinte pruebas, y el registro confirma los 29,24 s. [Web publicada](https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/)
+
+Quedan tres errores:
+
+- `memoria/construir_pdf.py:296–297` — El gráfico de portada está oculto a las tecnologías de asistencia y carece de texto alternativo en el PDF. Las seis figuras interiores sí lo tienen. :codex-file-citation{path="C:/Programas creados por mi/pronostico-ecobici/memoria/memoria.pdf" purpose="source"}
+- `web/index.html:189–191` — Ridge y el perceptrón reciben tres tipos de día. El *boosting* recibe el día de la semana real. La agrupación pierde información, así que los tres modelos no reciben la misma información de calendario.
+- `web/index.html:181` y `memoria/memoria.html:748` — La mediana de calendario agrupa por hora y día de la semana, tratando los feriados como domingos. La web dice «tipo de día» y el glosario del PDF omite la regla de los feriados.
+
+No ejecuté Python ni `pytest`, ni pude comprobar visualmente la web y el PDF en el navegador.
+=== gpt-6.2-sol / medium · tarea revision · 345 s · tokens: 1469542 de entrada, 6706 de salida · encargo 01a1f434-3c3e-7611-b29a-4792eb3968d1
+Límites de Codex — 5 horas: 14% usado (se reinicia 19/11 01:25 PM); semana: 14% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~1 %
