@@ -568,6 +568,7 @@ figure { margin: 0; }
 @media (min-width: 47.5rem) {
   .lista-limites { grid-template-columns: 1fr 1fr; column-gap: 2rem; row-gap: 1.75rem; }
   .descargas { grid-template-columns: 1fr 1fr; }
+  .descargas__ancha { grid-column: 1 / -1; }
 }
 
 /* ---------- Pie ---------- */
