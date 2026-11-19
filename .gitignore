@@ -21,5 +21,8 @@ web/memoria.docx
 # Documento intermedio del PDF (lleva las letras incrustadas)
 memoria/memoria.html
 
+# Versión para subir a Google Docs (se arma con memoria/construir_gdocs.py)
+memoria/memoria_gdocs.docx
+
 # Imágenes de las propuestas de estilo (solo se sube la elegida, a web/img)
 recursos/propuestas/

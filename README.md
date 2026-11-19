@@ -50,7 +50,7 @@ Error absoluto medio (MAE) en viajes por hora, sobre 4.244 horas de prueba (juli
 | 3 | `src/descargar_clima.py` | Temperatura y lluvia por hora de Open-Meteo (ERA5, CC BY 4.0) |
 | 4 | `src/feriados.py` | Feriados y días no laborables de Argentina 2022-2025, con las correcciones de cada año |
 | 5 | `src/ejecutar_todo.py` | Variables por escenario, cinco modelos, validación, prueba, Diebold-Mariano, figuras, tablas, datos de la web (`src/exportar_web.py`) y registro de la ejecución (menos de un minuto) |
-| 6 | `memoria/construir_docx.py` y `memoria/construir_pdf.py` | La memoria en Word (editable) y en PDF (diseño editorial, con Edge o Chrome sin ventana) a partir de los capítulos en Markdown |
+| 6 | `memoria/construir_docx.py`, `memoria/construir_pdf.py` y `memoria/construir_gdocs.py` | La memoria en Word (editable), en PDF (diseño editorial, con Edge o Chrome sin ventana) y para Google Docs (el diseño del PDF en un documento editable) a partir de los capítulos en Markdown |
 
 Protocolo: entrenamiento 2022-2024, validación enero-junio de 2025 y prueba julio-diciembre de 2025, con un margen
 de siete días entre bloques; los modelos se congelan antes de la prueba y todas las alternativas se evalúan en las
@@ -75,7 +75,9 @@ en ese orden.
 ## Memoria y página web
 
 - Memoria en PDF: `memoria/memoria.pdf` (también se descarga desde la página). En Word, editable:
-  `memoria/memoria.docx`. En Markdown, por capítulos, en `memoria/`.
+  `memoria/memoria.docx`. Para Google Docs, con el diseño del PDF: `memoria/construir_gdocs.py` arma un .docx que,
+  subido a Google Drive con conversión, queda como documento nativo de Google Docs. En Markdown, por capítulos, en
+  `memoria/`.
 - Página: carpeta `web/` (HTML, CSS y JavaScript sin librerías; gráficos SVG dibujados a mano). Se publica en
   GitHub Pages con `.github/workflows/pagina.yml`. Sus cifras salen de `web/datos.js`, que genera
   `src/exportar_web.py`; una prueba comprueba que coincidan con los resultados.
