@@ -1,8 +1,9 @@
 # 6. Resultados
 
 Todos los resultados de este capítulo se refieren al periodo de prueba, del 8 de julio al 31 de diciembre de 2025,
-con el protocolo fijado antes de ejecutarlo y los modelos congelados. La primera repetición tras las correcciones de
-robustez dio resultados idénticos. Después, la revisión detectó que faltaba el feriado del 2 de septiembre de 2022.
+con el protocolo fijado antes de ejecutarlo y los modelos congelados. En la primera repetición tras las correcciones de
+robustez, la serie, el clima, las predicciones y los contrastes salieron idénticos; solo cambió una cifra
+descriptiva, los días secos, por un ajuste de redondeo. Después, la revisión detectó que faltaba el feriado del 2 de septiembre de 2022.
 Se corrigió el calendario y se repitió el experimento. Todas las cifras de la memoria proceden de esa última
 ejecución. Las alternativas se comparan sobre las mismas **4.244 horas**: de las 4.248 horas posteriores al margen,
 se excluyeron 4 por faltantes, todas alrededor del corte de registro del 14 de octubre de 2025 (una por el objetivo y

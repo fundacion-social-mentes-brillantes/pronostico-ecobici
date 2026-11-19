@@ -100,14 +100,14 @@ def semana_de_prueba(predicciones):
             break
     else:
         # Si no hay una semana completa, se muestran las primeras 168 horas disponibles (con sus huecos).
-        horas = ingenuo.index[:168]
+        horas = pd.date_range(ingenuo.index[0], periods=168, freq="h")
         inicio = horas[0]
-    semana = ingenuo.loc[horas]
+    semana = ingenuo.reindex(horas)  # las horas ausentes quedan vacías: la línea se corta en los huecos
     eje.plot(horas, semana["real"], label="Real", color="#222222", linewidth=2)
     eje.plot(horas, semana["predicho"], label="Ingenuo semanal", color="#777777", linestyle="--")
     for d in config.RETRASOS:
         boosting = predicciones.loc[predicciones["metodo"].eq("boosting") & predicciones["retraso"].eq(d)]
-        eje.plot(horas, boosting.set_index("hora").loc[horas, "predicho"], label=f"Boosting, {d} h")
+        eje.plot(horas, boosting.set_index("hora")["predicho"].reindex(horas), label=f"Boosting, {d} h")
     eje.xaxis.set_major_locator(mdates.DayLocator())
     eje.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m"))
     eje.set(title=f"Demanda real y pronosticada del {inicio:%d/%m/%Y} al {horas[-1]:%d/%m/%Y}",

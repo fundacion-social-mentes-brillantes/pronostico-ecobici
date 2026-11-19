@@ -23,7 +23,9 @@ else:
     from config import ANIOS, DATOS_CRUDOS, DATOS_PROCESADOS, URL_RECORRIDOS
 
 AGENTE = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-PLAZO_TOTAL_S = 3600  # una hora como máximo por archivo
+# Plazo total por archivo: una hora. Se comprueba al recibir cada bloque y cada espera de lectura tiene 120 s de
+# límite, así que una descarga atascada se corta como mucho unos 120 s después de cumplida la hora.
+PLAZO_TOTAL_S = 3600
 
 
 def ruta_zip(anio):

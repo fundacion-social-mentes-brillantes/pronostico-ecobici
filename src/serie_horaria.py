@@ -53,7 +53,9 @@ def extraer(anio):
         miembro = csvs[0]
         if miembro.file_size > LIMITE_DESCOMPRIMIDO:
             raise ValueError(f"{anio}: el CSV ocupa {miembro.file_size:,} bytes, más que el límite")
-        ruta = destino / f"{anio}.csv"  # nombre fijo: el nombre interno del ZIP nunca se usa como ruta
+        # Nombre propio de esta ejecución (el nombre interno del ZIP nunca se usa como ruta): así dos ejecuciones
+        # simultáneas no se pisan y al final solo se borran los archivos que creó esta.
+        ruta = destino / f"{anio}.{os.getpid()}.csv"
         temporal = destino / f"{anio}.csv.{os.getpid()}.parcial"  # único por ejecución
         try:
             # Siempre se extrae de nuevo: zipfile comprueba el CRC al leer, así que el CSV queda verificado.

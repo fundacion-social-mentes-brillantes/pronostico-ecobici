@@ -112,7 +112,8 @@ def main():
             sensibilidad[str(rezagos)][f"{d}h"] = {
                 "estadistico_dm": f["estadistico_dm"], "p_holm": f"{ph:.2e}",
                 "diferencia_mae": f["diferencia_mae"],
-                "ic95": [f["diferencia_mae"] - 1.96 * error_estandar, f["diferencia_mae"] + 1.96 * error_estandar]}
+                "ic95": (None if not np.isfinite(error_estandar) else
+                         [f["diferencia_mae"] - 1.96 * error_estandar, f["diferencia_mae"] + 1.96 * error_estandar])}
     salida["diebold_mariano_sensibilidad_rezagos"] = sensibilidad
 
     # Cifras descriptivas del capítulo 4: solo días con las 24 horas válidas, bloque 2022-2025.

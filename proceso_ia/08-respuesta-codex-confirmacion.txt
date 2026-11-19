@@ -1,0 +1,9 @@
+=== Respuesta de Codex ===
+- **#4.** `memoria/anexos.md:22–24` y `memoria/capitulo6_resultados.md:4–6` aún califican de idénticos los resultados de la primera repetición. Antes de corregir el feriado, el recuento de días laborables secos ya había pasado de 764 a 763.
+- **#6.** `src/tablas_memoria.py:110–115,147–148` evita la división por cero, pero cuando el estadístico DM es cero escribe `NaN` en el intervalo. Ese valor es inválido en JSON estricto.
+- **#21.** `src/serie_horaria.py:56–66,148–151` sigue publicando el CSV extraído con un nombre fijo por año. Puede sobrescribir y borrar un CSV preexistente, y dos procesos pueden interferir al usar o borrar esa misma ruta.
+- **#21.** `src/descargar_datos.py:26,48–55` sigue anunciando una hora como máximo. El reloj empieza tras recibir las cabeceras y solo se comprueba al recibir un bloque. Los 120 s limitan la inactividad de lectura, por lo que la descarga puede superar el plazo total.
+
+No pude ejecutar las pruebas ni repetir el experimento porque el intérprete local no arrancó.
+=== gpt-6.2-sol / medium · tarea revision · 179 s · tokens: 735130 de entrada, 4133 de salida · encargo 01a1f272-8cb7-7623-b2df-09cc8a02cc93
+Límites de Codex — 5 horas: 28% usado (se reinicia 19/11 04:51 AM); semana: 12% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~1 %

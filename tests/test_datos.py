@@ -61,7 +61,7 @@ def test_extraer_usa_un_nombre_fijo_y_no_el_del_zip(tmp_path, monkeypatch):
     with zipfile.ZipFile(tmp_path / "recorridos-realizados-2030.zip", "w") as z:
         z.writestr("../../fuera.csv", CABECERA)  # un nombre interno malicioso no debe usarse como ruta
     ruta = serie_horaria.extraer(2030)
-    assert ruta == tmp_path / "csv" / "2030.csv"
+    assert ruta.parent == tmp_path / "csv" and ruta.name.startswith("2030.") and ruta.suffix == ".csv"
     assert ruta.read_text(encoding="utf-8") == CABECERA
     assert not (tmp_path.parent / "fuera.csv").exists()
     assert not list((tmp_path / "csv").glob("*.parcial"))

@@ -21,6 +21,8 @@ LIBRERIAS = ["numpy", "pandas", "scikit-learn", "matplotlib", "duckdb", "threadp
 
 
 def main():
+    # Se borra el registro anterior: si algún paso falla, no queda un registro viejo junto a resultados nuevos.
+    (config.RESULTADOS / "registro_ejecucion.json").unlink(missing_ok=True)
     tiempos = {}
     inicio_total = perf_counter()
     for nombre, paso in (("experimento", ejecutar_experimento), ("figuras", generar_figuras),
