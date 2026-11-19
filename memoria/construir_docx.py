@@ -4,8 +4,11 @@ Uso: .venv/Scripts/python memoria/construir_docx.py
 Entrada: memoria/resumen.md, capitulo1..8_*.md, referencias.md y anexos.md, en ese orden.
 Figuras: una línea {{FIGURA:nombre}} inserta resultados/figuras/<nombre>.png con su pie (ver PIES).
 Salida: memoria/memoria.docx (el índice se actualiza al abrirlo en Word, o con Word instalado se actualiza solo).
+Si se actualiza el índice con Word, después hay que correr `construir_docx.py --limpiar`: al guardar, Word escribe en
+«modificado por» el nombre de quien usa el computador, y ese dato personal no debe publicarse (una prueba lo vigila).
 """
 import re
+import sys
 from pathlib import Path
 
 from docx import Document
@@ -311,5 +314,17 @@ def main():
     print("ok", SALIDA)
 
 
+def limpiar_propiedades(ruta=SALIDA):
+    """Borra el «modificado por» que Word llena con el nombre de quien guarda el archivo."""
+    doc = Document(ruta)
+    doc.core_properties.last_modified_by = ""
+    doc.save(ruta)
+    print("propiedades limpias", ruta)
+
+
 if __name__ == "__main__":
-    main()
+    if "--limpiar" in sys.argv:
+        for ruta in sys.argv[sys.argv.index("--limpiar") + 1:] or [SALIDA]:
+            limpiar_propiedades(Path(ruta))
+    else:
+        main()
