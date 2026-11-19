@@ -9,6 +9,8 @@ PREDICCIONES = pd.read_csv(config.RESULTADOS / "predicciones_prueba.csv", parse_
 ULTIMO_DATO = pd.Timestamp("2025-12-31 23:00")
 
 
+# El margen (una milmillonésima de viaje) cubre el redondeo distinto de cada computadora: en Windows la diferencia
+# con lo guardado es de 10⁻¹³ viajes y en el Linux de GitHub, de 10⁻¹² viajes.
 @pytest.mark.parametrize("posicion", [0, 2000, -1])
 def test_en_las_horas_de_prueba_da_lo_mismo_que_el_experimento(posicion):
     hora = pd.Timestamp(PREDICCIONES["hora"].unique()[posicion])
@@ -19,7 +21,7 @@ def test_en_las_horas_de_prueba_da_lo_mismo_que_el_experimento(posicion):
         assert escenario["honesto"]
         for metodo in METODOS:
             fila = esperadas.loc[esperadas["metodo"].eq(metodo) & esperadas["retraso"].eq(retraso)]
-            assert escenario["pronosticos"][metodo] == pytest.approx(fila["predicho"].iat[0], rel=0, abs=1e-12)
+            assert escenario["pronosticos"][metodo] == pytest.approx(fila["predicho"].iat[0], rel=0, abs=1e-9)
     assert resultado["real"] == esperadas["real"].iat[0]
 
 

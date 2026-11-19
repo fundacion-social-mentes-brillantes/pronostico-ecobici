@@ -1,0 +1,8 @@
+=== Respuesta de Codex ===
+Confirmado por lectura. La prueba usa `pytest.approx(..., rel=0, abs=1e-9)` y el comentario explica las diferencias de redondeo entre Windows y Linux. El README, el Anexo B y el docstring de `src/pronosticar.py` coinciden en «menos de una milmillonésima de viaje».
+
+La prueba quedó sin ejecutar, según lo indicado.
+
+SIN ERRORES PENDIENTES.
+=== gpt-6.2-sol / medium · tarea revision · 77 s · tokens: 121221 de entrada, 619 de salida · encargo 01a1f4ca-96c3-7282-acbe-56ad6795a97d
+Límites de Codex — 5 horas: 29% usado (se reinicia 19/11 01:25 PM); semana: 16% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

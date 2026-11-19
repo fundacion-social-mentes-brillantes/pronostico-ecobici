@@ -11,7 +11,7 @@ cada método y con el dato de hace 1 hora, 1 día y 1 semana. Si la hora tiene d
 Los modelos se ajustan igual que en el experimento (src/experimento.py): con los datos de 2022 a junio de 2025 y los
 hiperparámetros elegidos en validación (resultados/hiperparametros_elegidos.json). Por eso, en las horas de prueba
 (desde el 8 de julio de 2025) da los mismos números que resultados/predicciones_prueba.csv, salvo diferencias de
-redondeo de la computadora (menos de una billonésima de viaje); una prueba lo comprueba.
+redondeo de la computadora (menos de una milmillonésima de viaje); una prueba lo comprueba.
 Un pronóstico solo es honesto si los modelos no vieron nada posterior a lo que se conocería en su escenario (la hora
 menos el retraso); si no, el comando lo avisa. Después del último dato (31 de diciembre de 2025, 23:00) cada escenario
 llega hasta donde alcanza su retraso: 1 hora, 1 día o 1 semana más allá. El análisis con clima (boosting_clima) no

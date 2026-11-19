@@ -95,7 +95,7 @@ Con el dato de hace 1 hora (lo último conocido sería el conteo de las 07:00 de
 
 Sin `--retraso` muestra los tres escenarios (dato de hace 1 hora, 1 día y 1 semana). Los modelos son los del
 experimento, ajustados con 2022 a junio de 2025, así que en las horas de prueba da las mismas cifras que
-`resultados/predicciones_prueba.csv`, salvo diferencias de redondeo de la computadora de menos de una billonésima de viaje (una prueba
+`resultados/predicciones_prueba.csv`, salvo diferencias de redondeo de la computadora de menos de una milmillonésima de viaje (una prueba
 lo comprueba). Después del último dato publicado (31 de diciembre de
 2025, 23:00) cada escenario llega solo hasta donde alcanza su retraso: 1 hora, 1 día o 1 semana más allá.
 

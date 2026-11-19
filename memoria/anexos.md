@@ -84,7 +84,7 @@ Para pedirle a los modelos del estudio el pronóstico de una hora concreta:
 El comando muestra lo que pronostica cada método con el dato de hace 1 hora, 1 día y 1 semana y, si esa hora ya
 tiene dato, el valor real. Usa los mismos modelos del experimento, ajustados con los datos de 2022 a junio de 2025,
 así que en las horas de prueba da las mismas cifras que guardó el experimento (salvo diferencias de redondeo de
-menos de una billonésima de viaje). Después del último dato publicado,
+menos de una milmillonésima de viaje). Después del último dato publicado,
 cada escenario llega solo hasta donde alcanza su retraso: una hora, un día o una semana más allá.
 
 # Anexo C. Días que marcaba la regla de bajo volumen (descartada)
