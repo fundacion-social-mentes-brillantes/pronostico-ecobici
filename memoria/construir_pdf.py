@@ -9,7 +9,6 @@ Salidas: memoria/memoria.pdf y, como paso intermedio, memoria/memoria.html (no s
 """
 import base64
 import html
-import json
 import os
 import re
 import shutil
@@ -269,57 +268,29 @@ def volcar(texto, titulos, contador):
     return "\n".join(salida)
 
 
-# ---------------------------------------------------------------- Portada: la semana típica
-
-def grafico_portada(ancho=166.0, alto=58.0):
-    """SVG (en mm) de la semana típica: viajes reales y los tres pronósticos, desde web/datos.js."""
-    texto = (RAIZ / "web" / "datos.js").read_text(encoding="utf-8")
-    datos = json.loads(texto[texto.index("{"):texto.rindex("}") + 1])
-    semana = datos["semanas"]["lista"][datos["semanas"]["tipica"]]
-    series = [("real", semana["real"])] + [(d, semana["pred"][d]) for d in ("168", "24", "1")]
-    tope = max(v for _, s in series for v in s if v is not None) * 1.04
-    n = len(semana["real"])
-    x = lambda i: i / (n - 1) * ancho
-    y = lambda v: alto - v / tope * alto
-    trazos = []
-    for nombre, valores in series:
-        d, abierto = "", False
-        for i, v in enumerate(valores):
-            if v is None:
-                abierto = False
-                continue
-            d += f"{'L' if abierto else 'M'}{x(i):.2f} {y(v):.2f}"
-            abierto = True
-        trazos.append(f'<path class="p-{nombre}" d="{d}"/>')
-    dias = "".join(f'<line x1="{x(k * 24 - 0.5):.2f}" x2="{x(k * 24 - 0.5):.2f}" y1="0" y2="{alto}"/>'
-                   for k in range(1, 7))
-    return (f'<svg class="grafico-portada" viewBox="0 0 {ancho} {alto}" width="{ancho}mm" height="{alto}mm" '
-            f'aria-hidden="true"><g class="dias">{dias}</g>{"".join(trazos)}</svg>'), semana["inicio"]
-
+# ---------------------------------------------------------------- Portada
 
 def portada():
-    svg, _ = grafico_portada()
-    svg = svg.replace('aria-hidden="true"', 'role="img" aria-label="Viajes reales de Ecobici hora por hora durante la '
-                      'semana del 30 de septiembre al 6 de octubre de 2025, con los pronósticos hechos con el último '
-                      'dato de hace 1 hora, 1 día y 1 semana"')
     return f"""
 <section class="portada">
-  <p class="portada-tipo">Memoria · Comparativa de soluciones · Aprendizaje automático</p>
-  <h1 class="portada-titulo">{html.escape(TITULO)}</h1>
-  <p class="portada-sub">{html.escape(SUBTITULO)}</p>
-  <figure class="portada-figura">{svg}
-    <figcaption><span class="m m-real"></span>Viajes reales
-      <span class="m m-1"></span>Pronóstico con el dato de 1 hora
-      <span class="m m-24"></span>de 1 día
-      <span class="m m-168"></span>de 1 semana
-      <span class="donde">Ecobici, Buenos Aires · semana del 30 de septiembre al 6 de octubre de 2025</span></figcaption>
-  </figure>
-  <div class="portada-pie">
-    <p>Realizada por <strong>Claude</strong> (Anthropic) y <strong>Codex</strong> (OpenAI) como prueba de capacidades,
-      por encargo de la Fundación Social Mentes Brillantes.</p>
-    <p>Con la estructura de un Trabajo Fin de Máster en Inteligencia Artificial (comparativa de soluciones). No es un
-      trabajo presentado ante ninguna universidad (ver Anexo A).</p>
-    <p class="portada-fecha">Noviembre de 2026 · <a href="{WEB}">{url_partible(WEB.removeprefix("https://"))}</a></p>
+  <div class="portada-imagen"><img src="portada.jpg" alt="Ilustración: una calle arbolada de Buenos
+    Aires de noche, con una estación de bicicletas públicas bajo las farolas y tres estelas de luz (verde aguamarina,
+    ámbar y coral) que representan el pronóstico con el dato de 1 hora, 1 día y 1 semana"></div>
+  <div class="portada-contenido">
+    <p class="portada-tipo">Memoria · Comparativa de soluciones · Aprendizaje automático</p>
+    <div class="portada-texto">
+      <h1 class="portada-titulo">{html.escape(TITULO)}</h1>
+      <p class="portada-sub">{html.escape(SUBTITULO)}</p>
+      <p class="portada-edades"><span class="m m-1"></span>dato de 1 hora <span class="m m-24"></span>de 1 día
+        <span class="m m-168"></span>de 1 semana</p>
+    </div>
+    <div class="portada-pie">
+      <p>Realizada por <strong>Claude</strong> (Anthropic) y <strong>Codex</strong> (OpenAI) como prueba de
+        capacidades, por encargo de la Fundación Social Mentes Brillantes.</p>
+      <p>Con la estructura de un Trabajo Fin de Máster en Inteligencia Artificial (comparativa de soluciones). No es un
+        trabajo presentado ante ninguna universidad (ver Anexo A). Ilustración de portada generada con IA (Codex).</p>
+      <p class="portada-fecha">Noviembre de 2026 · <a href="{WEB}">{url_partible(WEB.removeprefix("https://"))}</a></p>
+    </div>
   </div>
 </section>"""
 

@@ -20,3 +20,6 @@ web/memoria.docx
 
 # Documento intermedio del PDF (lleva las letras incrustadas)
 memoria/memoria.html
+
+# Imágenes de las propuestas de estilo (solo se sube la elegida, a web/img)
+recursos/propuestas/

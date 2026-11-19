@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>La edad del dato · Pronóstico de viajes de Ecobici</title>
 <meta name="description" content="Cuánto empeora el pronóstico de viajes por hora de Ecobici, en Buenos Aires, cuando el último dato tiene una hora, un día o una semana de atraso. Cinco técnicas comparadas con 11,9 millones de viajes reales.">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121518" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0f14">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="El dato fresco pesa más que el modelo">
 <meta property="og:description" content="Pronóstico de viajes de Ecobici con datos de hace una hora, un día o una semana: cinco técnicas comparadas con 11,9 millones de viajes.">
 <meta property="og:url" content="https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/">
-<meta property="og:image" content="https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/compartir.png">
+<meta property="og:image" content="https://fundacion-social-mentes-brillantes.github.io/pronostico-ecobici/compartir.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/portada-1672.webp" imagesrcset="img/portada-960.webp 960w, img/portada-1672.webp 1672w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" href="fuentes/Newsreader-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fuentes/SchibstedGrotesk-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilos.css">
@@ -46,6 +46,7 @@
 <main id="contenido">
 
 <section id="hallazgo" class="portada marco" aria-labelledby="titular">
+  <div class="portada-fondo" aria-hidden="true"><img src="img/portada-1672.webp" srcset="img/portada-960.webp 960w, img/portada-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" fetchpriority="high" decoding="async"></div>
   <h1 id="titular">El dato fresco pesa más que el modelo.</h1>
   <p class="entrada">Este estudio pronostica cuántos viajes empiezan cada hora en <strong>Ecobici</strong>, las bicicletas
     públicas de Buenos Aires, cuando el último conteo disponible tiene una hora, un día o una semana de atraso. Elegir
@@ -91,15 +92,15 @@
       </div>
     </div>
 
+    <details class="datos-tabla" id="tabla-semana">
+      <summary>Ver esta semana en una tabla</summary>
+      <div class="tabla-desplazable"></div>
+    </details>
     <figcaption class="nota">Cada línea de color es el pronóstico del <em>boosting</em> de árboles, el modelo con menos
       error en los tres casos. La página abre en la semana cuyo error más se parece al del semestre completo; con las
       flechas se recorren las <span data-cifra="semanas.lista.length">26</span>. Pasa el cursor o el dedo por el gráfico
       para ver qué conteo veía el modelo en cada hora (con el teclado: flechas, y Mayús + flechas para saltar un día).</figcaption>
 
-    <details class="datos-tabla" id="tabla-semana">
-      <summary>Ver esta semana en una tabla</summary>
-      <div class="tabla-desplazable"></div>
-    </details>
   </figure>
 </section>
 
@@ -123,6 +124,12 @@
     </div>
   </div>
 </section>
+
+<div class="banda">
+  <img src="img/datos-1672.webp" srcset="img/datos-960.webp 960w, img/datos-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" loading="lazy" decoding="async">
+  <p class="banda__frase">Casi doce millones de viajes en cuatro años, contados hora por hora.</p>
+  <span class="banda__credito">Ilustración generada con IA (Codex)</span>
+</div>
 
 <section id="datos" class="seccion" aria-labelledby="t-datos">
   <div class="marco">
@@ -151,7 +158,8 @@
         <li><span class="num">−35&nbsp;%</span>
           <p>de viajes en los <strong>días laborables con lluvia</strong> de 10&nbsp;mm o más: en promedio
             <span data-cifra="cifras.lluvia.media_lluvia">6.990</span>, frente a
-            <span data-cifra="cifras.lluvia.media_seca">10.728</span> en los días secos.</p></li>
+            <span data-cifra="cifras.lluvia.media_seca">10.728</span> en los días secos (menos de 1&nbsp;mm). Solo
+            cuentan los días con las 24 horas registradas.</p></li>
         <li><span class="num" data-cifra="cifras.record.viajes">1.527</span>
           <p>viajes en la <strong>hora con más uso</strong> de los cuatro años: el lunes 10 de noviembre de 2025 a las
             18:00.</p></li>
@@ -182,7 +190,7 @@
             usa el dato reciente.</dd></div>
         <div><dt>Regresión Ridge<span class="tipo">modelo lineal</span></dt>
           <dd>Suma ponderada del calendario y de los conteos disponibles, con un freno para no sobreajustar.</dd></div>
-        <div><dt><em>Boosting</em> de árboles<span class="tipo">aprendizaje automático</span></dt>
+        <div><dt>Boosting de árboles<span class="tipo">aprendizaje automático</span></dt>
           <dd>Trescientos árboles de decisión pequeños, cada uno corrigiendo los errores de los anteriores.</dd></div>
         <div><dt>Perceptrón multicapa<span class="tipo">red neuronal</span></dt>
           <dd>Una red neuronal pequeña, de una o dos capas, con parada temprana.</dd></div>
@@ -195,6 +203,12 @@
     </div>
   </div>
 </section>
+
+<div class="banda">
+  <img src="img/lluvia-1672.webp" srcset="img/lluvia-960.webp 960w, img/lluvia-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" loading="lazy" decoding="async">
+  <p class="banda__frase">Un día laborable con 10&nbsp;mm de lluvia o más tiene, en promedio, un 35&nbsp;% menos de viajes que uno seco (menos de 1&nbsp;mm).</p>
+  <span class="banda__credito">Ilustración generada con IA (Codex)</span>
+</div>
 
 <section id="resultados" class="seccion" aria-labelledby="t-resultados">
   <div class="marco">
@@ -222,7 +236,7 @@
               <th scope="col"><span class="marca-edad" style="--c: var(--semana)">1 semana</span></th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><em>Boosting</em> de árboles</th>
+            <tr><th scope="row">Boosting de árboles</th>
               <td class="mejor" data-cifra="metricas.1.boosting.mae" data-dec="1">31,1</td>
               <td class="mejor" data-cifra="metricas.24.boosting.mae" data-dec="1">78,3</td>
               <td class="mejor" data-cifra="metricas.168.boosting.mae" data-dec="1">89,4</td></tr>
@@ -242,7 +256,7 @@
               <td data-cifra="metricas.1.mediana_calendario.mae" data-dec="1">111,7</td>
               <td data-cifra="metricas.24.mediana_calendario.mae" data-dec="1">111,7</td>
               <td data-cifra="metricas.168.mediana_calendario.mae" data-dec="1">111,7</td></tr>
-            <tr class="secundario separa"><th scope="row"><em>Boosting</em> + clima observado</th>
+            <tr class="secundario separa"><th scope="row">Boosting + clima observado</th>
               <td data-cifra="metricas.1.boosting_clima.mae" data-dec="1">30,2</td>
               <td data-cifra="metricas.24.boosting_clima.mae" data-dec="1">59,3</td>
               <td data-cifra="metricas.168.boosting_clima.mae" data-dec="1">65,3</td></tr>
@@ -265,13 +279,13 @@
       <figure class="fig">
         <div class="grafico grafico--chico" id="grafico-semanas" role="img"
              aria-label="Error del boosting en cada una de las semanas de prueba, según la edad del dato"></div>
+      <details class="datos-tabla" id="tabla-semanas">
+          <summary>Ver el error de cada semana en una tabla</summary>
+          <div class="tabla-desplazable"></div>
+        </details>
         <figcaption>Error medio de cada semana de prueba con cada edad del dato. Toca o haz clic en una semana para
           verla arriba, en el gráfico principal.</figcaption>
       </figure>
-      <details class="datos-tabla" id="tabla-semanas">
-        <summary>Ver el error de cada semana en una tabla</summary>
-        <div class="tabla-desplazable"></div>
-      </details>
 
       <h3>El clima ayuda cuando el dato es viejo</h3>
       <p>Con el dato de hace una hora, sumar la lluvia y la temperatura casi no cambió nada
@@ -311,6 +325,12 @@
     </div>
   </div>
 </section>
+
+<div class="banda">
+  <img src="img/amanecer-1672.webp" srcset="img/amanecer-960.webp 960w, img/amanecer-1672.webp 1672w" sizes="100vw" width="1672" height="941" alt="" loading="lazy" decoding="async">
+  <p class="banda__frase">Todo el estudio se puede leer, revisar y repetir.</p>
+  <span class="banda__credito">Ilustración generada con IA (Codex)</span>
+</div>
 
 <section id="descargas" class="seccion" aria-labelledby="t-descargas">
   <div class="marco">
@@ -356,7 +376,8 @@
       <p>Viajes: Gobierno de la Ciudad de Buenos Aires, Buenos Aires Data, «Bicicletas públicas: recorridos
         realizados» (CC BY 2.5 AR), depurados y sumados por hora. Clima: Open-Meteo, reanálisis ERA5 de Copernicus
         (CC BY 4.0).</p>
-      <p>Letras: Newsreader y Schibsted Grotesk (SIL Open Font License 1.1).</p>
+      <p>Letras: Newsreader y Schibsted Grotesk (SIL Open Font License 1.1). Ilustraciones: generadas con IA por
+        Codex (OpenAI) a partir de indicaciones de Claude; no son fotografías.</p>
     </div>
   </div>
 </footer>

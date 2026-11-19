@@ -261,7 +261,7 @@
       return;
     }
     const inicio = performance.now();
-    const duracion = 320;
+    const duracion = 300;
     const paso = (ahora) => {
       const t = Math.min(1, (ahora - inicio) / duracion);
       const e = 1 - Math.pow(1 - t, 3);
@@ -583,7 +583,7 @@
   function dibujarPendiente(ancho) {
     const caja = document.getElementById("grafico-pendiente");
     const angosto = ancho < 520;
-    const dm = { w: ancho, h: angosto ? 280 : 320, izq: 40, der: angosto ? 118 : 178, arr: 26, aba: 34 };
+    const dm = { w: ancho, h: angosto ? 340 : 360, izq: 40, der: angosto ? 122 : 200, arr: 26, aba: 34 };
     const svg = svgNuevo(caja, dm.w, dm.h);
     const metodos = Object.keys(NOMBRES);
     const maximo = Math.max(...metodos.flatMap((m) => RETRASOS.map((d) => D.metricas[d][m].mae)));
@@ -613,7 +613,7 @@
       }
       finales.push({ m, v: valores[2] });
     });
-    const yEtiquetas = separar(finales.map((f) => y(f.v)), 15, dm.arr, dm.h - dm.aba);
+    const yEtiquetas = separar(finales.map((f) => y(f.v)), angosto ? 19 : 18, dm.arr, dm.h - dm.aba);
     finales.forEach((f, k) => {
       const yy = yEtiquetas[k];
       const fuerte = f.m === "boosting";
@@ -785,12 +785,4 @@
   alCambiarAncho(document.getElementById("grafico-semanas"), dibujarSemanas);
   alCambiarAncho(document.getElementById("grafico-clima"), dibujarClima);
 
-  // Si cambia el modo claro u oscuro, se redibujan los gráficos que usan colores calculados.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-    for (const [id, f] of [["grafico-vista", dibujarVista], ["grafico-tramos", dibujarTramos], ["grafico-pendiente", dibujarPendiente],
-      ["grafico-semanas", dibujarSemanas], ["grafico-clima", dibujarClima]]) {
-      const c = document.getElementById(id);
-      if (c.clientWidth) f(Math.round(c.clientWidth));
-    }
-  });
 })();

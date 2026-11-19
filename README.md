@@ -79,8 +79,10 @@ en ese orden.
 - Página: carpeta `web/` (HTML, CSS y JavaScript sin librerías; gráficos SVG dibujados a mano). Se publica en
   GitHub Pages con `.github/workflows/pagina.yml`. Sus cifras salen de `web/datos.js`, que genera
   `src/exportar_web.py`; una prueba comprueba que coincidan con los resultados.
-- Sistema de diseño común a la web, el PDF y las figuras: `DESIGN.md` (letras Newsreader y Schibsted Grotesk, con
-  licencia OFL, en `web/fuentes/` y `recursos/fuentes/`).
+- Sistema de diseño común a la web, el PDF y las figuras: `DESIGN.md` (estilo «Ciudad de noche», escogido entre tres
+  propuestas; letras Newsreader y Schibsted Grotesk, con licencia OFL, en `web/fuentes/` y `recursos/fuentes/`).
+- Las cuatro ilustraciones de la página y la portada del PDF (`web/img/`, `memoria/portada.jpg`) las generó Codex con
+  IA a partir de indicaciones de Claude; no son fotografías.
 
 ## Licencias
 
