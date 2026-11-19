@@ -64,7 +64,7 @@ consistent covariance matrix. *Econometrica, 55*(3), 703–708. https://doi.org/
 Ohana, M. A. (2021). *Predicción de demanda del uso de las bicicletas públicas de CABA* [Tesis de maestría,
 Universidad Torcuato Di Tella]. Repositorio Digital UTDT. https://repositorio.utdt.edu/handle/20.500.13098/11241
 
-OpenAI. (2026). *Codex* (GPT-6.2 Sol y GPT-6.1 Terra) [Asistente de programación basado en modelos de lenguaje].
+OpenAI. (2026). *Codex* (GPT-6.2 Sol, GPT-6.1 Terra y GPT-6 Luna) [Asistente de programación basado en modelos de lenguaje].
 https://openai.com/codex/
 
 Peláez-Rodríguez, C., Pérez-Aracil, J., Fister, D., Torres-López, R., & Salcedo-Sanz, S. (2024). Bike sharing and

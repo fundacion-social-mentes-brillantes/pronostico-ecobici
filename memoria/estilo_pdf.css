@@ -265,6 +265,7 @@ pre {
   break-inside: avoid;
 }
 code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 0.86em; hyphens: manual; }
-.mate { white-space: nowrap; }
+.mate { white-space: nowrap; font-family: "Newsreader", "Schibsted Grotesk", "Cambria Math", serif; }
+sup.exp { font-size: 0.72em; line-height: 0; vertical-align: 0.42em; }
 .mate sub, .mate sup { font-size: 0.7em; line-height: 0; }
 .raiz { border-top: 0.22mm solid currentColor; padding-top: 0.2mm; margin-left: 0.3mm; }

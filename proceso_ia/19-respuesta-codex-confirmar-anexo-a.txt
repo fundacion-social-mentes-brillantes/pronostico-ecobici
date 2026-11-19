@@ -1,0 +1,8 @@
+=== Respuesta de Codex ===
+Confirmé que Claude diseñó y construyó la web y el PDF, y que Codex revisó ambos y las figuras. Hay 18 respuestas previas al encargo 19. Codex generó **cuatro ilustraciones en total**. La portada del PDF reutiliza la de la web, que `hacer_compartir.py` también usa. Conviene explicitar esa reutilización en el Anexo A.
+
+El PDF de `memoria/` confirma que el cierre de 5.6 quedó unido en la página 32. La copia local de `web/` conserva la versión anterior. El flujo de publicación toma el PDF de `memoria/`.
+
+**Quedó sin comprobar** qué tarea usó GPT-6 Luna, aunque figura en el anexo y en la referencia. Tampoco encontré el encargo 09 ni las instrucciones exactas de ilustración y crítica. La comprobación fue estática, sin ejecutar Python.
+=== gpt-6.2-sol / medium · tarea revision · 108 s · tokens: 267688 de entrada, 1523 de salida · encargo 01a1f467-4904-7630-a022-53c8925d997d
+Límites de Codex — 5 horas: 23% usado (se reinicia 19/11 01:25 PM); semana: 15% usado (se reinicia 25/11 01:51 PM) · este encargo subió la semana ~0 %

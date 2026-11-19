@@ -27,8 +27,11 @@ FIJAS = RAIZ / "recursos" / "fuentes"
 
 # Latín básico y Latin-1 (tildes, ñ, ¿¡, «», ×, ·), comillas y rayas tipográficas, signo menos, flechas, ≈ ≤ ≥,
 # espacios finos y la letra griega α (parámetro de regularización en las tablas).
-CARACTERES = ("U+0020-007E,U+00A0-00FF,U+0152-0153,U+03B1,U+0394,U+2009,U+200A,U+2011,U+2013-2014,U+2018-201E,"
-              "U+2022,U+2026,U+202F,U+2032-2033,U+2039-203A,U+20AC,U+2190-2193,U+2212,U+2248,U+2264-2265")
+# Más Latín extendido A (ŷ), acentos combinantes, cifras voladas y los símbolos de las fórmulas (∑, √) cuando la letra
+# los tiene; lo que una letra no trae lo pone el navegador con otra.
+CARACTERES = ("U+0020-007E,U+00A0-00FF,U+0100-017F,U+0300-0304,U+03B1,U+0394,U+2009,U+200A,U+2011,U+2013-2014,"
+              "U+2018-201E,U+2022,U+2026,U+202F,U+2032-2033,U+2039-203A,U+2070-2079,U+20AC,U+2190-2193,U+2211,U+2212,"
+              "U+221A,U+2248,U+2264-2265")
 
 
 def recortar(fuente, destino, sabor):

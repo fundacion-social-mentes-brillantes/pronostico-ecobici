@@ -154,6 +154,5 @@ tiempos de ajuste fueran comparables entre métodos. En los ajustes finales, Rid
 de 0,3 a 0,6 s, el *boosting* con clima de 0,4 a 0,7 s y el perceptrón de 1,3 a 1,5 s. En la búsqueda de
 validación, los ajustes tardaron de 0,028 a 0,048 s para Ridge, de 0,3 a 0,6 s para el *boosting* y de 0,8 a 1,3 s para
 el perceptrón. Pronosticar las 4.244 horas de prueba tardó menos de una décima de segundo con cualquiera de ellos.
-
 La primera repetición confirmó la reproducibilidad tras las correcciones de robustez. El registro citado arriba
 corresponde a la ejecución final con el calendario corregido (véase el capítulo 6).

@@ -104,5 +104,5 @@ estas. Al lado va lo que cada una respalda; no atribuirles nada más.
 ## Herramientas de IA usadas (Anexo A)
 
 - Anthropic. (2026). *Claude Opus 5.5* [Modelo de lenguaje de gran tamaño]. https://www.anthropic.com/claude
-- OpenAI. (2026). *Codex* (GPT-6.2 Sol y GPT-6.1 Terra) [Asistente de programación basado en modelos de lenguaje].
+- OpenAI. (2026). *Codex* (GPT-6.2 Sol, GPT-6.1 Terra y GPT-6 Luna) [Asistente de programación basado en modelos de lenguaje].
   https://openai.com/codex/

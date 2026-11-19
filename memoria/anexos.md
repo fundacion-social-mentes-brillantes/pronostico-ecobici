@@ -10,11 +10,13 @@ Participaron (Anthropic, 2026; OpenAI, 2026):
 - **Claude** (Anthropic, modelo Claude Opus 5.5), que dirigió el trabajo: definió el tema y el diseño experimental,
   buscó y comprobó la bibliografía, descargó y depuró los datos, escribió los scripts de preparación y de tablas,
   revisó, corrigió y ejecutó el código de los modelos, redactó los capítulos 1, 4, 5, 6, 7 y 8, el resumen y los
-  anexos, y revisó todo el documento.
-- **Codex** (OpenAI, modelos GPT-6.2 Sol y GPT-6.1 Terra), que propuso temas candidatos, revisó la propuesta como
+  anexos, revisó todo el documento, y diseñó y construyó la página web del proyecto y este PDF.
+- **Codex** (OpenAI, modelos GPT-6.2 Sol, GPT-6.1 Terra y GPT-6 Luna), que propuso temas candidatos, revisó la propuesta como
   segundo lector, programó los modelos, el protocolo de evaluación, las pruebas automáticas y las figuras, redactó
   los primeros borradores de los capítulos 2 y 3 y los ajustó, y revisó el proyecto completo (memoria y código) en
-  una revisión final de 30 puntos.
+  una revisión final de 30 puntos. Después revisó la página web, el PDF y las figuras, generó con IA las cuatro
+  ilustraciones de la página web (una de ellas es también la portada de este documento; no son fotografías) y
+  criticó el diseño a partir de capturas.
 
 La revisión final de Codex llevó a corregir varias cifras, a contar por separado 3.379 recorridos sin hora de
 llegada, a reforzar la seguridad y la robustez del código (ruta del archivo como parámetro de la consulta SQL,
@@ -25,7 +27,10 @@ cambió una cifra descriptiva, los días secos, por un ajuste de redondeo. Despu
 2 de septiembre de 2022. Se corrigió el calendario y se repitió el experimento. Todas las cifras de la memoria
 proceden de esa última ejecución (`resultados/`). Las limitaciones de diseño se recogen en la sección 7.4.
 
-Las instrucciones exactas que recibió Codex y sus respuestas están en la carpeta `proceso_ia/` del repositorio.
+En total Codex recibió dieciocho encargos de revisión, programación y redacción, más los de las ilustraciones y
+las críticas de diseño; cada tanda de arreglos se repitió hasta que respondió «SIN ERRORES PENDIENTES». Las
+instrucciones exactas que recibió Codex y sus respuestas están en la carpeta `proceso_ia/` del repositorio, incluidas
+las de las ilustraciones y las críticas de diseño (`20-ilustraciones-y-criticas-codex.md`).
 Todas las referencias bibliográficas se comprobaron una por una en Crossref, arXiv o la página oficial de la
 fuente; ninguna se tomó de la memoria de un modelo sin verificar.
 

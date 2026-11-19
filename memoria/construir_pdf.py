@@ -120,8 +120,19 @@ def en_linea(texto):
         elif trozo.startswith("http"):
             partes.append(f'<a class="url" href="{html.escape(trozo)}">{url_partible(trozo)}</a>')
         else:
-            partes.append(html.escape(trozo, quote=False))
+            partes.append(VOLADAS.sub(exponente, html.escape(trozo, quote=False)))
     return "".join(partes)
+
+
+# Exponentes escritos con cifras voladas («10⁻³⁵»): se pasan a <sup> con cifras normales, para que todas salgan en la
+# misma letra (ninguna de las dos letras del proyecto trae el «menos» volado).
+VOLADAS = re.compile("[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+")
+NORMALES = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻", "0123456789−")
+
+
+def exponente(m):
+    return f'<sup class="exp">{m.group(0).translate(NORMALES)}</sup>'
+
 
 
 # ---------------------------------------------------------------- Bloques
